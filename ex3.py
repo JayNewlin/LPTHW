@@ -24,8 +24,8 @@ print 3 + 2 < 5 - 7
 # 25 and 26 analyze the "halves" of the above question and formula, printing the "halves" first, then the result of the calculation.
 print "What is 3 + 2?", 3 + 2
 print "What is 5 - 7", 5 - 7
-
-# 29 is an "Aha" from the above tow analyses.
+#                               vvv----I noticed a typo here while working on Extra Credit 5
+# 29 is an "Aha" from the above two analyses.
 print "Oh, that's why it's False."
 
 print "How about some more."			# print the statement to the screen
