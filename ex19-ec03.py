@@ -33,7 +33,11 @@ Fri_number_of_people = raw_input("Tell me how many people are riding the buses o
 Fri_number_of_people_as_int = int(Fri_number_of_people)
 bus_calculator(Fri_number_of_people_as_int, Thu_bus_capacity)
 
-print "\nThe Saturday buses are the same as the capacity at the beginning of the week,"
+print "\nThe Saturday buses are the same as the capacity at the beginning of the week (47 people),"
 print "but only 62 people ride the bus."
 Saturday_riders = 62
 bus_calculator_cap47(Saturday_riders)
+
+print "\nOn Sunday, so few people ride the bus that the company only ever puts 20-passenger buses on the route."
+print "The people who rode on Saturday also ride on Sunday, so:"
+bus_calculator(62,20)
