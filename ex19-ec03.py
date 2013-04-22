@@ -27,3 +27,13 @@ bus_calculator_cap47(number_of_people)
 print "\nOn Thursday, the capacity of the buses changes."
 Thu_bus_capacity = raw_input("How many people do Thursday's buses hold? ")
 bus_calculator(number_of_people, Thu_bus_capacity)
+
+print "\nOn Friday we'll use the buses from Thursday, but I want you to recount all the passengers."
+Fri_number_of_people = raw_input("Tell me how many people are riding the buses on Friday. ")
+Fri_number_of_people_as_int = int(Fri_number_of_people)
+bus_calculator(Fri_number_of_people_as_int, Thu_bus_capacity)
+
+print "\nThe Saturday buses are the same as the capacity at the beginning of the week,"
+print "but only 62 people ride the bus."
+Saturday_riders = 62
+bus_calculator_cap47(Saturday_riders)
