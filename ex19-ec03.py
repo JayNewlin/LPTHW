@@ -15,3 +15,7 @@ bus_calculator(number_of_people)
 print "\nOn Tuesday, an extra 57 people want to ride the bus."
 number_of_people = number_of_people + 57
 bus_calculator(number_of_people)
+
+Wed_absentees = raw_input("\nHow many people are not interested in riding the bus on Wednesday?")
+number_of_people = number_of_people - Wed_absentees
+bus_calculator(number_of_people)
