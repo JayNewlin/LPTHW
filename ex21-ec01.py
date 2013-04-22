@@ -1,4 +1,5 @@
 # Modified for Exercise 21, Extra Credit 1: Create a few functions and return values from them.
+
 def add(a, b):
 	print "ADDING %d + %d" % (a, b)
 	return a + b
@@ -19,7 +20,9 @@ def divide(a, b):
 def user_name_cat(user_first_name, user_last_name):
 	return user_first_name + " " + user_last_name
 
-# def 
+def number_rounder(number_to_round):
+	return round(number_to_round)
+
 
 
 
@@ -35,6 +38,10 @@ weight = multiply(90, 2)
 iq = divide(100, 2)
 
 print "Age: %d, Height: %d, Weight: %d, IQ: %d" % (age, height, weight, iq)
+
+print "\nI can also round a number to the nearest integer."
+input_num_to_rnd = float( raw_input("What number shall I round?"))
+print "Rounding %g gives us %d" % (input_num_to_rnd, number_rounder(input_num_to_rnd))
 
 
 # A puzzle for the extra credit, type it in anyway.
