@@ -41,3 +41,18 @@ bus_calculator_cap47(Saturday_riders)
 print "\nOn Sunday, so few people ride the bus that the company only ever puts 20-passenger buses on the route."
 print "The people who rode on Saturday also ride on Sunday, so:"
 bus_calculator(62,20)
+
+print "\n\nThe new week starts on Monday, and 47-passenger buses are available again."
+Second_Monday_pax = raw_input("How many passengers are riding to work today? ")
+Second_Monday_pax = int(Second_Monday_pax)
+bus_calculator_cap47(Second_Monday_pax)
+
+print"\n"
+Second_Tue_more = raw_input("How many more people ride on Tuesday than on Monday this week? ")
+Second_Tue_pax = Second_Monday_pax + int(Second_Tue_more)
+bus_calculator_cap47(Second_Tue_pax)
+
+print"\nFor our last exercise together, please count all the riders, and tell me how many people fit in the buses:"
+Second_Wed_pax = int(raw_input("Number of people:"))
+Second_Wed_capacity = int(raw_input("Bus capacity: "))
+bus_calculator(Second_Wed_pax,Second_Wed_capacity)
