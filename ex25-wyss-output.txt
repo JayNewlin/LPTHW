@@ -1,0 +1,37 @@
+Jays-MacBook-Pro:PythonTheHardWay jnewlin$ python
+Python 2.7.2 (default, Oct 11 2012, 20:14:37) 
+[GCC 4.2.1 Compatible Apple Clang 4.0 (tags/Apple/clang-418.0.60)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ex25
+>>> sentence = "All good things come to those who wait."
+>>> words = ex25.break_words(sentence)
+>>> words
+['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> sorted_words = ex25.sort_words(words)
+>>> sorted_words
+['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+>>> ex 25.print_first_word(words)
+  File "<stdin>", line 1
+    ex 25.print_first_word(words)
+         ^
+SyntaxError: invalid syntax
+>>> ex25.print_first_word(words)
+All
+>>> ex25.print_last_word(words)
+wait.
+>>> words
+['good', 'things', 'come', 'to', 'those', 'who']
+>>> ex25.print_first_word(sorted_words)
+All
+>>> ex25.print_last_word(sorted_words)
+who
+>>> sorted_words
+['come', 'good', 'things', 'those', 'to', 'wait.']
+>>> sorted_words = ex25.sort_sentence(sentence)
+>>> sorted_words
+['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+>>> ex25.print_first_and_last_sorted(sentence)
+All
+who
+>>> ^D
+Jays-MacBook-Pro:PythonTheHardWay jnewlin$ 
