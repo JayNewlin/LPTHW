@@ -12,10 +12,10 @@ def convert_number(num_to_test):
 		return None
 
 def blueberry():
-	global blueberries
+	global ate_blueberries
 	print "You eat some blueberries. Nom nom nom!"
 	print "\nYou are still in the dark room."
-	blueberries = True
+	ate_blueberries = True
 	pass
 
 def take_gun():
@@ -86,28 +86,47 @@ def gold_room():
 
 
 def bear_room():
-	print "There is a bear here."
-	print "The bear has a bunch of honey."
-	print "The fat bear is in front of another door."
-	print "How are you going to move the bear?"
+	bear_moved = False
+	global ate_blueberries
+	global has_gun
+	global has_knort
+	print "You enter another room. This room has a bear in it."
+	if ate_blueberries:
+		dead("The bear enjoys a meal of human-stuffed-with-blueberry. Nom nom nom!!")
+	else:
+		print "The bear has some honey."
+		print "The fat bear is in front of another door."
+		print "What do you do now?"
 
-	while True:
-		next = raw_input("> ")
+		while True:
+			next = raw_input("> ")
 
-		if next == "take honey":
-			dead("The bear looks at you, then slaps your face off.")
-		elif next == "taunt bear" and not bear_moved:
-			print "The bear has moved from the door. You can go through it now."
-			bear_moved = True
-		elif next == "taunt bear" and bear_moved:
-			dead("The bear is really angry and chews your leg off.")
-		elif next == "open door" and bear_moved:
-			gold_room()
-		else:
-			print "Sorry. That makes no sense to me."
+			if 'honey' in next:
+				dead("You would touch a bear's honey??!!?? Not a good choice.\nThe bear has you AND the honey as a snack.")
+			elif next == "taunt bear" and not bear_moved:
+				print "Teasing the bear makes the bear cry, and it moves away from the door.\nYou can go through it now."
+				bear_moved = True
+			elif next == "taunt bear" and bear_moved:
+				dead("You keep teasing the bear. Not a good choice.\nNow the bear is really angry and chews your leg off.")
+			elif next == "open door" and bear_moved:
+				gold_room()
+			elif ('shoot' in next) or ('gun' in next):
+				if has_gun:
+					print "Good thinking! You brought the gun for just such a situation! Your way to the door is now clear,\nso you go through it to the next room."
+					gold_room()
+				else:
+					print "But you didn't pick up the gun in the last room."
+			elif ('knort' in next) and has_knort:
+				print "The left-handed knortenrod confuses the bear, too. It moves away from the door to figure it out."
+				bear_moved = True
+			else:
+				print "Sorry. That makes no sense to me."
 
 
 def cthulhu_room():
+	global ate_blueberries
+	global has_gun
+	global has_knort
 	print "Here you see the great evil Cthulhu."
 	print "He/It/Whatever stares at you and you go insane."
 	print "Do you flee for your life or eat your head?"
@@ -127,12 +146,10 @@ def dead(why):
 	exit(0)
 
 def start():
-	global blueberries
-	global bear_moved
+	global ate_blueberries
 	global has_gun
 	global has_knort
-	blueberries = False
-	bear_moved = False
+	ate_blueberries = False
 	has_gun = False
 	has_knort = False
 	print "You are in a dark room."
