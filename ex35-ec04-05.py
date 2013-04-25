@@ -3,9 +3,6 @@
 #	5.    Fix the number input verification system in gold_room()
 from sys import exit
 
-blueberries = False
-bear_moved = False
-
 def convert_number(num_to_test):
 	# This function found with a Google search.
 	# It comes from learnpythonthehardeay.org/book/ex48.html
@@ -15,32 +12,49 @@ def convert_number(num_to_test):
 		return None
 
 def blueberry():
+	global blueberries
 	print "You eat some blueberries. Nom nom nom!"
 	print "\n\nYou are still in the dark room."
 	blueberries = True
-	entryway()
+	pass
+
+def take_gun():
+	global has_gun
+	if has_gun:
+		print "You already have the gun."
+		pass
+	else:
+		print "You never know when you might need a gun, so you pick it up."
+		has_gun = True
+		pass
 
 
 def entryway():
-	print "In the room is a table with some objects on it:"
-	print "\t* Some blueberries"
-	print "\t* A gun"
-	print "\t* A left-handed knortenrod."
-	print "Two doors lead out of the room, one to your right and the other to your left."
-	print "What do you do? "
+	in_entryway = True
+	while in_entryway:
+		print "In the room is a table with some objects on it:"
+		print "\t* Some blueberries"
+		print "\t* A gun"
+		print "\t* A left-handed knortenrod."
+		print "Two doors lead out of the room, one to your right and the other to your left."
+		print "What do you do? "
 
-	next = raw_input("> ")
+		next = raw_input("> ")
 
-	if 'left' in next:
-		bear_room()
-	elif 'right' in next:
-		cthulhu_room()
-	elif ('blueberr' in next) and not blueberries:
-		blueberry()
-	elif 'shoot' in next:
-		dead("You shoot the gun. This is a small room, and the bullet ricochets several times.\nThe bullet hits you. You shot yourself!")
-	else:
-		dead("You stumble around the room until you starve.")
+		if 'left' in next:
+			in_entryway = False
+			bear_room()
+		elif 'right' in next:
+			in_entryway = False
+			cthulhu_room()
+		elif ('blueberr' in next) and not blueberries:
+			blueberry()
+		elif 'shoot' in next:
+			dead("You shoot the gun. This is a small room, and the bullet ricochets several times.\nThe bullet hits you. You shot yourself!")
+		elif 'gun' in next:
+			take_gun()
+		else:
+			dead("You stumble around the room until you starve.")
 
 def gold_room():
 	print "This room is full of gold. How much do you take?"
@@ -98,6 +112,12 @@ def dead(why):
 	exit(0)
 
 def start():
+	global blueberries
+	global bear_moved
+	global has_gun
+	blueberries = False
+	bear_moved = False
+	has_gun = False
 	print "You are in a dark room."
 	entryway()
 	
