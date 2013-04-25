@@ -14,7 +14,7 @@ def convert_number(num_to_test):
 def blueberry():
 	global blueberries
 	print "You eat some blueberries. Nom nom nom!"
-	print "\n\nYou are still in the dark room."
+	print "\nYou are still in the dark room."
 	blueberries = True
 	pass
 
@@ -22,12 +22,25 @@ def take_gun():
 	global has_gun
 	if has_gun:
 		print "You already have the gun."
+		print "\nYou are still in the dark room."
 		pass
 	else:
 		print "You never know when you might need a gun, so you pick it up."
+		print "\nYou are still in the dark room."
 		has_gun = True
 		pass
 
+def knort():
+	global has_knort
+	if has_knort:
+		print "You already picked it up. No infinite loops caused by the user, please."
+		print "\nYou are still in the dark room."
+		pass
+	else:
+		print "Yeah, I don't know what it is, either, but you pick it up and put it in your pocket."
+		print "\nYou are still in the dark room."
+		has_knort = True
+		pass
 
 def entryway():
 	in_entryway = True
@@ -47,12 +60,14 @@ def entryway():
 		elif 'right' in next:
 			in_entryway = False
 			cthulhu_room()
-		elif ('blueberr' in next) and not blueberries:
+		elif 'blueberr' in next:
 			blueberry()
 		elif 'shoot' in next:
 			dead("You shoot the gun. This is a small room, and the bullet ricochets several times.\nThe bullet hits you. You shot yourself!")
 		elif 'gun' in next:
 			take_gun()
+		elif ('knort' in next) or ('left' in next):
+			knort()
 		else:
 			dead("You stumble around the room until you starve.")
 
@@ -115,9 +130,11 @@ def start():
 	global blueberries
 	global bear_moved
 	global has_gun
+	global has_knort
 	blueberries = False
 	bear_moved = False
 	has_gun = False
+	has_knort = False
 	print "You are in a dark room."
 	entryway()
 	
