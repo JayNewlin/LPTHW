@@ -11,6 +11,20 @@ def convert_number(num_to_test):
 	except ValueError:
 		return None
 
+def dead(why):
+	print why, "You lose!"
+	exit(0)
+
+def start():
+	global ate_blueberries
+	global has_gun
+	global has_knort
+	ate_blueberries = False
+	has_gun = False
+	has_knort = False
+	print "You are in a dark room."
+	entryway()
+	
 def blueberry():
 	global ate_blueberries
 	print "You eat some blueberries. Nom nom nom!"
@@ -84,7 +98,6 @@ def gold_room():
 	else:
 		dead("Wow! You're so greedy!")
 
-
 def bear_room():
 	bear_moved = False
 	global ate_blueberries
@@ -104,7 +117,7 @@ def bear_room():
 			if 'honey' in next:
 				dead("You would touch a bear's honey??!!?? Not a good choice.\nThe bear has you AND the honey as a snack.")
 			elif next == "taunt bear" and not bear_moved:
-				print "Teasing the bear makes the bear cry, and it moves away from the door.\nYou can go through it now."
+				print "Teasing the bear makes the bear cry, and it moves away from the door."
 				bear_moved = True
 			elif next == "taunt bear" and bear_moved:
 				dead("You keep teasing the bear. Not a good choice.\nNow the bear is really angry and chews your leg off.")
@@ -122,39 +135,35 @@ def bear_room():
 			else:
 				print "Sorry. That makes no sense to me."
 
-
 def cthulhu_room():
 	global ate_blueberries
 	global has_gun
 	global has_knort
-	print "Here you see the great evil Cthulhu."
-	print "He/It/Whatever stares at you and you go insane."
-	print "Do you flee for your life or eat your head?"
+	print "The Great Evil Cthulhu lives in this room."
+	print "If he/she/it (whatever) stares at you too long, you will go insane."
+	if ate_blueberries:
+		dead("You have blueberry juice on your chin, so Cthulhu hands you a napkin.\nCthulhu watches while you wipe your face, but...\n--->Remember what I said about Cthulhu staring at you?\n--->You go insane!")
+	else:	
 
-	next = raw_input("> ")
+		next = raw_input("What do you do now? ")
 
-	if "flee" in next:
-		start()
-	elif "head" in next:
-		dead("Nom nom nom! <<burp>> But that's it for you; the headless can't continue.")
-	else:
-		cthulhu_room()
-
-
-def dead(why):
-	print why, "You lose!"
-	exit(0)
-
-def start():
-	global ate_blueberries
-	global has_gun
-	global has_knort
-	ate_blueberries = False
-	has_gun = False
-	has_knort = False
-	print "You are in a dark room."
-	entryway()
-	
+		if 'flee' in next:
+			print "Running away from Cthulhu is a great idea!\n\n\n\n"
+			start()
+		elif 'head' in next:
+			dead("You eat your head. Nom nom nom! <<burp>> But that's it for you; the headless can't continue.")
+#		elif ('gun' in next) or ('shoot' in next):
+#			if has_gun:
+#				dead("Sorry, but guns have no effect on Cthulhu. He/She/It (Whatever) grabs you by the shoulders and stares at you until you go insane."
+#			else:
+#				dead("You didn't pick up the gun in the last room. Doesn't matter that much: Guns have no effect on Cthulhu.\nHe/She/It (Whatever) grabs you by the shoulders and stares at you until you go insane.")	
+#		elif ('knort' in next) and has_knort:
+#			print "Who knew that a left-handed knortenrod was the perfect offering to give to Cthulhu?"
+#			print "You are now friends with The Great Evil Cthulhu, who awards you with a pile of gold from his/her/its (whatever) hoard!"
+#			print "You win!!"
+#			exit(0)
+#		else:
+#			cthulhu_room()
 
 
 start()
