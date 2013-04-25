@@ -152,18 +152,19 @@ def cthulhu_room():
 			start()
 		elif 'head' in next:
 			dead("You eat your head. Nom nom nom! <<burp>> But that's it for you; the headless can't continue.")
-#		elif ('gun' in next) or ('shoot' in next):
-#			if has_gun:
-#				dead("Sorry, but guns have no effect on Cthulhu. He/She/It (Whatever) grabs you by the shoulders and stares at you until you go insane."
-#			else:
-#				dead("You didn't pick up the gun in the last room. Doesn't matter that much: Guns have no effect on Cthulhu.\nHe/She/It (Whatever) grabs you by the shoulders and stares at you until you go insane.")	
-#		elif ('knort' in next) and has_knort:
-#			print "Who knew that a left-handed knortenrod was the perfect offering to give to Cthulhu?"
-#			print "You are now friends with The Great Evil Cthulhu, who awards you with a pile of gold from his/her/its (whatever) hoard!"
-#			print "You win!!"
-#			exit(0)
-#		else:
-#			cthulhu_room()
+		elif ('gun' in next) or ('shoot' in next):
+			if has_gun:
+				dead("Sorry, but guns have no effect on Cthulhu. He/She/It (Whatever) grabs you by the shoulders and stares at you until you go insane.")
+			else:
+				dead("You didn't pick up the gun in the last room. Doesn't matter that much: Guns have no effect on Cthulhu.\nHe/She/It (Whatever) grabs you by the shoulders and stares at you until you go insane.")	
+		elif ('knort' in next) and has_knort:
+			print "Who knew that a left-handed knortenrod was the perfect offering to give to Cthulhu?"
+			print "You are now friends with The Great Evil Cthulhu, who awards you with a pile of gold from his/her/its (whatever) hoard!"
+			print "You win!!"
+			exit(0)
+		else:
+			print "Huh?\n"
+			cthulhu_room()
 
 
 start()
