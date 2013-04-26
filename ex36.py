@@ -151,7 +151,7 @@ def bar_room():
 			print "You're staring at the walls? Shame...You looked like you were smarter than that."
 			print "Let's go! There's more to do in this room than that!"
 
-		elif ('shoot' in bar_room_action) and has_gun:
+		elif (('shoot' in bar_room_action) or ('gun' in bar_room_action)) and has_gun:
 			print "Shooting a gun, even in a large room, isn't a good choice."
 			print "The bullet ricochets several times around the room and hits a bottle of very expensive champagne."
 			print "The bartender appears out of nowhere and demands payment for the bottle of 'Chateau de DeuxLeftFitte.'"
@@ -186,12 +186,7 @@ def sit_at_bar():
 				print "\"No problem. Have a nice day, Doc!\"\n\nYou get up from the bar stool.\nYou're standing in the barroom. Two doors and the fireplace are still visible."
 
 			elif has_gun and (('shoot' in drink_answer) or ('gun' in drink_answer)):
-				global has_gun
-				global bartender_alive
-				print "You shoot the bartender. Yeah, he was weird, but that's a pretty violent reaction, don't you think?"
-				print "You are suddenly filled with remorse and drop the gun on the floor."
-				has_gun = False
-				bartender_alive = False
+				shoot_bartender()
 				at_bar = False
 				
 			else:
@@ -206,23 +201,43 @@ def drink_routine():
 
 	while (drink_count < 3) and drinking:
 		drink_type = raw_input("> ").lower()
-		print "\nHe pours a %s and passes it to you." % drink_type
-		print "The glass is pretty dirty, but you drink the %s anyway." % drink_type
-		drink_count += 1
-		
-		if drink_count < 3:
-			have_another = raw_input("\n\"You drank that like you need another. Care for another drink?\" ")
 
-			if ('y' in have_another) or ('sure' in have_another):
-				print "\n\"Sure, Doc. What can I get you this time?\""
-
-			elif 'n' in have_another:
-				drinking = False
-				print "No problem, Doc. Have a nice day!"
+		if has_gun and (('shoot' in drink_type) or ('gun' in drink_type)):
+			shoot_bartender()
+			drinking = False
 
 		else:
-			print "\nYou've had %d drinks. That's too many to drink that quickly. You're drunk!\n\nYou get up from the bar and stumble over to the chair by the fireplace." % drink_count
-			sit_in_chair()
+			print "\nHe pours a %s and passes it to you." % drink_type
+			print "The glass is pretty dirty, but you drink the %s anyway." % drink_type
+			drink_count += 1
+		
+			if drink_count < 3:
+				have_another = raw_input("\n\"You drank that like you need another. Care for another drink?\" ")
+
+				if ('y' in have_another) or ('sure' in have_another):
+					print "\n\"Sure, Doc. What can I get you this time?\""
+
+				elif 'n' in have_another:
+					drinking = False
+					print "No problem, Doc. Have a nice day!"
+
+				elif has_gun and (('shoot' in have_another) or ('gun' in have_another)):
+					shoot_bartender()
+					drinking = False
+
+				else:
+					print "\"Excuse me?\""
+			else:
+				print "\nYou've had %d drinks. That's too many to drink that quickly. You're drunk!\n\nYou get up from the bar and stumble over to the chair by the fireplace." % drink_count
+				sit_in_chair()
+
+def shoot_bartender():
+	global has_gun
+	global bartender_alive
+	print "You shoot the bartender. Yeah, he was weird, but that's a pretty violent reaction, don't you think?"
+	print "You are suddenly filled with remorse and drop the gun on the floor."
+	has_gun = False
+	bartender_alive = False
 
 def closet():			# The ghost lives in the Creepy Closet.
 	pass
