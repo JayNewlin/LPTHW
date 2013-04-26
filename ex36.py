@@ -7,12 +7,14 @@ global has_cd
 global has_cure
 global has_gold
 global entryway_message
+global drink_count
 inventory_count = 0
 has_gun = False
 has_cd = False
 has_cure = False
 has_gold = False
 entryway_message = "\n\nYou're still in the entry hall. There are doors to your right and left and the table ahead of you."
+drink_count = 0
 
 
 def sorry_command():
@@ -120,7 +122,8 @@ def ballroom():			# The Crazy DJ hangs out here.
 
 def bar_room():			# The bartender is here.
 	in_bar = True
-	print "You enter the bar. I mean, wow! Can you imagine living in a house big enough to have its own bar?"
+	print "\nYou enter the bar."
+	print "Wow! Can you imagine living in a house big enough to have its own bar?"
 	print "The room is paneled in dark wood, and there are hunt-scene paintings on the walls."
 	print "To your left is the bar itself. There's a fireplace with an overstuffed chair in front of it in one corner of the room."
 	print "There is a door across the room and another door to your right."
@@ -138,7 +141,7 @@ def bar_room():			# The bartender is here.
 			print "There's a problem in the bar_room routine."
 
 def sit_in_chair():
-	you_lose("You sit down in the chair, in spite of a layer of dust on it.\nThe fire is nice and warm...\n\nYour head begins to nod...\n\nZzzzzzz....\n\nYou fell asleep in a weird house like this??\nJeez!")
+	you_lose("\nYou sit down in the chair, in spite of a layer of dust on it.\n\nThe fire is nice and warm...\n\nYour head begins to nod...\n\nZzzzzzz....\n\nYou fell asleep in a weird house like this??\nJeez!")
 
 def sit_at_bar():
 	at_bar = True
@@ -163,25 +166,32 @@ def sit_at_bar():
 			print "I'm not sure what kind of gobbledygook that it, but I asked if you want a drink."
 
 def drink_routine():
-	drink_count = 0
+	global drink_count
 	drinking = True
-	print "\nHe asks, \"What would you like?"
+	print "\nHe asks, \"What would you like?\""
 
-	while drink_count < 3 and drinking:
-		drink_type = raw_input("> ")
-		print "He pours you a %s and passes it to you." % drink_type
+	while (drink_count < 3) and drinking:
+		drink_type = raw_input("> ").lower()
+		print "drink_count is now %d" % drink_count
+		print "\nHe pours a %s and passes it to you." % drink_type
+		print "The glass is pretty dirty, but you drink the %s anyway." % drink_type
 		drink_count += 1
-		have_another = raw_input("\"You drank that like you need another. Care for another drink?\"")
+		print "drink_count is now %d" % drink_count
+		
+		if drink_count < 3:
+			have_another = raw_input("\n\"You drank that like you need another. Care for another drink?\" ")
 
-		if 'y' in have_another:
-			print "\"Sure, Doc. What can I get you this time?\""
+			if ('y' in have_another) or ('sure' in have_another):
+				print "\n\"Sure, Doc. What can I get you this time?\""
 
-		elif 'n' in have_another:
-			drinking = False
-			print "No problem, Doc. Have a nice day!"
-			pass
+			elif 'n' in have_another:
+				drinking = False
+				print "No problem, Doc. Have a nice day!"
+				pass
 
-	print "You've had %d drinks." % drink_count
+		else:
+			print "\nYou've had %d drinks. That's too many to drink that quickly. You're drunk!\n\nYou get up from the bar and stumble over to the chair by the fireplace." % drink_count
+			sit_in_chair()
 
 def closet():			# The ghost lives in the Creepy Closet.
 	pass
