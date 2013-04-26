@@ -8,6 +8,7 @@ global has_cure
 global has_gold
 global entryway_message
 global drink_count
+global bartender_alive
 inventory_count = 0
 has_gun = False
 has_cd = False
@@ -15,6 +16,7 @@ has_cure = False
 has_gold = False
 entryway_message = "\n\nYou're still in the entry hall. There are doors to your right and left and the table ahead of you."
 drink_count = 0
+bartender_alive = True
 
 
 def sorry_command():
@@ -59,7 +61,7 @@ def get_inventory(pick_up_what):
 		print "Sorry, but you can only carry two items."
 		print entryway_message
 
-def entryway():			# The entrance to the mansion. Game "really" starts here.
+def entryway():
 	in_entryway = True
 	print "\nYou are standing in the entry hallway."
 	print "There is a door to your left and a door to your right."
@@ -79,8 +81,8 @@ def entryway():			# The entrance to the mansion. Game "really" starts here.
 		elif 'table' in entryway_action:
 			table()
 
-		elif ('vase' in entryway_action) or ('flower' in entryway_action):
-			print "Leave the vase with the flowers alone!"
+		elif ('shoot' in entryway_action) and has_gun:
+			you_lose("\nThe bullet ricochets around the hallway several times, then hits you in the head.\nOops. You're dead.")
 
 		else:
 			sorry_command()
@@ -106,9 +108,15 @@ def table():
 			at_table = False
 			get_inventory("cd")
 
+		elif has_gun and ('shoot' in table_action):
+			you_lose("\nThe bullet ricochets around the hallway several times, then hits you in the head.\nOops. You're dead.")
+
 		elif ('gun' in table_action) or ('pistol' in table_action):
 			at_table = False
 			get_inventory("pistol")
+
+		elif ('vase' in table_action) or ('flower' in table_action):
+			print "Leave the vase with the flowers alone!"
 			
 		else:
 			sorry_command()
@@ -120,7 +128,7 @@ def snake_pit():		# Snakes live here
 def ballroom():			# The Crazy DJ hangs out here.
 	print"You made it to the ballroom."
 
-def bar_room():			# The bartender is here.
+def bar_room():
 	in_bar = True
 	print "\nYou enter the bar."
 	print "Wow! Can you imagine living in a house big enough to have its own bar?"
@@ -139,6 +147,16 @@ def bar_room():			# The bartender is here.
 			print "\n\nYou get up from the barstool and are standing by the bar itself."
 			print "You notice again the fireplace with a chair in front of it and the two doors."
 
+		elif ('pic' in bar_room_action) or ('wall' in bar_room_action):
+			print "You're staring at the walls? Shame...You looked like you were smarter than that."
+			print "Let's go! There's more to do in this room than that!"
+
+		elif ('shoot' in bar_room_action) and has_gun:
+			print "Shooting a gun, even in a large room, isn't a good choice."
+			print "The bullet ricochets several times around the room and hits a bottle of very expensive champagne."
+			print "The bartender appears out of nowhere and demands payment for the bottle of 'Chateau de DeuxLeftFitte.'"
+			you_lose("Yeah, you don't have that kind of pocket change.")
+
 		else:
 			print "There's a problem in the bar_room routine."
 
@@ -146,26 +164,40 @@ def sit_in_chair():
 	you_lose("\nYou sit down in the chair, in spite of a layer of dust on it.\n\nThe fire is nice and warm...\n\nYour head begins to nod...\n\nZzzzzzz....\n\nYou fell asleep in a weird house like this??\nJeez!")
 
 def sit_at_bar():
-	at_bar = True
-	print "\nYou walk over to the bar."
-	print "Seemingly out of nowhere, a bartender appears behind the bar."
-	print "He has a handlebar mustache and looks like he stepped out of a bad movie about the Victorian Age."
-	print "\n(Weird. Someone lives in this joint?)"
-	print "\nHe asks, \"What's up, Doc? Care for a drink?\""
+	
+	if bartender_alive:
 
-	while at_bar:
-		drink_answer = raw_input("> ").lower()
+		at_bar = True
+		print "\nYou walk over to the bar."
+		print "Seemingly out of nowhere, a bartender appears behind the bar."
+		print "He has a handlebar mustache and looks like he stepped out of a bad movie about the Victorian Age."
+		print "\n(Weird. Someone lives in this joint?)"
+		print "\nHe asks, \"What's up, Doc? Care for a drink?\""
 
-		if ('y' in drink_answer) or ('sure' in drink_answer):
-			drink_routine()
-			at_bar = False
+		while at_bar:
+			drink_answer = raw_input("> ").lower()
 
-		elif 'n' in drink_answer:
-			at_bar = False
-			print "\"No problem. Have a nice day, Doc!\"\n\nYou get up from the bar stool.\nYou're standing in the barroom. Two doors and the fireplace are still visible."
+			if ('y' in drink_answer) or ('sure' in drink_answer):
+				drink_routine()
+				at_bar = False
 
-		else:
-			print "I'm not sure what kind of gobbledygook that it, but I asked if you want a drink."
+			elif 'n' in drink_answer:
+				at_bar = False
+				print "\"No problem. Have a nice day, Doc!\"\n\nYou get up from the bar stool.\nYou're standing in the barroom. Two doors and the fireplace are still visible."
+
+			elif has_gun and (('shoot' in drink_answer) or ('gun' in drink_answer)):
+				global has_gun
+				global bartender_alive
+				print "You shoot the bartender. Yeah, he was weird, but that's a pretty violent reaction, don't you think?"
+				print "You are suddenly filled with remorse and drop the gun on the floor."
+				has_gun = False
+				bartender_alive = False
+				at_bar = False
+				
+			else:
+				print "I'm not sure what kind of gobbledygook that it, but I asked if you want a drink."
+	else:
+		print "You shot the bartender. Who do you think is going to help you now?"
 
 def drink_routine():
 	global drink_count
