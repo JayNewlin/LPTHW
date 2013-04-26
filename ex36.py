@@ -142,24 +142,35 @@ def sit_in_chair():
 
 def sit_at_bar():
 	at_bar = True
-	print "You walk over to the bar."
-	print "Seemingly out of nowhere, a bartender appears behind the bar. He has a handlebar mustache and looks like he stepped out of a bad movie about the Victorian Age."
+	print "\nYou walk over to the bar."
+	print "Seemingly out of nowhere, a bartender appears behind the bar."
+	print "He has a handlebar mustache and looks like he stepped out of a bad movie about the Victorian Age."
 	print "\n(Weird. Someone lives in this joint?)"
-	print "\nHe asks, \"What's up, Doc? Care for a drink?"
+	print "\nHe asks, \"What's up, Doc? Care for a drink?\""
 
 	while at_bar:
 		drink_answer = raw_input("> ").lower()
 
 		if 'yes' in drink_answer:
-			print "Count up to three drinks. If greater than three, you lose!"
+			drink_routine()
 
 		elif 'no' in drink_answer:
-			print "No problem. Have a nice day, Doc!\nYou're still in the barroom. Two doors and the fireplace are still visible."
+			at_bar = False
+			print "No problem. Have a nice day, Doc!\n\nYou're still in the barroom. Two doors and the fireplace are still visible."
 
 		else:
 			print "I'm not sure what kind of gobbledygook that it, but I asked if you want a drink."
 
-	exit(0)
+def drink_routine():
+	drink_count = 0
+	print "\nHe asks, \"What would you like?"
+
+	while drink_count < 3:
+		drink_type = raw_input("> ")
+		print "He pours you a %s and passes it to you." % drink_type
+		drink_count += 1
+
+	print "You've had %d drinks." % drink_count
 
 def closet():			# The ghost lives in the Creepy Closet.
 	pass
