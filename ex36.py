@@ -151,10 +151,11 @@ def sit_at_bar():
 	while at_bar:
 		drink_answer = raw_input("> ").lower()
 
-		if 'yes' in drink_answer:
+		if ('y' in drink_answer) or ('sure' in drink_answer):
 			drink_routine()
+			at_bar = False
 
-		elif 'no' in drink_answer:
+		elif 'n' in drink_answer:
 			at_bar = False
 			print "No problem. Have a nice day, Doc!\n\nYou're still in the barroom. Two doors and the fireplace are still visible."
 
@@ -163,12 +164,22 @@ def sit_at_bar():
 
 def drink_routine():
 	drink_count = 0
+	drinking = True
 	print "\nHe asks, \"What would you like?"
 
-	while drink_count < 3:
+	while drink_count < 3 and drinking:
 		drink_type = raw_input("> ")
 		print "He pours you a %s and passes it to you." % drink_type
 		drink_count += 1
+		have_another = raw_input("\"You drank that like you need another. Care for another drink?\"")
+
+		if 'y' in have_another:
+			print "\"Sure, Doc. What can I get you this time?\""
+
+		elif 'n' in have_another:
+			drinking = False
+			print "No problem, Doc. Have a nice day!"
+			pass
 
 	print "You've had %d drinks." % drink_count
 
