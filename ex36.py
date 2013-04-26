@@ -6,11 +6,13 @@ global has_gun
 global has_cd
 global has_cure
 global has_gold
+global entryway_message
 inventory_count = 0
 has_gun = False
 has_cd = False
 has_cure = False
 has_gold = False
+entryway_message = "\n\nYou're still in the entry hall. There are doors to your right and left and the table ahead of you."
 
 
 def start():
@@ -18,14 +20,14 @@ def start():
 	print "The front door stands ajar, so you step inside. (Perhaps not one of the best decisions in your life.)"
 	entryway()
 
-def can_i_pick_up_more():
-	global inventory_count
-
-	if inventory_count <= 2:
-		return True
-
-	else:
-		return False
+#def can_i_pick_up_more():
+#	global inventory_count
+#
+#	if inventory_count <= 2:
+#		return True
+#
+#	else:
+#		return False
 
 def sorry_command():
 	print "Sorry, but I don't understand what you mean."
@@ -34,27 +36,39 @@ def get_inventory(pick_up_what):
 	global inventory_count
 	global has_cure
 	global has_cd
+	global has_gun
+#	pick_up_object = can_i_pick_up_more()
+#	print "can_i_pick_up_more is %r" % can_i_pick_up_more
+#	print "pick_up_object is %r" % pick_up_object
 
-	if can_i_pick_up_more():
+	if inventory_count < 2:
 
 		if pick_up_what == "vial":
 			has_cure = True
 			inventory_count += 1
 			print "You pick up the bottle and put it in your pocket."
-			print "\n\nYou're still in the entry hall."
+			print entryway_message
 
 		elif pick_up_what == "cd":
 			has_cd = True
 			inventory_count += 1
-			print "Ba-da-bump-bump-bump Another one bites the dust..."
+			print "\"Ba-da-bump-bump-bump Another one bites the dust...\""
 			print "Singing to yourself, you pick up the CD."
-			print "\n\nYou're still in the entry hall."
-	
+			print entryway_message
+
+		elif pick_up_what == "pistol":
+			has_gun = True
+			inventory_count += 1
+			print "Wow! That's a tiny pistol, but you never know when a gun might come in handy in a weird place like this!"
+			print entryway_message
+
 		else:
-			print "Houston, we have a problem picking up inventory."
-	
+			print "I'm sorry, but there's a problem with my get_inventory function."
+			exit(0)
+
 	else:
 		print "Sorry, but you can only carry two items."
+		print entryway_message
 
 def entryway():			# The entrance to the mansion. Game "really" starts here.
 	in_entryway = True
@@ -100,6 +114,10 @@ def table():
 		elif 'cd' in table_action:
 			at_table = False
 			get_inventory("cd")
+
+		elif ('gun' in table_action) or ('pistol' in table_action):
+			at_table = False
+			get_inventory("pistol")
 			
 		else:
 			print "There's a problem at the table."
