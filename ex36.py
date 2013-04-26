@@ -1,9 +1,11 @@
 # Game Project for Exercise 36
 def start():			# Put global variables and other initializing stuff here.
-	pass
+	print "You are standing outside a weird mansion on the edge of town."
+	print "The front door stands ajar, so you step inside. (Perhaps not one of the bext decisions in your life.)"
+	entryway()
 
 def entryway():			# The entrance to the mansion. Game "really" starts here.
-	pass
+	print "You made it into the entryway."
 
 def snake_pit():		# Snakes live here
 	pass
