@@ -136,6 +136,8 @@ def bar_room():			# The bartender is here.
 
 		elif ('left' in bar_room_action) or ('bar' in bar_room_action):
 			sit_at_bar()
+			print "\n\nYou get up from the barstool and are standing by the bar itself."
+			print "You notice again the fireplace with a chair in front of it and the two doors."
 
 		else:
 			print "There's a problem in the bar_room routine."
@@ -160,7 +162,7 @@ def sit_at_bar():
 
 		elif 'n' in drink_answer:
 			at_bar = False
-			print "No problem. Have a nice day, Doc!\n\nYou're still in the barroom. Two doors and the fireplace are still visible."
+			print "\"No problem. Have a nice day, Doc!\"\n\nYou get up from the bar stool.\nYou're standing in the barroom. Two doors and the fireplace are still visible."
 
 		else:
 			print "I'm not sure what kind of gobbledygook that it, but I asked if you want a drink."
@@ -172,11 +174,9 @@ def drink_routine():
 
 	while (drink_count < 3) and drinking:
 		drink_type = raw_input("> ").lower()
-		print "drink_count is now %d" % drink_count
 		print "\nHe pours a %s and passes it to you." % drink_type
 		print "The glass is pretty dirty, but you drink the %s anyway." % drink_type
 		drink_count += 1
-		print "drink_count is now %d" % drink_count
 		
 		if drink_count < 3:
 			have_another = raw_input("\n\"You drank that like you need another. Care for another drink?\" ")
@@ -187,7 +187,6 @@ def drink_routine():
 			elif 'n' in have_another:
 				drinking = False
 				print "No problem, Doc. Have a nice day!"
-				pass
 
 		else:
 			print "\nYou've had %d drinks. That's too many to drink that quickly. You're drunk!\n\nYou get up from the bar and stumble over to the chair by the fireplace." % drink_count
