@@ -157,6 +157,25 @@ def bar_room():
 			print "The bartender appears out of nowhere and demands payment for the bottle of 'Chateau de DeuxLeftFitte.'"
 			you_lose("Yeah, you don't have that kind of pocket change.")
 
+		elif 'door' in bar_room_action:
+			opening_door = True
+			in_bar = False
+			
+			while opening_door:
+				print "There are two doors in the barroom. The one ahead of you is very plain."
+				print "The one to your right is very ornate."
+				door_to_open = raw_input("Which door do you go through?").lower()
+
+					if ('ahead' in door_to_open) or ('plain' in door_to_open):
+						outside()
+					
+					elif ('ornate' in door_to_open) or ('right' in door_to_open):
+						closet()
+
+					else:
+						print "Huh?"
+
+
 		else:
 			print "There's a problem in the bar_room routine."
 
@@ -240,13 +259,17 @@ def shoot_bartender():
 	bartender_alive = False
 
 def closet():			# The ghost lives in the Creepy Closet.
-	pass
+	print "You find yourself in a closet with a ghost."
+	print "This part of the game is undeveloped. Sorry. :("
+	exit(0)
 
 def treasury():			# There are 1000 gold pieces on a table here with a sign "Take some!"
 	pass
 
-def outside():			# Outside = Freedom! = one of the win states
-	pass
+def outside():
+	print "\nYou made your way out of the mansion! You're free!"
+	print "Thanks for playing!"
+	exit(0)
 
 
 print "You are standing outside a weird mansion on the edge of town."
