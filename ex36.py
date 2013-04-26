@@ -2,12 +2,12 @@
 from sys import exit
 
 def start():			# Put global variables and other initializing stuff here.
-	global in_entryway
+	global inventory_count
 	global has_gun
 	global has_cd
 	global has_cure
 	global has_gold
-	in_entryway = False
+	inventory_count = 0
 	has_gun = False
 	has_cd = False
 	has_cure = False
@@ -16,22 +16,36 @@ def start():			# Put global variables and other initializing stuff here.
 	print "The front door stands ajar, so you step inside. (Perhaps not one of the best decisions in your life.)"
 	entryway()
 
+def can_i_pick_up_more():
+	global inventory_count
+
+	if inventory_count < 2:
+		return True
+
+	else:
+		return False
+
 def sorry_command():
 	print "Sorry, but I don't understand what you mean."
 
 def get_inventory(pick_up_what):
-	global has_cure
 	
-	if pick_up_what == "vial":
-		has_cure = True
-		print "You pick up the bottle and put it in your pocket."
-		print "\n\nYou're still in the entry hall."
+	if can_i_pick_up_more():
+
+		if pick_up_what == "vial":
+			global inventory_count
+			global has_cure
+			has_cure = True
+			inventory_count += 1
+			print "You pick up the bottle and put it in your pocket."
+			print "\n\nYou're still in the entry hall."
 	
+		else:
+			print "Houston, we have a get_inventory problem."
 	else:
-		print "Houston, we have a get_inventory problem."	
+		print "Sorry, but you can only carry two items."
 
 def entryway():			# The entrance to the mansion. Game "really" starts here.
-	global in_entryway
 	in_entryway = True
 	print "\nYou are standing in the entry hallway."
 	print "There is a door to your left and a door to your right."
@@ -71,7 +85,6 @@ def table():
 		if ('bottle' in table_action) or ('liquid' in table_action):
 			at_table = False
 			get_inventory("vial")
-			print "I got back to the table."
 			
 		else:
 			print "There's a problem at the table."
