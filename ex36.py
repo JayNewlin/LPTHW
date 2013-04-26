@@ -1,17 +1,19 @@
 # Game Project for Exercise 36
 from sys import exit
 
-def start():			# Put global variables and other initializing stuff here.
-	global inventory_count
-	global has_gun
-	global has_cd
-	global has_cure
-	global has_gold
-	inventory_count = 0
-	has_gun = False
-	has_cd = False
-	has_cure = False
-	has_gold = False
+global inventory_count
+global has_gun
+global has_cd
+global has_cure
+global has_gold
+inventory_count = 0
+has_gun = False
+has_cd = False
+has_cure = False
+has_gold = False
+
+
+def start():
 	print "You are standing outside a weird mansion on the edge of town."
 	print "The front door stands ajar, so you step inside. (Perhaps not one of the best decisions in your life.)"
 	entryway()
@@ -19,7 +21,7 @@ def start():			# Put global variables and other initializing stuff here.
 def can_i_pick_up_more():
 	global inventory_count
 
-	if inventory_count < 2:
+	if inventory_count <= 2:
 		return True
 
 	else:
@@ -29,19 +31,28 @@ def sorry_command():
 	print "Sorry, but I don't understand what you mean."
 
 def get_inventory(pick_up_what):
-	
+	global inventory_count
+	global has_cure
+	global has_cd
+
 	if can_i_pick_up_more():
 
 		if pick_up_what == "vial":
-			global inventory_count
-			global has_cure
 			has_cure = True
 			inventory_count += 1
 			print "You pick up the bottle and put it in your pocket."
 			print "\n\nYou're still in the entry hall."
+
+		elif pick_up_what == "cd":
+			has_cd = True
+			inventory_count += 1
+			print "Ba-da-bump-bump-bump Another one bites the dust..."
+			print "Singing to yourself, you pick up the CD."
+			print "\n\nYou're still in the entry hall."
 	
 		else:
-			print "Houston, we have a get_inventory problem."
+			print "Houston, we have a problem picking up inventory."
+	
 	else:
 		print "Sorry, but you can only carry two items."
 
@@ -52,7 +63,7 @@ def entryway():			# The entrance to the mansion. Game "really" starts here.
 	print "Straight ahead of you is an ornate table with a huge vase full of dead flowers."
 
 	while in_entryway:
-		entryway_action = raw_input("\nWhat do you do? ")
+		entryway_action = raw_input("\nWhat do you do? ").lower()
 
 		if 'left' in entryway_action:
 			in_entryway = False
@@ -80,11 +91,15 @@ def table():
 	print "\t*  A small pistol"
 
 	while at_table:
-		table_action = raw_input("\nWhat do you do? ")
+		table_action = raw_input("\nWhat do you do? ").lower()
 
 		if ('bottle' in table_action) or ('liquid' in table_action):
 			at_table = False
 			get_inventory("vial")
+
+		elif 'cd' in table_action:
+			at_table = False
+			get_inventory("cd")
 			
 		else:
 			print "There's a problem at the table."
