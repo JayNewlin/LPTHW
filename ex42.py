@@ -6,7 +6,8 @@ class Game(object):
 	def __init__(self, start):
 		self.quips = [
 			"You died. You kinda suck at this.",
-			 "Your mom would be proud. If she were smarter.",	# "Nice job. You died...jackass.",
+			 "Your mom would be proud. If she were smarter.",
+			 "Nice job. You died...jackass.",
 			 "Such a loser.",
 			 "I have a small puppy that's better at this."
 		]
