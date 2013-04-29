@@ -13,7 +13,7 @@ def death():
 
 def central_corridor():
 	print "The Gothons of Planet Percal #25 have invaded your ship and destroyed"
-	print "your entire crew. You are the last sutviving member and your last"
+	print "your entire crew. You are the last surviving member and your last"
 	print "mission is to get the neutron destruct bomb from the Weapons Armory,"
 	print "put it in the Bridge, and blow the ship up after getting into an"
 	print "escape pod."
