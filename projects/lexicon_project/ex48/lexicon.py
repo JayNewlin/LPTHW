@@ -1,36 +1,51 @@
 # Created for Learning Python the Hard Way, Exercise 48
-def convert_number(input_string):					# From LPTHW, pg. 145
+def sentence_breaker(sentence_to_parse):
+	words = sentence_to_parse.split()
+	return words
+
+def convert_number(word_to_test):					# From LPTHW, pg. 145
 	try:
-		return int(input_string)
+		return int(word_to_test)
 	except ValueError:
 		return None
 
-def sentence_breaker(input_string):
-	words = input_string.split()
-	return words
+def word_type_tester(word_to_test):
+	# Establish the word-types as sets
+	directions = {'north', 'south', 'east', 'west', 'down',
+				  'up', 'left', 'right', 'back'}
+	verbs = {'go', 'kill', 'eat', 'stop', 'shoot'}
+	stop_words = {'the', 'in', 'of', 'from', 'at', 'it', 'to'}
+	nouns = {'bear', 'princess', 'door', 'cabinet'}
 
-# Establish the word-types as sets
-directions = {'north', 'south', 'east', 'west', 'down',
-			  'up', 'left', 'right', 'back'}
-verbs = {'go', 'kill', 'eat', 'stop', 'shoot'}
-stop_words = {'the', 'in', 'of', 'from', 'at', 'it', 'to'}
-nouns = {'bear', 'princess', 'door', 'cabinet'}
+	if word_to_test in directions:
+		return ['direction', word_to_test]
 
-while True:
-	test_word = raw_input("What word shall I look up? ")
+	elif word_to_test in verbs:
+		return ['verb', word_to_test]
 
-	if test_word in directions:
-		print test_word, "is a direction."
+	elif word_to_test in stop_words:
+		return ['stop', word_to_test]
 
-	elif test_word in verbs:
-		print "You can't fool me! %s is an action word; that means it's a verb!" % test_word
-
-	elif test_word in stop_words:
-		print "That's a stop word."
-
-	elif test_word in nouns:
-		print "I recognize %s as a noun." % test_word
+	elif word_to_test in nouns:
+		return ['noun', word_to_test]
 
 	else:
-		print "Sorry, but I haven't learned that word yet. :-("
-			
+		return ['error', word_to_test]
+
+sentence = raw_input("Sentence to break? ")
+broken_sentence = sentence_breaker(sentence)
+print "Broken sentence: ", broken_sentence
+
+number_to_test = raw_input("\nPlease give me a number: ")
+number_as_int = convert_number(number_to_test)
+print "That number is now an integer: %d" % number_as_int
+
+not_a_number = raw_input("\nNow a non-numeric string, please: ")
+oops_nope = convert_number(not_a_number)
+print "convert_number says %r" % oops_nope
+
+while True:
+	test_this_word = raw_input("\nGive me a word to look up: ")
+	test_result = word_type_tester(test_this_word)
+	print "word_type_tester replies: %r" % test_result
+
