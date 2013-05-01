@@ -3,7 +3,7 @@ from ex49 import lexicon49
 
 def peek(word_list):
 	if word_list:
-		word = word_list[0]
+		word = word_list[1]
 		# return word 			# returns the tuple
 		return word[0]		# returns the first element of the tuple (the word type)
 	else:
