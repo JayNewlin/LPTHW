@@ -1,0 +1,6 @@
+[PTHW] Jays-MacBook-Pro:lexicon_project jnewlin$ nosetests
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.006s
+
+OK
