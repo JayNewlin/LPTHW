@@ -93,3 +93,61 @@ def test_subject_parsing():
 	passed_word_list = ('noun', 'bear')
 	subject = ('noun', 'hunter')
 	assert_raises( sentence_parser.ParserError, sentence_parser.parse_subject, passed_word_list, subject)
+
+def test_parse_sentence_function():
+	passed_word_list = [('noun', 'hunter'), ('verb', 'shoot'), ('noun', 'bear')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'hunter')
+	assert_equal (returned_sentence.verb, 'shoot')
+	assert_equal (returned_sentence.s_object, 'bear')
+
+	passed_word_list = [('noun', 'hunter'), ('verb', 'go'), ('direction', 'west')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'hunter')
+	assert_equal (returned_sentence.verb, 'go')
+	assert_equal (returned_sentence.s_object, 'west')
+
+	passed_word_list = [('stop', 'the'), ('noun', 'hunter'), ('verb', 'go'), ('stop', 'to'), ('stop', 'the'), ('direction', 'right')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'hunter')
+	assert_equal (returned_sentence.verb, 'go')
+	assert_equal (returned_sentence.s_object, 'right')
+
+	passed_word_list = [('stop', 'the'), ('noun', 'hunter'), ('verb', 'shoot'), ('stop', 'at'), ('stop', 'the'), ('noun', 'bear')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'hunter')
+	assert_equal (returned_sentence.verb, 'shoot')
+	assert_equal (returned_sentence.s_object, 'bear')
+
+	passed_word_list = [('verb', 'shoot'), ('noun', 'bear')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'player')
+	assert_equal (returned_sentence.verb, 'shoot')
+	assert_equal (returned_sentence.s_object, 'bear')
+
+	passed_word_list = [('verb', 'go'), ('direction', 'north')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'player')
+	assert_equal (returned_sentence.verb, 'go')
+	assert_equal (returned_sentence.s_object, 'north')
+
+	passed_word_list = [('stop', 'please'), ('verb', 'shoot'), ('noun', 'bear')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'player')
+	assert_equal (returned_sentence.verb, 'shoot')
+	assert_equal (returned_sentence.s_object, 'bear')
+
+	passed_word_list = [('stop', 'please'), ('verb', 'go'), ('direction', 'north')]
+	returned_sentence = sentence_parser.parse_sentence(passed_word_list)
+	assert_equal (returned_sentence.subject, 'player')
+	assert_equal (returned_sentence.verb, 'go')
+	assert_equal (returned_sentence.s_object, 'north')
+
+	passed_word_list = [('error', 'foofle'), ('verb', 'shoot'), ('noun', 'princess')]
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_sentence, passed_word_list)
+
+	passed_word_list = [('', ''), ('verb', 'shoot'), ('noun', 'princess')]
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_sentence, passed_word_list)
+
+	passed_word_list = ''
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_sentence, passed_word_list)

@@ -38,5 +38,5 @@ def scan(sentence_to_parse):
 	return new_sentence
 
 # words_to_test =  raw_input("I need words to scan: ")
-print scan("the the the bear eat the princess")
+print scan("the hunter go to the right")
 

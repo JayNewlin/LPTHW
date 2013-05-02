@@ -78,6 +78,3 @@ def parse_sentence(word_list):
 	else:
 		raise ParserError("Must start with subject, object, or verb, not: %s" % start)
 
-#passed_word_list = [('noun', 'princess'), ('noun', 'bear')]
-#what_is = parse_subject(passed_word_list, ('noun', 'hunter'))
-#print "I got ", what_is.subject, what_is.verb, what_is.s_object
