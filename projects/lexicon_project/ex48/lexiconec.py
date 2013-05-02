@@ -36,3 +36,7 @@ def scan(sentence_to_parse):
 				new_sentence.append(word_tuple)
 		
 	return new_sentence
+
+# words_to_test =  raw_input("I need words to scan: ")
+print scan("the bear eat the princess")
+

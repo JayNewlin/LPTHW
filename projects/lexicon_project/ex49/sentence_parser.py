@@ -12,8 +12,10 @@ class Sentence(object):
 
 
 def peek(word_list):
+#	print "word_list is ", word_list
 	if word_list:
 		word = word_list[0]
+#		print "word is ", word
 		return word[0]
 	else:
 		return None
@@ -77,3 +79,6 @@ def parse_sentence(word_list):
 		return parse_subject(word_list, ('noun', 'player'))
 	else:
 		raise ParserError("Must start with subject, object, or verb, not: %s" % start)
+
+# what_is = peek([('direction', 'north')])
+# print "I got ", what_is

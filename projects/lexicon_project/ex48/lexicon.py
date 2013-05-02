@@ -40,4 +40,4 @@ def scan(sentence_to_parse):
 
 # input_sentence = raw_input("Give me a sentence: ")
 # output_sentence = scan(input_sentence)
-# print "I recreate the sentence as: %r" % output_sentence
+# print "word list is %r" % output_sentence
