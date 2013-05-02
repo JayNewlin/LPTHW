@@ -78,5 +78,5 @@ def parse_sentence(word_list):
 	else:
 		raise ParserError("Must start with subject, object, or verb, not: %s" % start)
 
-# what_is = peek([('direction', 'north')])
+# what_is = skip('', 'direction')
 # print "I got ", what_is

@@ -15,3 +15,10 @@ def test_matching():
 	assert_equal( sentence_parser.match( [('stop', 'the'), ('noun', 'bear'), ('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')],
 										'noun'), None )
 	assert_equal(sentence_parser.match('', 'stop'), None )
+
+def test_skipping():
+	assert_equal( sentence_parser.skip( [('direction', 'north')], 'direction' ), None )
+	passed_word_list = [('stop', 'the'), ('stop', 'the'), ('stop', 'the'), ('noun', 'bear'), ('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')]
+	passed_word_type = 'verb'
+	assert_equal( sentence_parser.skip( passed_word_list, passed_word_type), None )
+	assert_equal( sentence_parser.skip( '', 'noun'), None )
