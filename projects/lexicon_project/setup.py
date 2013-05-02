@@ -11,7 +11,7 @@ config = {
 	'author_email': 'jay@dmgctrl.com',
 	'version': '1.01',
 	'install_requires': ['nose'],
-	'packages': ['ex48', 'ex49'],
+	'packages': ['ex48', 'ex49', 'ex49c'],
 	'scripts': [],
 	'name': 'LPTHW_Ex48-49_Lexicon'
 }
