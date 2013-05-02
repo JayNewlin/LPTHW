@@ -36,7 +36,7 @@ def test_verb_parsing():
 	assert_equal( sentence_parser.parse_verb(passed_word_list), ('verb', 'eat'))
 
 	passed_word_list = [('noun', 'bear'), ('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')]
-	assert_raises( Exception, sentence_parser.parse_verb, passed_word_list)
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_verb, passed_word_list)
 
 def test_object_parsing():
 	assert_equal( sentence_parser.parse_object( [('noun', 'princess')] ), ('noun', 'princess'))
@@ -47,4 +47,49 @@ def test_object_parsing():
 	assert_equal( sentence_parser.parse_object( [('direction', 'down')] ), ('direction', 'down'))
 	
 	passed_word_list = [('verb', 'go'), ('direction', 'left')]
-	assert_raises( Exception, sentence_parser.parse_object, passed_word_list)
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_object, passed_word_list)
+
+def test_subject_parsing():
+	passed_word_list = [('verb', 'shoot'), ('noun', 'bear')]
+	subject = ('noun', 'hunter')
+	assert_equal( (sentence_parser.parse_subject( passed_word_list, subject)).subject, 'hunter')
+
+	passed_word_list = [('verb', 'shoot'), ('noun', 'bear')]
+	subject = ('noun', 'hunter')
+	assert_equal( (sentence_parser.parse_subject( passed_word_list, subject)).verb, 'shoot')
+
+	passed_word_list = [('verb', 'shoot'), ('noun', 'bear')]
+	subject = ('noun', 'hunter')
+	assert_equal( (sentence_parser.parse_subject( passed_word_list, subject)).s_object, 'bear')
+
+	passed_word_list = [('verb', 'go'), ('direction', 'north')]
+	subject = ('noun', 'player')
+	assert_equal( (sentence_parser.parse_subject( passed_word_list, subject)).subject, 'player')
+
+	passed_word_list = [('verb', 'go'), ('direction', 'north')]
+	subject = ('noun', 'player')
+	assert_equal( (sentence_parser.parse_subject( passed_word_list, subject)).verb, 'go')
+
+	passed_word_list = [('verb', 'go'), ('direction', 'north')]
+	subject = ('noun', 'player')
+	assert_equal( (sentence_parser.parse_subject( passed_word_list, subject)).s_object, 'north')
+
+	passed_word_list = [('noun', 'princess'), ('noun', 'bear')]
+	subject = ('noun', 'hunter')
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_subject, passed_word_list, subject)
+
+	passed_word_list = [('verb', 'go'), ('verb', 'do')]
+	subject = ('noun', 'hunter')
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_subject, passed_word_list, subject)
+
+	passed_word_list = ''
+	subject = ('noun', 'hunter')
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_subject, passed_word_list, subject)
+
+	passed_word_list = ('verb', 'shoot')
+	subject = ('noun', 'hunter')
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_subject, passed_word_list, subject)
+
+	passed_word_list = ('noun', 'bear')
+	subject = ('noun', 'hunter')
+	assert_raises( sentence_parser.ParserError, sentence_parser.parse_subject, passed_word_list, subject)

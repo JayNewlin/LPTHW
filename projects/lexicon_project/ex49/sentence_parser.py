@@ -8,7 +8,7 @@ class Sentence(object):
 		# remember we take ('noun', 'princess') tuples and convert them
 		self.subject = subject[1]
 		self.verb = verb[1]
-		self.object = s_object[1]	# JRN edited 'object' to 's_object' ("sentence object") to prevent a conflict with the Python keyword
+		self.s_object = s_object[1]		# Edited by JRN to prevent conflict with Python keyword 
 
 
 def peek(word_list):
@@ -78,5 +78,6 @@ def parse_sentence(word_list):
 	else:
 		raise ParserError("Must start with subject, object, or verb, not: %s" % start)
 
-# what_is = skip('', 'direction')
-# print "I got ", what_is
+#passed_word_list = [('noun', 'princess'), ('noun', 'bear')]
+#what_is = parse_subject(passed_word_list, ('noun', 'hunter'))
+#print "I got ", what_is.subject, what_is.verb, what_is.s_object
