@@ -37,3 +37,14 @@ def test_verb_parsing():
 
 	passed_word_list = [('noun', 'bear'), ('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')]
 	assert_raises( Exception, sentence_parser.parse_verb, passed_word_list)
+
+def test_object_parsing():
+	assert_equal( sentence_parser.parse_object( [('noun', 'princess')] ), ('noun', 'princess'))
+
+	passed_word_list = [('stop', 'the'), ('noun', 'princess')]
+	assert_equal (sentence_parser.parse_object(passed_word_list), ('noun', 'princess'))
+
+	assert_equal( sentence_parser.parse_object( [('direction', 'down')] ), ('direction', 'down'))
+	
+	passed_word_list = [('verb', 'go'), ('direction', 'left')]
+	assert_raises( Exception, sentence_parser.parse_object, passed_word_list)
