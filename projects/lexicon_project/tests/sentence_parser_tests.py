@@ -22,3 +22,18 @@ def test_skipping():
 	passed_word_type = 'verb'
 	assert_equal( sentence_parser.skip( passed_word_list, passed_word_type), None )
 	assert_equal( sentence_parser.skip( '', 'noun'), None )
+
+def test_verb_parsing():
+	assert_equal( sentence_parser.parse_verb( [('verb', 'go')] ), ('verb', 'go'))
+	
+	passed_word_list = [('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')]
+	assert_equal( sentence_parser.parse_verb(passed_word_list), ('verb', 'eat'))
+
+	passed_word_list = [('stop', 'please'), ('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')]
+	assert_equal( sentence_parser.parse_verb(passed_word_list), ('verb', 'eat'))
+
+	passed_word_list = [('stop', 'please'), ('stop', 'please'), ('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')]
+	assert_equal( sentence_parser.parse_verb(passed_word_list), ('verb', 'eat'))
+
+	passed_word_list = [('noun', 'bear'), ('verb', 'eat'), ('stop', 'the'), ('noun', 'princess')]
+	assert_raises( Exception, sentence_parser.parse_verb, passed_word_list)
