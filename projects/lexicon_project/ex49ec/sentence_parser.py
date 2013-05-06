@@ -17,16 +17,29 @@ class Sentence(object):
 class Skip(object):
 
 	def __init__(self, word_list, word_type):
-			while peek(word_list) == word_type:
-				match(word_list, word_type)
+		while (Peek(word_list)).word == word_type:
+			match(word_list, word_type)
 
 
-def peek(word_list):
-	if word_list:
-		word = word_list[0]
-		return word[0]
-	else:
-		return None
+class Peek(object):
+
+	def __init__(self, word_list):
+		pass
+
+	def __str__(self):
+		if word_list:
+			word = word_list[0]
+			return word[0]
+		else:
+			return None	
+
+
+#def peek(word_list):
+#	if word_list:
+#		word = word_list[0]
+#		return word[0]
+#	else:
+#		return None
 
 
 def match(word_list, expecting):
@@ -49,7 +62,7 @@ def match(word_list, expecting):
 def parse_verb(word_list):
 	Skip(word_list, 'stop')
 
-	if peek(word_list) == 'verb':
+	if (Peek(word_list)).word == 'verb':
 		return match(word_list, 'verb')
 	else:
 		raise ParserError("Expected a verb next.")
@@ -59,7 +72,7 @@ def parse_verb(word_list):
 
 def parse_object(word_list):
 	Skip(word_list, 'stop')
-	next = peek(word_list)
+	next = (Peek(word_list)).word
 
 	if next == 'noun':
 		return match(word_list, 'noun')
@@ -79,7 +92,7 @@ def parse_subject(word_list, subj):
 def parse_sentence(word_list):
 	Skip(word_list, 'stop')
 
-	start = peek(word_list)
+	start = (Peek(word_list)).word
 
 	if start == 'noun':
 		subj = match(word_list, 'noun')
