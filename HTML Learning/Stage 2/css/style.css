@@ -1,0 +1,10 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	color: #FAF3BC;
+	background: #420600 url('img/bg-texure.jpg') repeat;
+}
+
+a {
+	color: #4FB69F;
+	text-decoration: none;
+}
