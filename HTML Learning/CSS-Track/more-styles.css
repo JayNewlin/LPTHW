@@ -1,0 +1,27 @@
+
+body {
+	font-size: 1.2em;
+	margin:0;
+	padding: 30px;
+}
+
+h1 {
+	color: #FFF;
+	margin-bottom: 30px;
+	padding: 10px;
+	background-color: #E14607;
+	border-bottom: 1px solid #1f1f1f;
+}
+
+h2 {
+	margin-top: 30px;
+}
+
+ul {
+	padding: 10px;
+	list-style-position: inside;
+}
+
+li {
+	margin-bottom: 6px;
+}
