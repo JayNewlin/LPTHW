@@ -1,0 +1,25 @@
+
+div > a {
+	color: red;
+}
+
+h2 + p {
+  color: #FFF;
+  padding: 10px;
+  background-color: #3F5765;
+}
+
+ul ~ p {
+  color: #FFF;
+  padding: 10px;
+  background-color: #3F5765;
+}
+
+a[class] {
+  font-size: 2em;
+  color: orange;
+}
+
+a[class~="baz"] {
+  background-color: black;
+}
