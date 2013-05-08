@@ -1,0 +1,43 @@
+
+/* ---------------------
+	Pseudo-elements
+------------------------ */
+
+.intro:first-line {
+	font-weight: bold;
+	color: #77C4D3;
+}
+
+.intro:first-letter {
+	font-size: 3em;
+	padding: 0 10px;
+	margin: 10px 15px 0 0;
+	background-color: #FFF;
+	float: left;
+}
+
+.phone:before {
+	content: "\2706";
+	font-size: 1.5em;
+}
+
+.pdf:after {
+	content: attr(href);
+	padding-left: 10px;
+	color: #FFF;
+}
+
+.pdf:before {
+	content: url(pdf.png);
+	margin-right: 10px;
+}
+
+h1:before {
+	content: " ";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #EA2E49;
+	border-radius: 20px;
+	margin: 15px 15px 0 0;
+}

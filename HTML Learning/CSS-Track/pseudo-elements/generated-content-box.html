@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generated Content Box</title>
+	<style type="text/css">
+		body {
+			font: bold 1.2em Sans-Serif;
+			color: #FFF;
+			background-color: #000;
+		}
+		.box {
+   			width: 500px;
+   			margin: 150px auto;
+   			padding: 30px;
+   			border: solid 1px #FFF;
+		}
+		.box:before {
+			content: "\27BD";
+			color: red;
+			font-size: 1.2em;
+			margin: 0 20px;
+		}
+  	</style>
+</head>
+<body>
+	<p class="box">Text inside the paragraph...</p>
+</body>
+</html>
