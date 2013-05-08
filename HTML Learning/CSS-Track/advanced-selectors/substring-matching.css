@@ -1,0 +1,23 @@
+
+a[href^="http://"] {
+	color: green;
+}
+
+a[href^="mailto:"] {
+	color: #FFF;
+	background-color: red;
+}
+
+a[href$=".pdf"] {
+	background: url('images/pdf.png') no-repeat 0 2px;
+	padding-left: 25px;
+}
+
+a[href$=".doc"] {
+	background: url('images/doc.png') no-repeat 0 2px;
+	padding-left: 25px;
+}
+
+img[src*="thumbnail"] {
+	border: 5px solid #000;
+}
