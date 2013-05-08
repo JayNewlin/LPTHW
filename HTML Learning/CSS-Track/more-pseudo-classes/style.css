@@ -1,0 +1,38 @@
+
+body {
+	padding: 20px 30px;
+	font: normal 1em sans-serif;
+}
+
+li {
+	margin-bottom: 8px;
+}
+
+div {
+	padding: 12px;
+	margin-bottom: 12px;
+}
+
+label, input {
+	display: block;
+	margin: 6px 0;
+}
+
+input {
+	width: 180px;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+}
+
+form div {
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+div label, div input {
+	display: inline;
+	width: inherit;
+	margin: 0 5px;
+}
+
+
