@@ -1,0 +1,14 @@
+
+div {
+	margin: 50px auto;
+	font: 1.1em/1.5 sans-serif;
+	box-sizing: border-box;
+}
+
+.sketch-img {
+	width: 700px;
+	height: 500px;
+	border-radius: 10px;
+	background: url('img/smiley.png') no-repeat 350px 200px, url('img/pencil.png') no-repeat 50px 50px, url('img/texture.jpg') #d6bb80;
+	background-size: 250px 200px, 50% 45%, 110%;
+}

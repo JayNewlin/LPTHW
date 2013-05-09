@@ -1,0 +1,10 @@
+
+.box {
+	width: 80%;
+	height: 500px;
+	padding: 30px;
+	background: url('img/full-bg.jpg') no-repeat;
+	border: 15px solid rgba(35,66,97,.6);
+	background-size: contain;
+	background-origin: border-box;
+}
