@@ -1,0 +1,8 @@
+
+.box {
+	border: 30px solid #70979A;
+	border-image: url('img/border.png') 30 round;
+	background: url('img/bg.jpg');
+	background-size: cover;
+	background-clip: padding-box;
+}
