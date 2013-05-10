@@ -10,12 +10,30 @@ body, h1, h2, h3, p {
 /* ---------------------------
 	Web Fonts
 ----------------------------- */
+@font-face {
+	font-family: "DroidSerifBold";
+	src: url('fonts/DroidSerif-Bold-webfont.eot');
+	src: url('fonts/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+		 url('fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+		 url('fonts/DroidSerif-Bold-webfont.svg#DroidSerifBold') format('svg');
+	font-weight: bold;
+	font-style: normal; 
 
+}
 
 /* --------------------------
 	Icon Fonts
 ----------------------------- */
 
+@font-face {
+	font-family: "icomoon";
+	src: url('icons/icomoon.eot');
+	src: url('icons/icomoon.eot?#iefix') format('embedded-opentype'),
+		 url('icons/icomoon.woff') format('woff'),
+		 url('icons/icomoon.ttf') format('truetype'),
+		 url('icons/icomoon.svg#icomoon') format('svg');
+}
 
 /* --------------------------
 	Page Styles
@@ -28,6 +46,7 @@ body {
 	color: #333;
 	font-size: 1.125em;
 	line-height: 1.6;
+	font-family: 'Open Sans', sans-serif;
 }
 p {
 	margin: 1.6em 0;
@@ -41,6 +60,21 @@ a {
 	margin: 0 auto;
 	max-width: 58%;
 }
+.wrap:before {
+	content: "\e002";
+	font-family: "icomoon";
+	font-size: 1.9em;
+	background: #2B9BD4;
+	color: #FFF;
+	position: absolute;
+	top: -31px;
+	left: 45%;
+	z-index: 100;
+	padding: .4em;
+	border-radius: 50%;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
 .intro {
 	margin-top: 3.15em;
 }
@@ -50,6 +84,8 @@ a {
 	border-top: 1px solid rgba(51,52,52,.4);
 	text-align: center;
 	line-height: 1.33;
+	font-family: "ff-tisa-web-pro", "DroidSerifBold", Georgia, serif;
+	-webkit-font-feature-settings: "liga", "dlig";
 }
 .author {
 	text-align: center;
@@ -61,6 +97,8 @@ h2 {
 	color: #2B9BD4;
 	font-size: 2em;
 	line-height: 1.1;
+	letter-spacing: -1px;
+	font-family: "DroidSerifBold", Georgia, serif;
 }
 
 /* --------------------------
