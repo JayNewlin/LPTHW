@@ -1,7 +1,6 @@
 .DS_Store
-test.txt
-test.2
 Backup*
 *.pyc
 env/
 PythonTheHardWay/documents/
+CLI-Crash-Course/
