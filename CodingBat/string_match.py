@@ -15,8 +15,6 @@ def string_match(a, b):
 
 	while n <= max_index:
 
-#		print "a[(n-1):(n+1)] is ", a[(n-1):(n+1)]
-#		print "b[(n-1):(n+1)] is ", b[(n-1):(n+1)]
 		if a[(n-1):(n+1)] == b[(n-1):(n+1)]:
 			counter += 1
 			n += 1
