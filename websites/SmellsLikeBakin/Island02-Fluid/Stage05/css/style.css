@@ -22,7 +22,6 @@ img, object {
 
 h1 {
 	font-size: 1.750em;
-	font-size: 2.5vw;
 	font-weight: 100;
 	letter-spacing: -1.5px;
 }
@@ -30,6 +29,7 @@ h1 {
 h2 {
 	font-weight: 100;
 	font-size: 1.500em;
+	font-size: 2.5vw;
 	color: #b4c34f;
 }
 h3 {
@@ -42,6 +42,7 @@ h3 {
 
 .btn {
 	padding: 15px 30px;
+	margin: 40px 0;
 	color: #faf3bc;
 	background-color: #4fb69f;
 	/*background: #4fb69f url('img/texture.png') no-repeat right top;*/
@@ -58,6 +59,7 @@ h3 {
 
 .btn-small {
 	padding: 10px 25px;
+	margin: 50px 0;
 	color: #faf3bc;
 	font-size: .75em;
 	background-color: #b22316;
@@ -108,7 +110,7 @@ h3 {
 		-moz-border-radius: 25px;
 		text-transform: uppercase;
 	}
-#nav ul li.last:hover {
+#nav ulli.last:hover {
 		background-color: #c62718;
 	}
 #nav ul li a {
