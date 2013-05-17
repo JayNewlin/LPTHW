@@ -13,7 +13,7 @@ a {
 	text-decoration: none;
 }
 
-img {
+img, object {
 	max-width: 100%;
 }
 
@@ -148,7 +148,7 @@ h3 {
 
 /*media queries*/
 
-/* Tablet ----------- */
+/* Medium Resolution ----------- */
 @media screen and (max-width: 1024px) {
 
 
@@ -197,8 +197,8 @@ h3 {
 }
 
 
-/* Small ----------- */
-@media screen and (max-width : 480px) {
+/* Small Resolution----------- */
+@media screen and (max-width : 650px) {
 
 .grid_1,
 .grid_2,
@@ -257,3 +257,4 @@ h3 {
 }
 
 }
+
