@@ -3,18 +3,26 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Smells Like Bakin&apos; Cupcake Company</title>
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+	<script src="external/matchmedia.js"></script>
+	<script src="picturefill.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
 </head>
 
 <body>
 	
 	<div class="container clearfix">
 		<div id="logo" class="grid_4">
-			<img src="img/logo.gif" alt="Smells Like Bakin&apos;">
+						
+			<object data="img/logo.svg" type="image/svg+xml" class="logo">
+			    <!--[if lte IE 8 ]-->
+			      <img src="img/logo.gif" alt="Smells Like Bakin">
+			    <!--![endif]-->
+			</object>
+
 		</div>
 		<div id="nav" class="grid_8 omega">
 			<ul>
@@ -30,21 +38,58 @@
 			<p><a href="#" class="btn">Browse Our Cupcakes</a></p>
 		</div>
 		<div id ="intro-img" class="grid_3">
-			<img src="img/you-bake-me-blush.gif" alt="You Bake Me Blush">
+			<object data="img/you-bake-me-blush.svg" type="image/svg+xml">
+			    <!--[if lte IE 8 ]-->
+			      <img src="img/you-bake-me-blush.gif" alt="You Bake Me Blush">
+			    <!--![endif]-->
+			</object>
 		</div>
-		
 	
 		<div id="featured-cupcake" class="grid_7">
 			<h2>Cupcake of the Week</h2>
-			<p>This week&apos;s featured cupcake is the <a href="#">Avocado Chocolate cupcake</a>. Its combination of flavors will kick your taste buds into fiesta mode!</p>
-			<img src="img/featured-cupcake.jpg" alt="Avocado Chocolate Cupcake">
+			<p>This week&apos;s featured cupcake is the <a href="#">Avocado Chocolate cupcake</a>. Its flavors will kick your taste buds into fiesta mode!</p>
+			
+				 <div data-picture data-alt="Avocado Chocolate Cupcake">
+			        <div data-src="external/imgs/avocado-small.jpg"></div>
+			        <div data-src="external/imgs/avocado-medium.jpg"     data-media="(min-width: 400px)"></div>
+			        <div data-src="external/imgs/avocado-large.jpg"      data-media="(min-width: 800px)"></div>
+			        <div data-src="external/imgs/avocado-extralarge.jpg" data-media="(min-width: 1000px)"></div>
+
+			        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			        <noscript>
+			            <img src="external/imgs/avocado-small.jpg" alt="Avocado Chocolate Cupcake">
+			        </noscript>
+			    </div>
+
 		</div>
 		
 		<div id="new-cupcakes" class="grid_5 omega">
-				<h2>Fresh from the Oven</h2>
+				<h2>Fresh Out the Oven</h2>
 				<p>Our newest cupcakes are <a href="#">Bacon Me Crazy</a> and <a href="#">Jalapeño So Spicy</a>. </p>
-			<img src="img/new-cupcake-bacon.jpg" alt="Bacon Me Crazy">
-			<img src="img/new-cupcake-jalapeno.jpg" alt="Spicy Lime">
+
+				<div data-picture data-alt="Bacon Me Crazy">
+			        <div data-src="external/imgs/bacon-small.jpg"></div>
+			        <div data-src="external/imgs/bacon-medium.jpg"     data-media="(min-width: 400px)"></div>
+			        <div data-src="external/imgs/bacon-large.jpg"      data-media="(min-width: 800px)"></div>
+			        <div data-src="external/imgs/bacon-extralarge.jpg" data-media="(min-width: 1000px)"></div>
+			        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			        <noscript>
+			            <img src="external/imgs/bacon-small.jpg" alt="Bacon Me Crazy">
+			        </noscript>
+			    </div>
+
+
+				<div data-picture data-alt="Spicy Lime">
+			        <div data-src="external/imgs/lime-small.jpg"></div>
+			        <div data-src="external/imgs/lime-medium.jpg"     data-media="(min-width: 400px)"></div>
+			        <div data-src="external/imgs/lime-large.jpg"      data-media="(min-width: 800px)"></div>
+			        <div data-src="external/imgs/lime-extralarge.jpg" data-media="(min-width: 1000px)"></div>
+			        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			        <noscript>
+			            <img src="external/imgs/lime-small.jpg" alt="Spicy Lime">
+			        </noscript>
+			    </div>
+
 		</div>
 					
 			<div id="about" class="grid_7">
@@ -63,15 +108,28 @@
 			</div>
 			
 			<p>We announce all of our new flavors first through Facebook &amp; Twitter, and even take requests!</p>		
-			<a href="http://www.facebook.com/SmellsLikeBakin"><img src="img/facebook.gif" alt="Facebook"></a>
-			<a href="https://twitter.com/#!/smellslikebakin"><img src="img/twitter.gif" alt="Twitter"></a>
+			
+			<object data="img/facebook.svg" type="image/svg+xml">
+			  <a href="facebook.svg">
+			    <!--[if lte IE 8 ]-->
+			      <img src="img/facebook.gif" alt="Facebook">
+			    <!--![endif]-->
+			  </a>
+			</object>
+
+			<object data="img/twitter.svg" type="image/svg+xml">
+			    <!--[if lte IE 8 ]-->
+			      <img src="img/twitter.gif" alt="Twitter">
+			    <!--![endif]-->
+			</object>
 		</div>
 		
 		<div id="copyright" class="grid_12">
-			<p>&copy; 2012 Smells Like Bakin&apos; Cupcake Company. All Rights Reserved.</p>
+			<p>&copy; 2012 Smells Like Bakin' Cupcake Company. All Rights Reserved.</p>
 		</div>
 		
 	</div>
-	
+
+
 </body>
 </html>
