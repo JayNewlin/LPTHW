@@ -4,3 +4,5 @@ Backup*
 env/
 PythonTheHardWay/documents/
 CLI-Crash-Course/
+*.pdf
+
