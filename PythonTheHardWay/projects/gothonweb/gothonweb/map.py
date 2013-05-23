@@ -36,6 +36,16 @@ flies into an insane rage and blasts you repeatedly in the face until
 you are dead. Then he eats you.
 """)
 
+central_corridor_dodge = Room("Central Corridor Dodge-Death",
+"""
+Like a world-class boxer you dodge, weave, slip, and slide just
+as the Gothon's blaster cranks a laser past your head.
+In the middle of your artful dodge your foot slips, and you
+bang your head on the metal wall. You pass out.
+You're only out a few moments ... then the Gothon stomps on
+your head and eats you.
+""")
+
 laser_weapon_armory = Room("Laser Weapon Armory",
 """
 Lucky for you they made you learn Gothon insults in the Academy.
@@ -130,7 +140,7 @@ laser_weapon_armory.add_paths ({
 
 central_corridor.add_paths({
 	'shoot!': central_corridor_shoot,
-	'dodge!': generic_death,
+	'dodge!': central_corridor_dodge,
 	'tell a joke': laser_weapon_armory
 })
 

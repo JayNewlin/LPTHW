@@ -32,7 +32,7 @@ def test_map():
 
 def test_gothon_game_start():
 	assert_equal(START.go('shoot!'), central_corridor_shoot)
-	assert_equal(START.go('dodge!'), generic_death)
+	assert_equal(START.go('dodge!'), central_corridor_dodge)
 
 	room = START.go('tell a joke')
 	assert_equal(room, laser_weapon_armory)
