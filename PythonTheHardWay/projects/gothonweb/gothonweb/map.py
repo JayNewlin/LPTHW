@@ -26,6 +26,15 @@ flowing around his hate-filled body. He's blocking the door to the
 Armory and about to pull a weapon to blast you.
 """)
 
+central_corridor_shoot = Room("Central Corridor Death",
+"""
+Quick on the draw, you yank out your blaster and fire it at the Gothon.
+His clown costume is flowing and moving around his body, which throws
+off your aim. Your laser hits his costume but misses him entirely. This
+completely ruins his brand-new costume that his mother bought him. He
+flies into an insane rage and blasts you repeatedly in the face until
+you are dead. Then he eats you.
+""")
 
 laser_weapon_armory = Room("Laser Weapon Armory",
 """
@@ -120,7 +129,7 @@ laser_weapon_armory.add_paths ({
 })
 
 central_corridor.add_paths({
-	'shoot!': generic_death,
+	'shoot!': central_corridor_shoot,
 	'dodge!': generic_death,
 	'tell a joke': laser_weapon_armory
 })

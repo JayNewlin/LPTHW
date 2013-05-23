@@ -30,9 +30,24 @@ def test_map():
 	assert_equal(start.go('west').go('east'), start)
 	assert_equal(start.go('down').go('up'), start)
 
-def test_gothon_game_map():
-	assert_equal(START.go('shoot!'), generic_death)
+def test_gothon_game_start():
+	assert_equal(START.go('shoot!'), central_corridor_shoot)
 	assert_equal(START.go('dodge!'), generic_death)
 
 	room = START.go('tell a joke')
 	assert_equal(room, laser_weapon_armory)
+
+def test_laser_weapon_armory():
+	assert_equal(laser_weapon_armory.go('0132'), the_bridge)
+	assert_equal(laser_weapon_armory.go('*'), generic_death)	
+
+def test_the_bridge():
+	assert_equal(the_bridge.go('throw the bomb'), generic_death)
+	assert_equal(the_bridge.go('slowly place the bomb'), escape_pod)
+
+def test_escape_pod():
+	assert_equal(escape_pod.go('2'), the_end_winner)
+	assert_equal(escape_pod.go('*'), the_end_loser)
+
+
+
