@@ -42,7 +42,7 @@ def test_laser_weapon_armory():
 	assert_equal(laser_weapon_armory.go('*'), armory_death)	
 
 def test_the_bridge():
-	assert_equal(the_bridge.go('throw the bomb'), generic_death)
+	assert_equal(the_bridge.go('throw the bomb'), bridge_throw_bomb)
 	assert_equal(the_bridge.go('slowly place the bomb'), escape_pod)
 
 def test_escape_pod():

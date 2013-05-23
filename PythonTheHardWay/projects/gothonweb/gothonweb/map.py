@@ -87,6 +87,16 @@ weapons out yet, as they see the active bomb under your
 arm and don't want to set it off.
 """)
 
+bridge_throw_bomb = Room("Bridge Death",
+"""
+In a panic you throw the bomb at the group of Gothons
+and make a leap for the door. Just as you drop it a
+Gothon shoots you right in the back, killing you.
+As you die you see another Gothon frantically try to disarm
+the bomb. Your last thought is that they will probably blow up
+when it goes off.
+""")
+
 
 escape_pod = Room("Escape Pod",
 """
@@ -134,10 +144,8 @@ escape_pod.add_paths({
 	'*': the_end_loser
 })
 
-generic_death = Room("death", "You died.")
-
 the_bridge.add_paths({
-	'throw the bomb': generic_death,
+	'throw the bomb': bridge_throw_bomb,
 	'slowly place the bomb': escape_pod
 })
 
