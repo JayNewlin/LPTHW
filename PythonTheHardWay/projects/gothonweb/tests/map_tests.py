@@ -39,7 +39,7 @@ def test_gothon_game_start():
 
 def test_laser_weapon_armory():
 	assert_equal(laser_weapon_armory.go('0132'), the_bridge)
-	assert_equal(laser_weapon_armory.go('*'), generic_death)	
+	assert_equal(laser_weapon_armory.go('*'), armory_death)	
 
 def test_the_bridge():
 	assert_equal(the_bridge.go('throw the bomb'), generic_death)

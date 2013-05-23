@@ -64,6 +64,14 @@ wrong 10 times then the lock closes forever, and you can't
 get the bomb. The code is 3 digits.
 """)
 
+armory_death = Room("Armory Death",
+"""
+The lock buzzes one last time and then you hear a sickening
+melting sound as the mechanism is fused together.
+You decide to sit there, waiting for the Gothons to blow up the
+ship from their ship. You'll die in the explosion, of course...
+""")
+
 
 the_bridge = Room("The Bridge",
 """
@@ -135,7 +143,7 @@ the_bridge.add_paths({
 
 laser_weapon_armory.add_paths ({
 	'0132': the_bridge,
-	'*': generic_death
+	'*': armory_death
 })
 
 central_corridor.add_paths({
