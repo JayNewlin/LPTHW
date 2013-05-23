@@ -10,10 +10,13 @@ render = web.template.render('templates/')
 
 class Index(object):
 	def GET(self):
-		form = web.input(name="Nobody")
-		greeting = "Hello, %s" % form.name
+		form = web.input(greet=None, name="Nobody")
 
-		return render.index(greeting = greeting)
+		if form.greet:
+			greeting = "%s, %s" % (form.greet, form.name)
+			return render.index(greeting = greeting)
+		else:
+			return "ERROR: greet is required."
 
 if __name__ == "__main__":
 	app.run()
