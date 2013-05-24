@@ -130,7 +130,7 @@ time.  You won!
 """)
 
 
-the_end_loser = Room("The End",
+the_end_loser = Room("Death at the End",
 """
 You jump into a random pod and hit the eject button.
 The pod escapes out into the void of space, then
