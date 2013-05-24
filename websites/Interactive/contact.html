@@ -115,5 +115,20 @@
 			</div>
 			
 		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$("#form span").hide();
+			$("input,textarea").focus(function(){
+				$(this).next().fadeIn("slow");
+			}).blur(function(){
+				$(this).next().fadeOut("slow");
+			}).keyup(function(){
+				// Check all required fields
+			});
+
+			$("#email").keyup(function(){
+				//Check for a valid email address.
+			})
+		</script>
 	</body>
 	</html>
