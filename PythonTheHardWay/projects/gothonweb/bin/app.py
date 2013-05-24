@@ -36,14 +36,14 @@ class GameEngine(object):
 			# why is this here? do we need it?
 			return render.you_died()
 
-		def POST(self):
-			form = web.input(action=None)
+	def POST(self):
+		form = web.input(action=None)
 
-			# there is a bug here. can you fix it?
-			if session.room and form.action:
-				session.room = session.room.go(form.action)
+		# there is a bug here. can you fix it?
+		if session.room and form.action:
+			session.room = session.room.go(form.action)
 
-			web.seeother("/game")
+		web.seeother("/game")
 
 if __name__ == "__main__":
 	app.run()
