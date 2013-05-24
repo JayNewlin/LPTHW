@@ -6,6 +6,8 @@ def test_index():
 	# test our first GET request to /game
 	resp = app.request("/game")
 	assert_response(resp)
+	resp = app.request("/")
+	assert_response(resp, status="303")
 
 
 	# make sure default values work for the form

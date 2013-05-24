@@ -34,7 +34,8 @@ class GameEngine(object):
 			return render.show_room(room=session.room)
 		else:
 			# why is this here? do we need it?
-			return render.you_died()
+#			return render.you_died()
+			return render.show_room(room=map.START)
 
 	def POST(self):
 		form = web.input(action=None)
