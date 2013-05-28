@@ -128,6 +128,8 @@
 
 			$("#email").keyup(function(){
 				//Check for a valid email address.
+				if(false) $(this).next().addClass("valid");
+				else $(this).next().addClass("error");
 			})
 		</script>
 	</body>
