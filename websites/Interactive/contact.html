@@ -117,6 +117,30 @@
 		</div>
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript">
+			var $submit = $(".submit input");
+			var $required = $(".required");
+
+			function containsBlanks(){
+				var blanks = new Array();
+				$required.each(function(){
+					blanks.push($(this).val() == "");
+				});
+				return blanks.sort().pop();
+			}
+
+			function isValidEmail(email){
+				return email.indexOf("@") != -1;
+			}
+
+
+			function requiredFilledIn(){
+				if(containsBlanks() || !isValidEmail($("#email").val()))
+					$submit.attr("disabled", "disabled");
+				else
+					$submit.removeAttr("disabled");
+			}
+
+
 			$("#form span").hide();
 			$("input,textarea").focus(function(){
 				$(this).next().fadeIn("slow");
@@ -124,13 +148,18 @@
 				$(this).next().fadeOut("slow");
 			}).keyup(function(){
 				// Check all required fields
+				requiredFilledIn();
 			});
 
 			$("#email").keyup(function(){
 				//Check for a valid email address.
-				if(false) $(this).next().addClass("valid");
-				else $(this).next().addClass("error");
-			})
+				if(isValidEmail($(this).val()))
+				 $(this).next().removeClass("error").addClass("valid");
+				else
+				 $(this).next().removeClass("valid").addClass("error");
+			});
+
+			requiredFilledIn();
 		</script>
 	</body>
 	</html>
