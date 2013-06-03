@@ -121,11 +121,8 @@
 			var $required = $(".required");
 
 			function containsBlanks(){
-				var blanks = new Array();
-				$required.each(function(){
-					blanks.push($(this).val() == "");
-				});
-				return blanks.sort().pop();
+				var blanks = $required.map(function(){ return $(this).val() == "";});
+				return $.inArray(true, blanks) != -1;
 			}
 
 			function isValidEmail(email){
