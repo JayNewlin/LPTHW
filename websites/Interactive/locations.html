@@ -39,14 +39,12 @@
 		</div>
 
 		<div id="locations" class="grid_12">
-			<div id="map">
-			</div>
 
 			<div class="grid_6">
 				<h2>Orlando Store</h2>
 				<p>Local: <span class="contact">407-555-5555</span><br>Toll Free: <span class="contact">1-800-CUPCAKE</span><br>
 					Email us: <a href="#">bakeon@smellslikebakin.com</a></p>
-					<p>
+					<p class="static_map">
 						<img src="http://maps.googleapis.com/maps/api/staticmap?key=AIzaSyChxrDiI50r9AT5-ZwVi-JV_NiRBOkAPSU&size=400x300&sensor=false&markers=622+E+Washington+Street,+Suite+240+Orlando,+FL+32801" alt="622 E Washington Street, Suite 240, Orlando, FL 32801">
 					</p>
 					<address>
@@ -57,7 +55,7 @@
 					<h2>Portland Store</h2>
 					<p>Local: <span class="contact">503-555-5555</span><br>Toll Free: <span class="contact">1-800-CUP-CAKE</span><br>
 						Email us: <a href="#">bakeon@smellslikebakin.com</a></p>
-					<p>
+					<p class="static_map">
 						<img src="http://maps.googleapis.com/maps/api/staticmap?key=AIzaSyChxrDiI50r9AT5-ZwVi-JV_NiRBOkAPSU&size=400x300&sensor=false&markers=70+Northwest+Couch Street+Portland,+Oregon+97209" alt="70 Northwest Couch Street, Portland, Oregon 97209">
 					</p>
 
@@ -107,5 +105,32 @@
 					</div>
 
 				</div>
+				<script type="text/javascript" src="js/jquery.js"></script>
+				<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChxrDiI50r9AT5-ZwVi-JV_NiRBOkAPSU&sensor=false">
+    			</script>
+				<script type="text/javascript">
+					$("#locations").prepend('<div id="map"></div>')
+					$(".static_map").remove();
+					var map;
+					var center;
+					function initialize() {
+						var mapOptions = {
+							center: new google.maps.LatLng(-34.397, 150.644),
+							zoom: 8,
+							mapTypeId: google.maps.MapTypeId.ROADMAP
+						};
+						map = new google.maps.Map(document.getElementById("map"),
+							mapOptions);
+					}
+					initialize();
+
+					google.maps.event.addDomListener(map, "idle", function() {
+						center = map.getCenter();
+					});
+
+					$(window).resize(function(){
+						map.setCenter(center);
+					});
+				</script>
 			</body>
 			</html>
