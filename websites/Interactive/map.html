@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map</title>
+	<style type="text/css">
+
+	html, body, #map {
+		width: 100%;
+		height: 100%
+	}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChxrDiI50r9AT5-ZwVi-JV_NiRBOkAPSU&sensor=false"></script>
+	<script type="text/javascript">
+					var map;
+					var bounds;
+					var geocoder;
+					var center;
+					function initialize() {
+						var mapOptions = {
+							center: new google.maps.LatLng(-34.397, 150.644),
+							zoom: 8,
+							mapTypeId: google.maps.MapTypeId.ROADMAP
+						};
+						map = new google.maps.Map(document.getElementById("map"),
+							mapOptions);
+						geocoder = new google.maps.Geocoder();
+						bounds = new google.maps.LatLngBounds();
+					}
+					function addMarkerToMap(location, address){
+						var image = "img/baby-cupcake.png";
+						var marker = new google.maps.Marker({map: map, position: location, icon: image});
+						bounds.extend(location);
+						map.fitBounds(bounds);
+						var infoWindow = new google.maps.InfoWindow({ content : address})
+						googlemaps.event.addListener(marker, "click", function() {
+							infoWindow.open(map, marker);
+						});
+					}
+					initialize();
+
+					$("address", parent.window.document).each(function(){
+						var $address = $(this);
+						geocoder.geocode({address: $address.text()}, function(results, status){
+							if(status == google.maps.GeocoderStatus.OK) addMarkerToMap(results[0].geometry.location, $address.html());
+						});
+					});
+
+					google.maps.event.addDomListener(map, "idle", function() {
+						center = map.getCenter();
+					});
+
+					$(window).resize(function(){
+						map.setCenter(center);
+					});
+
+	</script>
+</body>
+</html>
