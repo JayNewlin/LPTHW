@@ -126,17 +126,22 @@
 						geocoder = new google.maps.Geocoder();
 						bounds = new google.maps.LatLngBounds();
 					}
-					function addMarkerToMap(location){
-						var marker = new google.maps.Marker({map: map, position: location});
+					function addMarkerToMap(location, address){
+						var image = "img/baby-cupcake.png";
+						var marker = new google.maps.Marker({map: map, position: location, icon: image});
 						bounds.extend(location);
 						map.fitBounds(bounds);
+						var infoWindow = new google.maps.InfoWindow({ content : address})
+						googlemaps.event.addListener(marker, "click", function() {
+							infoWindow.open(map, marker);
+						});
 					}
 					initialize();
 
 					$("address").each(function(){
 						var $address = $(this);
 						geocoder.geocode({address: $address.text()}, function(results, status){
-							if(status == google.maps.GeocoderStatus.OK) addMarkerToMap(results[0].geometry.location);
+							if(status == google.maps.GeocoderStatus.OK) addMarkerToMap(results[0].geometry.location, $address.text());
 						});
 					});
 
