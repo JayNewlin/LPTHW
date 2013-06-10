@@ -30,10 +30,6 @@ body {
 	top: 55%;
 	left: -15%;
 	-webkit-transform: rotateZ(-5deg);
-	-moz-transform: rotateZ(-5deg);
-	-o-transform: rotateZ(-5deg);
-	-ms-transform: rotateZ(-5deg);
-	transform: rotateZ(-5deg);
 }
 
 
