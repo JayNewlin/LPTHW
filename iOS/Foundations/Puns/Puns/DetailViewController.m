@@ -52,6 +52,7 @@
 - (void)viewDidUnload
 {
     [self setTextView:nil];
+    [self setTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -9,6 +9,7 @@
 #import "ListViewController.h"
 #import "Pun.h"
 #import "PunsTableViewCell.h"
+#import "DetailViewController.h"
 
 @implementation ListViewController
 
@@ -23,6 +24,14 @@
     return self;
 }
 
+#pragma mark - Segue
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([[segue identifier] isEqualToString:@"ShowPun"] ){
+    DetailViewController *dvc = (DetailViewController *) [segue destinationViewController];
+    dvc.pun = [self.punsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+  }
+}
 
 #pragma mark - View lifecycle
 

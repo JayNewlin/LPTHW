@@ -12,8 +12,6 @@
 
 @interface DetailViewController : UIViewController
 
-
-
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) Pun *pun;
 
