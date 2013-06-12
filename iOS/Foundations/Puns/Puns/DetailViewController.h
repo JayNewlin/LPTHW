@@ -10,9 +10,10 @@
 #import "Pun.h"
 
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UISlider *ratingSlider;
 @property (strong, nonatomic) Pun *pun;
 
 @end
