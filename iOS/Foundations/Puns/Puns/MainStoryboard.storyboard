@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYc-li-w9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-111"/>
+            <point key="canvasLocation" x="1106" y="-113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lGq-uh-ddO">
@@ -103,6 +103,24 @@
             <point key="canvasLocation" x="140" y="-113"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
+        </class>
+        <class className="PunsTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PunsTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="punRatingLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="punTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
