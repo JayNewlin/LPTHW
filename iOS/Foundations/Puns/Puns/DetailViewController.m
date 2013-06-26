@@ -45,13 +45,15 @@
     [super viewWillAppear:animated];
 
     self.textView.text = self.pun.title;
-   
+    self.ratingSlider.value = [self.pun.rating floatValue];
+  
 }
 
 
 - (void)viewDidUnload
 {
     [self setTextView:nil];
+    [self setRatingSlider:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
