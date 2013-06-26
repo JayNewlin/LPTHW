@@ -9,6 +9,7 @@
 #import "ListViewController.h"
 #import "Pun.h"
 #import "PunsTableViewCell.h"
+#import "DetailViewController.h"
 
 @implementation ListViewController
 
@@ -23,6 +24,14 @@
     return self;
 }
 
+#pragma mark - Segue
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ( [[segue identifier] isEqualToString:@"ShowPun"] ){
+        DetailViewController *dvc = (DetailViewController *)[segue destinationViewController];
+        dvc.pun = [self.punsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+    }     
+}
 
 #pragma mark - View lifecycle
 
@@ -69,13 +78,14 @@
 {
     static NSString *CellIdentifier = @"PunTableViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PunsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[PunsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     Pun *pun = [self.punsArray objectAtIndex:indexPath.row];
    
-    cell.textLabel.text = pun.title;
+    cell.punTextLabel.text = pun.title;
+    cell.punRatingLabel.text = [pun.rating stringValue];
    
     
     
