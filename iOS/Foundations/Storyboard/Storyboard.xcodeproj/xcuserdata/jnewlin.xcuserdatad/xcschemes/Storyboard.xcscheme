@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "506413461766646F00741DDC"
+               BlueprintIdentifier = "501B7997177B31A2006DE26F"
                BuildableName = "Storyboard.app"
                BlueprintName = "Storyboard"
                ReferencedContainer = "container:Storyboard.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "506413461766646F00741DDC"
+            BlueprintIdentifier = "501B7997177B31A2006DE26F"
             BuildableName = "Storyboard.app"
             BlueprintName = "Storyboard"
             ReferencedContainer = "container:Storyboard.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "506413461766646F00741DDC"
+            BlueprintIdentifier = "501B7997177B31A2006DE26F"
             BuildableName = "Storyboard.app"
             BlueprintName = "Storyboard"
             ReferencedContainer = "container:Storyboard.xcodeproj">
@@ -69,7 +69,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "506413461766646F00741DDC"
+            BlueprintIdentifier = "501B7997177B31A2006DE26F"
             BuildableName = "Storyboard.app"
             BlueprintName = "Storyboard"
             ReferencedContainer = "container:Storyboard.xcodeproj">
