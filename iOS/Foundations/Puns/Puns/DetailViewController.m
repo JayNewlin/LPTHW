@@ -11,6 +11,7 @@
 @implementation DetailViewController
 @synthesize textView = _textView;
 @synthesize pun = _pun;
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,14 +39,31 @@
 }
 */
 
+- (void) viewDidLoad {
+  [super viewDidLoad];
+  
+  if ( !self.pun )
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(addNewPun)];
+}
+
+- (void) addNewPun {
+  
+  self.pun = [Pun punWithTitle:self.textView.text rating:self.ratingSlider.value];
+  
+  [self.delegate addPunToList:self.pun];
+  [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
+  if (self.pun ) {
     self.textView.text = self.pun.title;
     self.ratingSlider.value = [self.pun.rating floatValue];
+  }
   
 }
 

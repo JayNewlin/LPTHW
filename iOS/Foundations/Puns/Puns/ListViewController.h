@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailViewController.h"
 
-@interface ListViewController : UITableViewController 
+@interface ListViewController : UITableViewController <DetailViewControllerDelegate>
 
 
 @property (nonatomic, strong) NSMutableArray *punsArray;

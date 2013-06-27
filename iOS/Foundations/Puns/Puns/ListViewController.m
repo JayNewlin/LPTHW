@@ -30,7 +30,19 @@
     if ( [[segue identifier] isEqualToString:@"ShowPun"] ){
         DetailViewController *dvc = (DetailViewController *)[segue destinationViewController];
         dvc.pun = [self.punsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
-    }     
+    }else if ( [[segue identifier] isEqualToString:@"AddPun"] ){
+      UINavigationController *navController = (UINavigationController *)[segue destinationViewController];
+      NSLog(@"%@", [segue destinationViewController]);
+      
+      DetailViewController *dvc = (DetailViewController *) [navController topViewController];
+      dvc.pun = nil;
+      dvc.delegate = self;
+    }
+}
+
+- (void) addPunToList:(Pun *)pun {
+  [self.punsArray addObject:pun];
+  [self.tableView reloadData];
 }
 
 #pragma mark - View lifecycle
