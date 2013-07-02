@@ -18,11 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-  NSString *path = [[NSBundle mainBundle] pathForResource:@"treehouse" ofType:@"pdf"];
-  NSData *content = [NSData dataWithContentsOfFile:path];
- 
   
-  [self.webView loadData:content MIMEType:@"application/pdf" textEncodingName:@"utf-8" baseURL:nil];
+  [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://teamtreehouse.com"]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,4 +28,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonPressed:(id)sender {
+  UIBarButtonItem *btn = (UIBarButtonItem *)sender;
+  switch (btn.tag) {
+    case 1:
+      if ( [self.webView canGoBack] )
+        [self.webView goBack];
+      break;
+      
+    case 2:
+      if ( [self.webView canGoForward] )
+        [self.webView goForward];
+      break;
+      
+    default:
+      break;
+  }
+}
 @end
