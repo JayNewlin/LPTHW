@@ -18,8 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"html"];
+  NSString *content = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:nil];
+  NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
   
-  [self.webView loadHTMLString:@"<h1 style='color:red'>Hello World</h1>" baseURL:nil];
+  [self.webView loadHTMLString:content baseURL:baseURL];
 }
 
 - (void)didReceiveMemoryWarning
