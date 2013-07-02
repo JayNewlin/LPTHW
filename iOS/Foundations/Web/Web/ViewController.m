@@ -18,7 +18,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self.webView loadHTMLString:@"<h1 style='color:red'>Hello World</h1>" baseURL:nil];
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"treehouse" ofType:@"pdf"];
+  NSData *content = [NSData dataWithContentsOfFile:path];
+  
+  [self.webView loadData:content MIMEType:@"applicaiton/pdf" textEncodingName:@"utf-8" baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning

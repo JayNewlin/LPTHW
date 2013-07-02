@@ -18,6 +18,9 @@
 		508361551783640A000FB3E6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508361541783640A000FB3E6 /* Default-568h@2x.png */; };
 		508361581783640A000FB3E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508361571783640A000FB3E6 /* ViewController.m */; };
 		5083615B1783640A000FB3E6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508361591783640A000FB3E6 /* ViewController.xib */; };
+		508361621783673E000FB3E6 /* info.html in Resources */ = {isa = PBXBuildFile; fileRef = 508361611783673E000FB3E6 /* info.html */; };
+		5083616417836752000FB3E6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5083616317836752000FB3E6 /* logo.png */; };
+		5083616617836A08000FB3E6 /* treehouse.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5083616517836A08000FB3E6 /* treehouse.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		508361561783640A000FB3E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		508361571783640A000FB3E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5083615A1783640A000FB3E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		508361611783673E000FB3E6 /* info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
+		5083616317836752000FB3E6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5083616517836A08000FB3E6 /* treehouse.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = treehouse.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 		508361441783640A000FB3E6 /* Web */ = {
 			isa = PBXGroup;
 			children = (
+				508361611783673E000FB3E6 /* info.html */,
+				5083616317836752000FB3E6 /* logo.png */,
+				5083616517836A08000FB3E6 /* treehouse.pdf */,
 				5083614D1783640A000FB3E6 /* AppDelegate.h */,
 				5083614E1783640A000FB3E6 /* AppDelegate.m */,
 				508361561783640A000FB3E6 /* ViewController.h */,
@@ -163,6 +172,9 @@
 				508361531783640A000FB3E6 /* Default@2x.png in Resources */,
 				508361551783640A000FB3E6 /* Default-568h@2x.png in Resources */,
 				5083615B1783640A000FB3E6 /* ViewController.xib in Resources */,
+				508361621783673E000FB3E6 /* info.html in Resources */,
+				5083616417836752000FB3E6 /* logo.png in Resources */,
+				5083616617836A08000FB3E6 /* treehouse.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
