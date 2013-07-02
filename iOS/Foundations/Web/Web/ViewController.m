@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
   
-  [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://teamtreehouse.com"]]];
+  [self.webView loadHTMLString:@"<h1 style='color:red'>Hello World</h1>" baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning
