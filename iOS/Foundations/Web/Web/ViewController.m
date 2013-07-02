@@ -18,8 +18,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"html"];
+  NSString *content = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:nil];
+  NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
   
-  [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://teamtreehouse.com"]]];
+  
+  [self.webView loadHTMLString:content baseURL:baseURL];
+  self.webView.delegate = self;
+}
+
+#pragma mark Web View Delegate
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+  [self.webView stringByEvaluatingJavaScriptFromString:@"alert('Hello Alert')"];
 }
 
 - (void)didReceiveMemoryWarning
