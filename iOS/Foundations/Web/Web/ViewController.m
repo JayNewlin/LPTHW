@@ -30,7 +30,7 @@
 #pragma mark Web View Delegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-  [self.webView stringByEvaluatingJavaScriptFromString:@"alert('Hello Alert')"];
+  [self.webView stringByEvaluatingJavaScriptFromString:@"showAlert()"];
 }
 
 - (void)didReceiveMemoryWarning
