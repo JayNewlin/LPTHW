@@ -33,6 +33,17 @@
   [self.webView stringByEvaluatingJavaScriptFromString:@"showAlert()"];
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+
+  if ( [[[request URL] absoluteString] hasPrefix:@"custom://"] && (navigationType == UIWebViewNavigationTypeLinkClicked) ) {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Calling from web view" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles: nil];
+    [alert show];
+    return NO;
+  }
+  
+  return YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
