@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListViewController : UITableViewController 
+@interface ListViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) NSMutableArray *punsArray;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 
