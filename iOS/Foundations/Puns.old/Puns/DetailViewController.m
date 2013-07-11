@@ -9,9 +9,9 @@
 #import "DetailViewController.h"
 
 @implementation DetailViewController
-@synthesize ratingSlider = _ratingSlider;
 @synthesize textView = _textView;
 @synthesize pun = _pun;
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,15 +39,24 @@
 }
 */
 
+- (void) viewDidLoad {
+  [super viewDidLoad];
+  
+  if ( !self.pun )
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(addNewPun)];
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
+  if (self.pun ) {
     self.textView.text = self.pun.title;
     self.ratingSlider.value = [self.pun.rating floatValue];
-   
+  }
+  
 }
 
 
@@ -67,20 +76,17 @@
 }
 
 - (IBAction)savePun:(id)sender {
-    [self.pun setTitle:self.textView.text];
-    [self.pun setRating:[NSNumber numberWithFloat:self.ratingSlider.value]];
-
-    NSError *error = nil;
-    if ( ![self.pun.managedObjectContext save:&error] ){
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		abort();
-
-    }
+  [self.pun setTitle:self.textView.text];
+  [self.pun setRating:[NSNumber numberWithFloat:self.ratingSlider.value]];
+  
+  NSError *error = nil;
+  if ( [self.pun.managedObjectContext save:&error] ){
+    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    abort();
     
-    if ( self.presentingViewController  )
-        [self dismissModalViewControllerAnimated:YES];
-    else
-        [self.navigationController popViewControllerAnimated:YES];
-
+  }
+  
+  [self.dismissModalViewControllerAnimated:YES];
+  
 }
 @end

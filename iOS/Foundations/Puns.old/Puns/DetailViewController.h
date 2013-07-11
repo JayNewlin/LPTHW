@@ -9,17 +9,25 @@
 #import <UIKit/UIKit.h>
 #import "Pun.h"
 
+@protocol DetailViewControllerDelegate;
 
 @interface DetailViewController : UITableViewController
 
+@property (weak, nonatomic) id <DetailViewControllerDelegate> delegate;
 
 
-@property (strong, nonatomic) IBOutlet UISlider *ratingSlider;
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UISlider *ratingSlider;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) Pun *pun;
 - (IBAction)savePun:(id)sender;
 
 @end
+
+@protocol DetailViewControllerDelegate <NSObject>
+- (void) addPunToList:(Pun *)pun;
+@end
+
+
 
 
 

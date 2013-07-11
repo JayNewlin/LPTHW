@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="uyk-kK-P8N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="uyk-kK-P8N">
     <dependencies>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
+        <!--List View Controller-->
         <scene sceneID="1Sz-i9-fr2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N2q-Nl-nA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="fZG-AX-iOD" customClass="ListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="VyO-Tl-25J">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -42,7 +41,7 @@
                                 <connections>
                                     <outlet property="punRatingLabel" destination="tXM-wn-BFA" id="TGu-Jc-8bc"/>
                                     <outlet property="punTextLabel" destination="d4p-PE-NTa" id="wec-db-neL"/>
-                                    <segue destination="BH7-zO-fnC" kind="push" identifier="ShowPun" id="pv9-UG-kYy"/>
+                                    <segue destination="GT2-tl-7oK" kind="push" identifier="ShowPun" id="G8M-2p-UgK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,103 +51,103 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8Ln-pj-fIb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="P6r-VL-iXm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wQi-xX-7l6">
                             <connections>
-                                <segue destination="vN6-Eu-T4w" kind="modal" identifier="addPun" id="pkA-Sj-tYu"/>
+                                <segue destination="UdI-YM-Ifu" kind="modal" identifier="addPun" id="WUM-UZ-38r"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2q-Nl-nA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-113"/>
+            <point key="canvasLocation" x="636" y="-121"/>
         </scene>
-        <scene sceneID="7Rs-gY-Chu">
+        <!--Detail View Controller-->
+        <scene sceneID="gCN-Fr-xCx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="soG-py-fvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="vN6-Eu-T4w" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="JQE-x6-CDi">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BH7-zO-fnC" kind="relationship" relationship="rootViewController" id="97q-B5-HyD"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="653" y="488"/>
-        </scene>
-        <scene sceneID="SEt-Os-ZqT">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VMc-WG-J7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="BH7-zO-fnC" customClass="DetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="5np-8m-TDP">
+                <tableViewController id="GT2-tl-7oK" customClass="DetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="OHy-nU-1uE">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="aL8-oc-6er">
+                            <tableViewSection id="EmZ-8F-d8Y">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="120" id="dkH-aw-vkR">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="120" id="MMo-Ft-SKa">
                                         <rect key="frame" x="0.0" y="10" width="320" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="B3N-VI-Yll">
-                                                    <rect key="frame" x="14" y="11" width="273" height="100"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="gSQ-SE-UBl">
+                                                    <rect key="frame" x="20" y="11" width="260" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qKI-IH-caq">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WYZ-gK-XiQ">
                                         <rect key="frame" x="0.0" y="131" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" id="L9j-3q-AIv">
-                                                    <rect key="frame" x="18" y="11" width="264" height="23"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" id="ovS-nk-x9y">
+                                                    <rect key="frame" x="18" y="1" width="264" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </slider>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="BH7-zO-fnC" id="gF3-Ub-xHj"/>
-                            <outlet property="delegate" destination="BH7-zO-fnC" id="ws2-nW-TqP"/>
+                            <outlet property="dataSource" destination="GT2-tl-7oK" id="Zhv-4g-h6z"/>
+                            <outlet property="delegate" destination="GT2-tl-7oK" id="Xlf-yO-tyr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NcG-Rz-6Lb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="c1j-Kt-Fak">
+                    <navigationItem key="navigationItem" id="gTG-16-fsw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="W4P-sz-LO0">
                             <connections>
-                                <action selector="savePun:" destination="BH7-zO-fnC" id="Q06-JK-gcB"/>
+                                <action selector="savePun:" destination="GT2-tl-7oK" id="sk2-Vf-GDq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ratingSlider" destination="L9j-3q-AIv" id="FnH-sQ-hnN"/>
-                        <outlet property="textView" destination="B3N-VI-Yll" id="Dnm-ld-PC2"/>
+                        <outlet property="ratingSlider" destination="ovS-nk-x9y" id="cDp-Dh-J1v"/>
+                        <outlet property="textView" destination="gSQ-SE-UBl" id="pFd-JX-F0n"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEB-Ex-ePo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1120" y="-113"/>
+            <point key="canvasLocation" x="1118" y="-121"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V4x-EL-cVq">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="UdI-YM-Ifu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bwt-He-Eor">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GT2-tl-7oK" kind="relationship" relationship="rootViewController" id="bZl-6N-RRV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZuG-iA-mTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="482"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="lGq-uh-ddO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x4l-d1-3yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="uyk-kK-P8N" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tL6-BL-nVl">
@@ -160,16 +159,37 @@
                         <segue destination="fZG-AX-iOD" kind="relationship" relationship="rootViewController" id="mDa-AS-8Nr"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4l-d1-3yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-113"/>
+            <point key="canvasLocation" x="149" y="-121"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="savePun:"/>
+                <relationship kind="outlet" name="ratingSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
+        </class>
+        <class className="PunsTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PunsTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="punRatingLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="punTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pv9-UG-kYy"/>
+        <segue reference="G8M-2p-UgK"/>
     </inferredMetricsTieBreakers>
 </document>

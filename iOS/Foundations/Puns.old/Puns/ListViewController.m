@@ -11,8 +11,6 @@
 #import "PunsTableViewCell.h"
 #import "DetailViewController.h"
 
-
-
 @implementation ListViewController
 
 @synthesize punsArray = _punsArray;
@@ -34,13 +32,12 @@
     if ( [[segue identifier] isEqualToString:@"ShowPun"] ){
         DetailViewController *dvc = (DetailViewController *)[segue destinationViewController];
         dvc.pun = [self.punsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
-        
-    } else if  ([[segue identifier] isEqualToString:@"addPun"]) {
-        DetailViewController *dvc = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [dvc setPun:[NSEntityDescription insertNewObjectForEntityForName:@"Pun" inManagedObjectContext:self.managedObjectContext]];
+    }else if ( [[segue identifier] isEqualToString:@"addPun"] ){
+      DetailViewController *dvc = (DetailViewController *)[[segue destinationViewController] topViewController];
+      [dvc setPun::[NSEntityDescription insertNewObjectForEntityForName:@"Pun"inManagedObjectContext:self.managedObjectContext]];
     }
-    
 }
+
 
 #pragma mark - View lifecycle
 
@@ -48,10 +45,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.punsArray = nil;
-
-
 }
 
 - (void)viewDidUnload
@@ -78,7 +73,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{ 
+{
+    // Return the number of rows in the section.
     return [self.punsArray count];
 }
 
@@ -90,15 +86,16 @@
     if (cell == nil) {
         cell = [[PunsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
     Pun *pun = [self.punsArray objectAtIndex:indexPath.row];
-    
+   
     cell.punTextLabel.text = pun.title;
     cell.punRatingLabel.text = [pun.rating stringValue];
+   
     
     
     return cell;
 }
+
 
 
 

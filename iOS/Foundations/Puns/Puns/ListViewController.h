@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DetailViewController.h"
 
-@interface ListViewController : UITableViewController <DetailViewControllerDelegate>
-
+@interface ListViewController : UITableViewController 
 
 @property (nonatomic, strong) NSMutableArray *punsArray;
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 
 @end

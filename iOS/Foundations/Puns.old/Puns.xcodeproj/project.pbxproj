@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5051BA85178F4049000B6F3B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5051BA84178F4049000B6F3B /* Default-568h@2x.png */; };
-		86099C1014D0AA6C00456656 /* PunsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86099C0E14D0AA6C00456656 /* PunsModel.xcdatamodeld */; };
-		86099C1314D0AEC500456656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86099C1214D0AEC500456656 /* CoreData.framework */; };
-		86099C4A14D0B41100456656 /* Pun.m in Sources */ = {isa = PBXBuildFile; fileRef = 86099C4914D0B41100456656 /* Pun.m */; };
+		50112CDC178E0551000EB7DE /* PunsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */; };
+		5051BA80178F2F44000B6F3B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5051BA7F178F2F44000B6F3B /* CoreData.framework */; };
+		5051BA83178F3920000B6F3B /* Pun.m in Sources */ = {isa = PBXBuildFile; fileRef = 5051BA82178F3920000B6F3B /* Pun.m */; };
 		86731DB9149A559400335FCA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86731DB8149A559400335FCA /* MainStoryboard.storyboard */; };
 		86731DBD149A5C1600335FCA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86731DBC149A5C1600335FCA /* DetailViewController.m */; };
 		B3BF3CF91497A7FE003AAEDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BF3CF81497A7FE003AAEDB /* UIKit.framework */; };
@@ -24,11 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5051BA84178F4049000B6F3B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		86099C0F14D0AA6C00456656 /* PunsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PunsModel.xcdatamodel; sourceTree = "<group>"; };
-		86099C1214D0AEC500456656 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		86099C4814D0B41100456656 /* Pun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pun.h; sourceTree = "<group>"; };
-		86099C4914D0B41100456656 /* Pun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pun.m; sourceTree = "<group>"; };
+		50112CDB178E0551000EB7DE /* PunsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PunsModel.xcdatamodel; sourceTree = "<group>"; };
+		5051BA7F178F2F44000B6F3B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5051BA81178F3920000B6F3B /* Pun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pun.h; sourceTree = "<group>"; };
+		5051BA82178F3920000B6F3B /* Pun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pun.m; sourceTree = "<group>"; };
 		86731DB8149A559400335FCA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		86731DBB149A5C1600335FCA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		86731DBC149A5C1600335FCA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -53,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86099C1314D0AEC500456656 /* CoreData.framework in Frameworks */,
+				5051BA80178F2F44000B6F3B /* CoreData.framework in Frameworks */,
 				B3BF3CF91497A7FE003AAEDB /* UIKit.framework in Frameworks */,
 				B3BF3CFB1497A7FE003AAEDB /* Foundation.framework in Frameworks */,
 				B3BF3CFD1497A7FE003AAEDB /* CoreGraphics.framework in Frameworks */,
@@ -66,7 +64,6 @@
 		B3BF3CE91497A7FE003AAEDB = {
 			isa = PBXGroup;
 			children = (
-				5051BA84178F4049000B6F3B /* Default-568h@2x.png */,
 				B3BF3CFE1497A7FE003AAEDB /* Puns */,
 				B3BF3CF71497A7FE003AAEDB /* Frameworks */,
 				B3BF3CF51497A7FE003AAEDB /* Products */,
@@ -84,7 +81,7 @@
 		B3BF3CF71497A7FE003AAEDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86099C1214D0AEC500456656 /* CoreData.framework */,
+				5051BA7F178F2F44000B6F3B /* CoreData.framework */,
 				B3BF3CF81497A7FE003AAEDB /* UIKit.framework */,
 				B3BF3CFA1497A7FE003AAEDB /* Foundation.framework */,
 				B3BF3CFC1497A7FE003AAEDB /* CoreGraphics.framework */,
@@ -105,9 +102,9 @@
 				86731DB8149A559400335FCA /* MainStoryboard.storyboard */,
 				86731DBB149A5C1600335FCA /* DetailViewController.h */,
 				86731DBC149A5C1600335FCA /* DetailViewController.m */,
-				86099C0E14D0AA6C00456656 /* PunsModel.xcdatamodeld */,
-				86099C4814D0B41100456656 /* Pun.h */,
-				86099C4914D0B41100456656 /* Pun.m */,
+				50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */,
+				5051BA81178F3920000B6F3B /* Pun.h */,
+				5051BA82178F3920000B6F3B /* Pun.m */,
 			);
 			path = Puns;
 			sourceTree = "<group>";
@@ -149,7 +146,7 @@
 		B3BF3CEB1497A7FE003AAEDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Treehouse Island Inc";
 			};
 			buildConfigurationList = B3BF3CEE1497A7FE003AAEDB /* Build configuration list for PBXProject "Puns" */;
@@ -176,7 +173,6 @@
 			files = (
 				B3BF3D031497A7FE003AAEDB /* InfoPlist.strings in Resources */,
 				86731DB9149A559400335FCA /* MainStoryboard.storyboard in Resources */,
-				5051BA85178F4049000B6F3B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +188,8 @@
 				B3BF3D1A1497AAB7003AAEDB /* ListViewController.m in Sources */,
 				B3BF3D4F1497BDB1003AAEDB /* PunsTableViewCell.m in Sources */,
 				86731DBD149A5C1600335FCA /* DetailViewController.m in Sources */,
-				86099C1014D0AA6C00456656 /* PunsModel.xcdatamodeld in Sources */,
-				86099C4A14D0B41100456656 /* Pun.m in Sources */,
+				50112CDC178E0551000EB7DE /* PunsModel.xcdatamodeld in Sources */,
+				5051BA83178F3920000B6F3B /* Pun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,10 +213,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -234,7 +226,6 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -247,17 +238,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -312,12 +298,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		86099C0E14D0AA6C00456656 /* PunsModel.xcdatamodeld */ = {
+		50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				86099C0F14D0AA6C00456656 /* PunsModel.xcdatamodel */,
+				50112CDB178E0551000EB7DE /* PunsModel.xcdatamodel */,
 			);
-			currentVersion = 86099C0F14D0AA6C00456656 /* PunsModel.xcdatamodel */;
+			currentVersion = 50112CDB178E0551000EB7DE /* PunsModel.xcdatamodel */;
 			path = PunsModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

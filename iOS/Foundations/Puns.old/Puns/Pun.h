@@ -2,8 +2,8 @@
 //  Pun.h
 //  Puns
 //
-//  Created by Nick Pettit on 1/25/12.
-//  Copyright (c) 2012 Treehouse Island Inc. All rights reserved.
+//  Created by Jay R Newlin on 7/11/13.
+//  Copyright (c) 2013 Treehouse Island Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,7 +12,7 @@
 
 @interface Pun : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * rating;
+@property (nonatomic, retain) NSString * title;
 
 @end
