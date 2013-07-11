@@ -13,5 +13,7 @@
 
 
 @property (nonatomic, strong) NSMutableArray *punsArray;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 
 @end

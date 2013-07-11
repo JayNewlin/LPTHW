@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50112CDC178E0551000EB7DE /* PunsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */; };
+		5051BA80178F2F44000B6F3B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5051BA7F178F2F44000B6F3B /* CoreData.framework */; };
 		86731DB9149A559400335FCA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86731DB8149A559400335FCA /* MainStoryboard.storyboard */; };
 		86731DBD149A5C1600335FCA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86731DBC149A5C1600335FCA /* DetailViewController.m */; };
 		B3BF3CF91497A7FE003AAEDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BF3CF81497A7FE003AAEDB /* UIKit.framework */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50112CDB178E0551000EB7DE /* PunsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PunsModel.xcdatamodel; sourceTree = "<group>"; };
+		5051BA7F178F2F44000B6F3B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		86731DB8149A559400335FCA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		86731DBB149A5C1600335FCA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		86731DBC149A5C1600335FCA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5051BA80178F2F44000B6F3B /* CoreData.framework in Frameworks */,
 				B3BF3CF91497A7FE003AAEDB /* UIKit.framework in Frameworks */,
 				B3BF3CFB1497A7FE003AAEDB /* Foundation.framework in Frameworks */,
 				B3BF3CFD1497A7FE003AAEDB /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +81,7 @@
 		B3BF3CF71497A7FE003AAEDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5051BA7F178F2F44000B6F3B /* CoreData.framework */,
 				B3BF3CF81497A7FE003AAEDB /* UIKit.framework */,
 				B3BF3CFA1497A7FE003AAEDB /* Foundation.framework */,
 				B3BF3CFC1497A7FE003AAEDB /* CoreGraphics.framework */,
@@ -98,6 +104,7 @@
 				86731DB8149A559400335FCA /* MainStoryboard.storyboard */,
 				86731DBB149A5C1600335FCA /* DetailViewController.h */,
 				86731DBC149A5C1600335FCA /* DetailViewController.m */,
+				50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */,
 			);
 			path = Puns;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 				B3BF3D1D1497AC85003AAEDB /* Pun.m in Sources */,
 				B3BF3D4F1497BDB1003AAEDB /* PunsTableViewCell.m in Sources */,
 				86731DBD149A5C1600335FCA /* DetailViewController.m in Sources */,
+				50112CDC178E0551000EB7DE /* PunsModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +296,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50112CDB178E0551000EB7DE /* PunsModel.xcdatamodel */,
+			);
+			currentVersion = 50112CDB178E0551000EB7DE /* PunsModel.xcdatamodel */;
+			path = PunsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B3BF3CEB1497A7FE003AAEDB /* Project object */;
 }

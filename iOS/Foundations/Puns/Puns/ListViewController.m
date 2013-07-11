@@ -14,6 +14,8 @@
 @implementation ListViewController
 
 @synthesize punsArray = _punsArray;
+@synthesize managedObjectContext = __managedObjectContext;
+@synthesize managedObjectModel = __managedObjectModel;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
