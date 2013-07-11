@@ -32,20 +32,12 @@
     if ( [[segue identifier] isEqualToString:@"ShowPun"] ){
         DetailViewController *dvc = (DetailViewController *)[segue destinationViewController];
         dvc.pun = [self.punsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
-    }else if ( [[segue identifier] isEqualToString:@"AddPun"] ){
-      UINavigationController *navController = (UINavigationController *)[segue destinationViewController];
-      NSLog(@"%@", [segue destinationViewController]);
-      
-      DetailViewController *dvc = (DetailViewController *) [navController topViewController];
-      dvc.pun = nil;
-      dvc.delegate = self;
+    }else if ( [[segue identifier] isEqualToString:@"addPun"] ){
+      DetailViewController *dvc = (DetailViewController *)[[segue destinationViewController] topViewController];
+      [dvc setPun::[NSEntityDescription insertNewObjectForEntityForName:@"Pun"inManagedObjectContext:self.managedObjectContext]];
     }
 }
 
-- (void) addPunToList:(Pun *)pun {
-  [self.punsArray addObject:pun];
-  [self.tableView reloadData];
-}
 
 #pragma mark - View lifecycle
 
@@ -54,9 +46,7 @@
 {
     [super viewDidLoad];
 
-    self.punsArray = [[NSMutableArray alloc] initWithObjects:
-                      [Pun punWithTitle:@"A successful diet is the triumph of mind over platter" rating:80], 
-                      [Pun punWithTitle:@"When you dream in color, it's a pigment of your imagination"  rating:35], nil];
+    self.punsArray = nil;
 }
 
 - (void)viewDidUnload

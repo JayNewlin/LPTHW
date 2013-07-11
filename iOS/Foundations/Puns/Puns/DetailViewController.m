@@ -46,14 +46,6 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(addNewPun)];
 }
 
-- (void) addNewPun {
-  
-  self.pun = [Pun punWithTitle:self.textView.text rating:self.ratingSlider.value];
-  
-  [self.delegate addPunToList:self.pun];
-  [self.navigationController dismissModalViewControllerAnimated:YES];
-}
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewWillAppear:(BOOL)animated
@@ -83,4 +75,18 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)savePun:(id)sender {
+  [self.pun setTitle:self.textView.text];
+  [self.pun setRating:[NSNumber numberWithFloat:self.ratingSlider.value]];
+  
+  NSError *error = nil;
+  if ( [self.pun.managedObjectContext save:&error] ){
+    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    abort();
+    
+  }
+  
+  [self.dismissModalViewControllerAnimated:YES];
+  
+}
 @end

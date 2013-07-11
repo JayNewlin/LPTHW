@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" id="8Ln-pj-fIb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wQi-xX-7l6">
                             <connections>
-                                <segue destination="UdI-YM-Ifu" kind="modal" identifier="AddPun" id="WUM-UZ-38r"/>
+                                <segue destination="UdI-YM-Ifu" kind="modal" identifier="addPun" id="WUM-UZ-38r"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -114,7 +114,13 @@
                             <outlet property="delegate" destination="GT2-tl-7oK" id="Xlf-yO-tyr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gTG-16-fsw"/>
+                    <navigationItem key="navigationItem" id="gTG-16-fsw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="W4P-sz-LO0">
+                            <connections>
+                                <action selector="savePun:" destination="GT2-tl-7oK" id="sk2-Vf-GDq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ratingSlider" destination="ovS-nk-x9y" id="cDp-Dh-J1v"/>
                         <outlet property="textView" destination="gSQ-SE-UBl" id="pFd-JX-F0n"/>
@@ -162,6 +168,7 @@
         <class className="DetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="savePun:"/>
                 <relationship kind="outlet" name="ratingSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>

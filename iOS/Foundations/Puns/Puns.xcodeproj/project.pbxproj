@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50112CDC178E0551000EB7DE /* PunsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */; };
 		5051BA80178F2F44000B6F3B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5051BA7F178F2F44000B6F3B /* CoreData.framework */; };
+		5051BA83178F3920000B6F3B /* Pun.m in Sources */ = {isa = PBXBuildFile; fileRef = 5051BA82178F3920000B6F3B /* Pun.m */; };
 		86731DB9149A559400335FCA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86731DB8149A559400335FCA /* MainStoryboard.storyboard */; };
 		86731DBD149A5C1600335FCA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86731DBC149A5C1600335FCA /* DetailViewController.m */; };
 		B3BF3CF91497A7FE003AAEDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BF3CF81497A7FE003AAEDB /* UIKit.framework */; };
@@ -18,13 +19,14 @@
 		B3BF3D051497A7FE003AAEDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BF3D041497A7FE003AAEDB /* main.m */; };
 		B3BF3D091497A7FE003AAEDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BF3D081497A7FE003AAEDB /* AppDelegate.m */; };
 		B3BF3D1A1497AAB7003AAEDB /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BF3D191497AAB7003AAEDB /* ListViewController.m */; };
-		B3BF3D1D1497AC85003AAEDB /* Pun.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BF3D1C1497AC85003AAEDB /* Pun.m */; };
 		B3BF3D4F1497BDB1003AAEDB /* PunsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BF3D4E1497BDB1003AAEDB /* PunsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50112CDB178E0551000EB7DE /* PunsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PunsModel.xcdatamodel; sourceTree = "<group>"; };
 		5051BA7F178F2F44000B6F3B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5051BA81178F3920000B6F3B /* Pun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pun.h; sourceTree = "<group>"; };
+		5051BA82178F3920000B6F3B /* Pun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pun.m; sourceTree = "<group>"; };
 		86731DB8149A559400335FCA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		86731DBB149A5C1600335FCA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		86731DBC149A5C1600335FCA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -40,8 +42,6 @@
 		B3BF3D081497A7FE003AAEDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3BF3D181497AAB7003AAEDB /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		B3BF3D191497AAB7003AAEDB /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		B3BF3D1B1497AC85003AAEDB /* Pun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pun.h; sourceTree = "<group>"; };
-		B3BF3D1C1497AC85003AAEDB /* Pun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pun.m; sourceTree = "<group>"; };
 		B3BF3D4D1497BDB1003AAEDB /* PunsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunsTableViewCell.h; sourceTree = "<group>"; };
 		B3BF3D4E1497BDB1003AAEDB /* PunsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,14 +97,14 @@
 				B3BF3CFF1497A7FE003AAEDB /* Supporting Files */,
 				B3BF3D181497AAB7003AAEDB /* ListViewController.h */,
 				B3BF3D191497AAB7003AAEDB /* ListViewController.m */,
-				B3BF3D1B1497AC85003AAEDB /* Pun.h */,
-				B3BF3D1C1497AC85003AAEDB /* Pun.m */,
 				B3BF3D4D1497BDB1003AAEDB /* PunsTableViewCell.h */,
 				B3BF3D4E1497BDB1003AAEDB /* PunsTableViewCell.m */,
 				86731DB8149A559400335FCA /* MainStoryboard.storyboard */,
 				86731DBB149A5C1600335FCA /* DetailViewController.h */,
 				86731DBC149A5C1600335FCA /* DetailViewController.m */,
 				50112CDA178E0551000EB7DE /* PunsModel.xcdatamodeld */,
+				5051BA81178F3920000B6F3B /* Pun.h */,
+				5051BA82178F3920000B6F3B /* Pun.m */,
 			);
 			path = Puns;
 			sourceTree = "<group>";
@@ -186,10 +186,10 @@
 				B3BF3D051497A7FE003AAEDB /* main.m in Sources */,
 				B3BF3D091497A7FE003AAEDB /* AppDelegate.m in Sources */,
 				B3BF3D1A1497AAB7003AAEDB /* ListViewController.m in Sources */,
-				B3BF3D1D1497AC85003AAEDB /* Pun.m in Sources */,
 				B3BF3D4F1497BDB1003AAEDB /* PunsTableViewCell.m in Sources */,
 				86731DBD149A5C1600335FCA /* DetailViewController.m in Sources */,
 				50112CDC178E0551000EB7DE /* PunsModel.xcdatamodeld in Sources */,
+				5051BA83178F3920000B6F3B /* Pun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

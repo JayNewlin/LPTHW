@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *ratingSlider;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) Pun *pun;
+- (IBAction)savePun:(id)sender;
 
 @end
 
