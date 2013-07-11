@@ -11,6 +11,11 @@
 #import "PunsTableViewCell.h"
 #import "DetailViewController.h"
 
+@interface ListViewController ()
+- (void)configureCell:(PunsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 
 
 @implementation ListViewController
@@ -33,8 +38,11 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ( [[segue identifier] isEqualToString:@"ShowPun"] ){
         DetailViewController *dvc = (DetailViewController *)[segue destinationViewController];
-        dvc.pun = [self.punsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
-        
+      
+      NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+      Pun *pun = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+      [dvc setPun:pun];
+      
     } else if  ([[segue identifier] isEqualToString:@"addPun"]) {
         DetailViewController *dvc = (DetailViewController *)[[segue destinationViewController] topViewController];
         [dvc setPun:[NSEntityDescription insertNewObjectForEntityForName:@"Pun" inManagedObjectContext:self.managedObjectContext]];
@@ -73,15 +81,18 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 { 
-    return [self.punsArray count];
+  
+  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+  
+  return [sectionInfo numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (PunsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"PunTableViewCell";
     
@@ -90,13 +101,16 @@
         cell = [[PunsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Pun *pun = [self.punsArray objectAtIndex:indexPath.row];
-    
-    cell.punTextLabel.text = pun.title;
-    cell.punRatingLabel.text = [pun.rating stringValue];
-    
-    
+  [self configureCell:cell atIndexPath:indexPath];
+  
     return cell;
+}
+
+- (void)configureCell:(PunsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+  Pun *pun = [self.fetchedResultsController objectAtIndexPath:indexPath];
+  cell.punTextLabel.text = pun.title;
+  cell.punRatingLabel.text = [pun.rating stringValue];
+
 }
 
 
