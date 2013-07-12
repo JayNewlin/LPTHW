@@ -2,12 +2,13 @@
 //  SecondViewController.h
 //  Notification
 //
-//  Created by Jay R Newlin on 7/12/13.
-//  Copyright (c) 2013 DmgCtrl Learning. All rights reserved.
+//  Created by Amit Bijlani on 2/14/12.
+//  Copyright (c) 2012 Treehouse Island Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end
