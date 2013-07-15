@@ -23,6 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  
+  NSLog(@"%@", [defaults stringForKey:@"fromCurrency"]);
     
         
 }
