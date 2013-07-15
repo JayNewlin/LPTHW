@@ -146,6 +146,14 @@ static NSString *kName_VenueName = @"venu_name";
   [_locationManager startUpdatingLocation];
 }
 
+- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+
+  NSLog(@"latitude %+.6f, longitude %+.6f accuracy %1.2f time %d", newLocation.coordinate.latitude, newLocation.coordinate.longitude, newLocation.horizontalAccuracy, abs ([newLocation.timestamp timeIntervalSinceNow]));
+  NSTimeInterval locationAge = -[newLocation.timestamp timeIntervalSinceNow];
+  if ( locationAge > 10.0 ) return;
+  
+  
+}
 
 
 @end
