@@ -23,12 +23,60 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  [self setupDefaults];
   
-  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-  
-  NSLog(@"%@", [defaults stringForKey:@"fromCurrency"]);
     
         
+}
+
+- (void) setupDefaults {
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  
+  NSString *testValue = [defaults stringForKey:kFromCurrency];
+  
+  if (testValue == nil ) {
+    NSString *pathStr = [[NSBundle mainBundle] bundlePath];
+    NSString *settingsBundlePath = [pathStr stringByAppendingPathComponent:@"Settings.bundle"];
+    NSString *finalPath = [settingsBundlePath stringByAppendingPathComponent:@"Root.plist"];
+    
+    NSDictionary *settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+    NSArray *prefSpecifierArray = [settingsDictionary objectForKey:@"PreferenceSpecifiers"];
+    
+    NSString *fromValue, *toValue;
+    
+    NSDictionary *prefItem;
+    
+    for (prefItem in prefSpecifierArray) {
+      NSString *keyValue = [prefItem objectForKey:@"Key"];
+      id defaultValue = [prefItem objectForKey:@"DefaultValue"];
+      
+      if ([keyValue isEqualToString:kFromCurrency])
+      {
+        fromValue = defaultValue;
+      }
+      else if ([keyValue isEqualToString:kToCurrency])
+      {
+        toValue = defaultValue;
+      }
+    
+    }
+    
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 fromValue, kFromCurrency,
+                                 toValue, kToCurrency,
+                                 nil];
+    
+    [defaults registerDefaults:appDefaults];
+    [defaults synchronize];
+    
+    
+    
+  }
+  
+  self.fromLabel.text = [defaults stringForKey:kFromCurrency];
+  self.toLabel.text = [defaults stringForKey:kToCurrency];
+  
+  
 }
 
 

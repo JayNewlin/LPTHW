@@ -13,9 +13,12 @@
 #define kFromCurrency @"fromCurrency"
 
 
+
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *fromLabel;
 @property (strong, nonatomic) IBOutlet UILabel *toLabel;
+
+- (void) setupDefaults;
 
 
 @end
