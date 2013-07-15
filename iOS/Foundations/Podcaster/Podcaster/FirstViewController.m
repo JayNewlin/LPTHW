@@ -21,10 +21,6 @@
   
   [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"steel-mesh.png"]]];
   
-    [self.muteSwitch setOnTintColor:RED_COLOR];
-    [self.volumeSlider setMinimumTrackTintColor:RED_COLOR];
-    [self.volumeSlider setMaximumTrackTintColor:[RED_COLOR colorWithAlphaComponent:0.5]];
-  [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObject:RED_COLOR forKey:UITextAttributeTextColor] forState:UIControlStateSelected];
 
 }
 

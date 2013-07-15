@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DetailViewController.h"
 
 @implementation AppDelegate
 
@@ -14,18 +15,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
   
-  UITabBar *tabBar = tabBarController.tabBar;
+  [self customizeControls];
   
-  [tabBar setSelectedImageTintColor:RED_COLOR];
-  [tabBar setSelectionIndicatorImage:[[UIImage imageNamed:@"tabbar-selection.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)]];
-  [tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar-bg.png"]];
-    
     // Override point for customization after application launch.
     return YES;
 }
-							
+
+- (void) customizeControls {
+  [[UITabBar appearance] setSelectedImageTintColor:RED_COLOR];
+  [[UITabBar appearance] setSelectionIndicatorImage:[[UIImage imageNamed:@"tabbar-selection.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)]];
+  [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar-bg.png"]];
+  
+  [[UISwitch appearance] setOnTintColor:RED_COLOR];
+  [[UISlider appearance] setMinimumTrackTintColor:RED_COLOR];
+  [[UISlider appearance] setMaximumTrackTintColor:[RED_COLOR colorWithAlphaComponent:0.5]];
+  [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:RED_COLOR forKey:UITextAttributeTextColor] forState:UIControlStateSelected];
+
+  [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"brushedmetal.png"] forBarMetrics:UIBarMetricsDefault];
+  
+  [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:BLACK_COLOR, UITextAttributeTextColor, [UIFont fontWithName:@"AmericanTypewriter" size:18], UITextAttributeFont, nil]];
+  
+  [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"backbtn-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 7)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+  
+
+  [[UISwitch appearanceWhenContainedIn:[DetailViewController class], nil] setOnTintColor:BLACK_COLOR];
+  
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

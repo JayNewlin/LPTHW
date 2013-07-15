@@ -39,17 +39,6 @@
  
     self.podcasts = [NSArray arrayWithObjects:@"This American Life",@"Planet Money",@"Radio Lab", @"Grammar Girl", nil];
   
-  UINavigationBar *navBar = self.navigationController.navigationBar;
-  
-  [navBar setBackgroundImage:[UIImage imageNamed:@"brushedmetal.png"] forBarMetrics:UIBarMetricsDefault];
-  
-  [navBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:BLACK_COLOR, UITextAttributeTextColor, [UIFont fontWithName:@"AmericanTypewriter" size:18], UITextAttributeFont, nil]];
-  
-  UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:nil action:NULL];
-  
-  [backBtn setBackButtonBackgroundImage:[[UIImage imageNamed:@"backbtn-bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 7)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-  
-  self.navigationItem.backBarButtonItem = backBtn;
     
 
 }
