@@ -14,15 +14,28 @@
 {
     // Override point for customization after application launch.
   
-  __block float inches = 12;
-  __block NSString *string = @"Some string";
+  float inches = 12;
   
-  double (^inchesToCms)(void) = ^{
-    string = @"Other string";
+  typedef double (^unit_conversion_t)(float);
+  
+  unit_conversion_t inchesToCms = ^(float i){
     return inches * 2.54;
   };
   
-  NSLog(@"%1.2f cms", inchesToCms ());
+  unit_conversion_t inchesToFt = ^(float i){
+    return i/12.00;
+  };
+  
+  unit_conversion_t inchesToYards = ^(float i){
+    return i/36.00;
+  };
+  
+  NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:inchesToCms, @"inchesToCms", inchesToFt, @"inchesToFt", inchesToYards, @"inchesToYards", nil];
+  
+  [dictionary enumerateKeysAndObjectsUsingBlock:^(id key, id val, BOOL *stop) {
+    unit_conversion_t conversionBlock = val;
+    NSLog(@"%@ - %1.2f",key,conversionBlock(inches));
+  }];
   
     return YES;
 }
