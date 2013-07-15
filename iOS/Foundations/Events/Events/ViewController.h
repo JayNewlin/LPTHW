@@ -15,5 +15,8 @@
 @property (nonatomic, strong) Event *currentEvent;
 @property (nonatomic, strong) NSMutableString *currentString;
 @property (nonatomic, assign) BOOL storeCharacters;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@property (nonatomic, strong) NSMutableArray *eventsArray;
+
 
 @end
