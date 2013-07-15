@@ -19,6 +19,7 @@
 		503E612B179482A300A16E46 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503E6129179482A300A16E46 /* MainStoryboard.storyboard */; };
 		503E612E179482A300A16E46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E612D179482A300A16E46 /* ViewController.m */; };
 		503E613C1794887B00A16E46 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E613B1794887B00A16E46 /* Event.m */; };
+		503E613E17949CAE00A16E46 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503E613D17949CAE00A16E46 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		503E612D179482A300A16E46 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		503E613A1794887B00A16E46 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		503E613B1794887B00A16E46 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		503E613D17949CAE00A16E46 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503E613E17949CAE00A16E46 /* CoreLocation.framework in Frameworks */,
 				503E6112179482A200A16E46 /* UIKit.framework in Frameworks */,
 				503E6114179482A200A16E46 /* Foundation.framework in Frameworks */,
 				503E6116179482A200A16E46 /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +79,7 @@
 		503E6110179482A200A16E46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				503E613D17949CAE00A16E46 /* CoreLocation.framework */,
 				503E6111179482A200A16E46 /* UIKit.framework */,
 				503E6113179482A200A16E46 /* Foundation.framework */,
 				503E6115179482A200A16E46 /* CoreGraphics.framework */,

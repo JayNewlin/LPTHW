@@ -20,11 +20,14 @@
 @synthesize storeCharacters = _storeCharacters;
 @synthesize dateFormatter = _dateFormatter;
 @synthesize eventsArray = _eventsArray;
+@synthesize locationManager = _locationManager;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+  [self startLocationManager];
   
   self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://api.eventful.com/rest/events/search?app_key=tgLkQkC4wv8vMNhr&location=19106&category=music&date=future"]];
   
@@ -128,7 +131,20 @@ static NSString *kName_VenueName = @"venu_name";
   [self.tableView reloadData];
 }
 
+#pragma mark -
+#pragma mark CLLocationManagerDelegate
 
+- (void) startLocationManager
+{
+  if ( !_locationManager ) {
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    _locationManager.distanceFilter = 100;
+    _locationManager.purpose = @"We need your location to display events near you.";
+  }
+  
+  [_locationManager startUpdatingLocation];
+}
 
 
 

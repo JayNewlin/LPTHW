@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UITableViewController <NSXMLParserDelegate>
+@interface ViewController : UITableViewController <NSXMLParserDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) NSXMLParser *xmlParser;
 @property (nonatomic, strong) Event *currentEvent;
@@ -17,6 +18,7 @@
 @property (nonatomic, assign) BOOL storeCharacters;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSMutableArray *eventsArray;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 
 @end
