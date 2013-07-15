@@ -14,6 +14,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+  
+  UITabBar *tabBar = tabBarController.tabBar;
+  
+  [tabBar setSelectedImageTintColor:RED_COLOR];
+  [tabBar setSelectionIndicatorImage:[[UIImage imageNamed:@"tabbar-selection.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)]];
+  [tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar-bg.png"]];
     
     // Override point for customization after application launch.
     return YES;
