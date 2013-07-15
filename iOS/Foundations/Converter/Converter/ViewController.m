@@ -23,10 +23,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSettings:) name:NSUserDefaultsDidChangeNotification object:nil];
   [self setupDefaults];
   
     
         
+}
+
+- (void) updateSettings:(NSNotification *)notif{
+  NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
+  self.fromLabel.text = [defaults objectForKey:kFromCurrency];
+  self.toLabel.text = [defaults valueForKey:kToCurrency];
 }
 
 - (void) setupDefaults {
@@ -87,6 +94,8 @@
     [self setFromLabel:nil];
     [self setToLabel:nil];
     [super viewDidUnload];
+  
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:NSUserDefaultsDidChangeNotification object:nil];
     
 
     
