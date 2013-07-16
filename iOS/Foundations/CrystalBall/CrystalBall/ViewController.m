@@ -31,6 +31,7 @@
                             @"Better not tell you now",
                             @"Concentrate, and ask again",
                             @"Unable to answer now",
+                            @"Maybe yes",
                             nil];
 
 }
@@ -71,7 +72,8 @@
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
+  NSUInteger index = arc4random_uniform(self.predictionArray.count);
   
-    self.predictionLabel.text = [self.predictionArray objectAtIndex:4];
+    self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
 }
 @end
