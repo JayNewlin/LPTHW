@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @implementation ViewController
+@synthesize predictionArray;
 
 - (void)didReceiveMemoryWarning
 {
@@ -21,7 +22,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  self.predictionArray = [[NSArray alloc] initWithObjects:@"It is certain",
+                            @"It is decidedly so",
+                            @"All signs say YES",
+                            @"The stars are not aligned",
+                            @"My reply is no",
+                            @"It is doubtful",
+                            @"Better not tell you now",
+                            @"Concentrate, and ask again",
+                            @"Unable to answer now",
+                            nil];
+
 }
 
 - (void)viewDidUnload
@@ -60,17 +71,7 @@
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-  NSArray *predictionArray = [[NSArray alloc] initWithObjects:@"It is certain",
-                     @"It is decidedly so",
-                     @"All signs say YES",
-                     @"The stars are not aligned",
-                     @"My reply is no",
-                     @"It is doubtful",
-                     @"Better not tell you now",
-                     @"Concentrate, and ask again",
-                     @"Unable to answer now",
-                     nil];
   
-    self.predictionLabel.text = [predictionArray objectAtIndex:8];
+    self.predictionLabel.text = [self.predictionArray objectAtIndex:4];
 }
 @end
