@@ -2,8 +2,8 @@
 //  ViewController.m
 //  CrystalBall
 //
-//  Created by Amit Bijlani on 6/7/12.
-//  Copyright (c) 2012 Treehouse Island Inc. All rights reserved.
+//  Created by Jay R. Newlin on 7/16/13.
+//  Copyright (c) 2013 DmgCtrl, Ltd. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -60,6 +60,10 @@
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
+  NSString *myString = @"My name is Jay";
+  [myString length];
+  [myString uppercaseString];
+  
   self.predictionLabel.text = @"Definitely yes";
 }
 @end
