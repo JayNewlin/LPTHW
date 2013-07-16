@@ -22,6 +22,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  UIImage *image = [UIImage imageNamed:@"background.png"];
+  UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+  [self.view insertSubview:imageView atIndex:0];
+  
   self.predictionArray = [[NSArray alloc] initWithObjects:@"It is certain",
                             @"It is decidedly so",
                             @"All signs say YES",
@@ -33,6 +37,8 @@
                             @"Unable to answer now",
                             @"Maybe yes",
                             nil];
+  
+  
 
 }
 
