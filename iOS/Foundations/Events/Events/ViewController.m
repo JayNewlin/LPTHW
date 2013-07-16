@@ -21,6 +21,7 @@
 @synthesize dateFormatter = _dateFormatter;
 @synthesize eventsArray = _eventsArray;
 @synthesize locationManager = _locationManager;
+@synthesize currentLocation = _currentLocation;
 
 
 - (void)viewDidLoad
@@ -141,6 +142,7 @@ static NSString *kName_VenueName = @"venu_name";
     _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     _locationManager.distanceFilter = 100;
     _locationManager.purpose = @"We need your location to display events near you.";
+    _locationManager.delegate = self;
   }
   
   [_locationManager startUpdatingLocation];
@@ -152,8 +154,27 @@ static NSString *kName_VenueName = @"venu_name";
   NSTimeInterval locationAge = -[newLocation.timestamp timeIntervalSinceNow];
   if ( locationAge > 10.0 ) return;
   
+  if ( newLocation.horizontalAccuracy < 0 ) return;
+  
+  if ( self.currentLocation == nil && newLocation.horizontalAccuracy <= _locationManager.desiredAccuracy ) {
+    self.currentLocation = newLocation;
+    
+    [self stopLocationManager];
+  }
+  
   
 }
 
+- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+  NSLog(@"%@", error);
+  
+  if ( [error code] != kCLErrorLocationUnknown){
+    [self stopLocationManager];
+  }
+}
+
+- (void) stopLocationManager {
+  [self.locationManager stopUpdatingLocation];
+}
 
 @end

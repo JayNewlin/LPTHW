@@ -19,6 +19,11 @@
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSMutableArray *eventsArray;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *currentLocation;
+
+- (void) finishedCurrentEvent:(Event *)e;
+- (void) startLocationManager;
+- (void) stopLocationManager;
 
 
 @end
