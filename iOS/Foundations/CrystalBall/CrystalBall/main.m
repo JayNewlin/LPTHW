@@ -2,8 +2,8 @@
 //  main.m
 //  CrystalBall
 //
-//  Created by Jay R Newlin on 7/16/13.
-//  Copyright (c) 2013 DmgCtrl Learning. All rights reserved.
+//  Created by Amit Bijlani on 6/7/12.
+//  Copyright (c) 2012 Treehouse Island Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-  @autoreleasepool {
-      return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-  }
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
 }
