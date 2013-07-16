@@ -58,4 +58,7 @@
 }
 
 
+- (IBAction)buttonPressed:(UIButton *)sender {
+  NSLog(@"button pressed");
+}
 @end
