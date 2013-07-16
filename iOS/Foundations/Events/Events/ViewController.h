@@ -24,6 +24,8 @@
 - (void) finishedCurrentEvent:(Event *)e;
 - (void) startLocationManager;
 - (void) stopLocationManager;
+- (void) reverseGeocode:(CLLocation *)location;
+- (void) parseXMLWithLocation: (CLLocation *)location;
 
 
 @end

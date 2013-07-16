@@ -28,8 +28,6 @@
 {
     [super viewDidLoad];
   
-  [self startLocationManager];
-  
   self.eventsArray = [NSMutableArray array];
   self.currentString = [NSMutableString string];
   
@@ -37,6 +35,7 @@
   self.dateFormatter.locale = [NSLocale currentLocale];
   self.dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
   
+  [self startLocationManager];
 
 }
 
@@ -46,9 +45,10 @@
   
   if ( location )
     stringURL = [NSString stringWithFormat:@"http://api.eventful.com/rest/events/search?app_key=tgLkQkC4wv8vMNhr&location=%1.6f,%1.6f&category=music&date=future",location.coordinate.latitude, location.coordinate.longitude];
-  else
+  else {
     stringURL = @"http://api.eventful.com/rest/events/search?app_key=tgLkQkC4wv8vMNhr&location=USA&category=music&date=future";
-  
+    self.navigationItem.title = @"USA";
+  }
   self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:stringURL]];
   
   self.xmlParser.delegate = self;
@@ -98,7 +98,7 @@
 static NSString *kName_Event = @"event";
 static NSString *kName_Title = @"title";
 static NSString *kName_StartTime = @"start_time";
-static NSString *kName_VenueName = @"venu_name";
+static NSString *kName_VenueName = @"venue_name";
 
 - (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
   
@@ -154,6 +154,9 @@ static NSString *kName_VenueName = @"venu_name";
   }
   
   [_locationManager startUpdatingLocation];
+  
+  if ( [CLLocationManager locationServicesEnabled] == NO)
+    [self parseXMLWithLocation:nil];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
@@ -167,6 +170,7 @@ static NSString *kName_VenueName = @"venu_name";
   if ( self.currentLocation == nil && newLocation.horizontalAccuracy <= _locationManager.desiredAccuracy ) {
     self.currentLocation = newLocation;
     [self parseXMLWithLocation:newLocation];
+    [self reverseGeocode:newLocation];
     [self stopLocationManager];
   }
   
@@ -184,6 +188,29 @@ static NSString *kName_VenueName = @"venu_name";
 
 - (void) stopLocationManager {
   [self.locationManager stopUpdatingLocation];
+}
+
+#pragma mark -
+#pragma mark Reverse Geocode
+
+- (void) reverseGeocode:(CLLocation *)location {
+  CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+  
+  [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+    if ( error ){
+      NSLog(@"Reverse geocode failed with error: %@", error);
+      return;
+    }
+    
+    if ( placemarks ) {
+      CLPlacemark *placemark = [placemarks lastObject];
+      NSLog(@"%@", placemark);
+      
+      self.navigationItem.title = placemark.locality;
+    } else {
+      self.navigationItem.title = @"USA";
+    }
+  }];
 }
 
 @end
