@@ -30,10 +30,6 @@
   
   [self startLocationManager];
   
-  self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://api.eventful.com/rest/events/search?app_key=tgLkQkC4wv8vMNhr&location=19106&category=music&date=future"]];
-  
-  self.xmlParser.delegate = self;
-  
   self.eventsArray = [NSMutableArray array];
   self.currentString = [NSMutableString string];
   
@@ -41,13 +37,25 @@
   self.dateFormatter.locale = [NSLocale currentLocale];
   self.dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
   
+
+}
+
+- (void) parseXMLWithLocation: (CLLocation *) location {
+
+  NSString *stringURL;
+  
+  if ( location )
+    stringURL = [NSString stringWithFormat:@"http://api.eventful.com/rest/events/search?app_key=tgLkQkC4wv8vMNhr&location=%1.6f,%1.6f&category=music&date=future",location.coordinate.latitude, location.coordinate.longitude];
+  else
+    stringURL = @"http://api.eventful.com/rest/events/search?app_key=tgLkQkC4wv8vMNhr&location=USA&category=music&date=future";
+  
+  self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:stringURL]];
+  
+  self.xmlParser.delegate = self;
   if ( [self.xmlParser parse] )
     NSLog(@"XML Parsed");
   else
     NSLog(@"Failed to parse");
-
-
-
 
 }
 
@@ -158,7 +166,7 @@ static NSString *kName_VenueName = @"venu_name";
   
   if ( self.currentLocation == nil && newLocation.horizontalAccuracy <= _locationManager.desiredAccuracy ) {
     self.currentLocation = newLocation;
-    
+    [self parseXMLWithLocation:newLocation];
     [self stopLocationManager];
   }
   
@@ -169,6 +177,7 @@ static NSString *kName_VenueName = @"venu_name";
   NSLog(@"%@", error);
   
   if ( [error code] != kCLErrorLocationUnknown){
+    [self parseXMLWithLocation:nil];
     [self stopLocationManager];
   }
 }
