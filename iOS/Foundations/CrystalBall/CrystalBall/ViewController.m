@@ -26,6 +26,7 @@
 
 - (void)viewDidUnload
 {
+  [self setPredictionLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -59,6 +60,6 @@
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-  NSLog(@"button pressed");
+  self.predictionLabel.text = @"Definitely yes";
 }
 @end
