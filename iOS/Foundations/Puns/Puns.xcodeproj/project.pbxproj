@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5051BA85178F4049000B6F3B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5051BA84178F4049000B6F3B /* Default-568h@2x.png */; };
+		50D4EFFC179728DD00A67AF5 /* QuoteIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D4EFFB179728DD00A67AF5 /* QuoteIcon.png */; };
+		50D4EFFE179728E100A67AF5 /* QuoteIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D4EFFD179728E100A67AF5 /* QuoteIcon@2x.png */; };
 		86099C1014D0AA6C00456656 /* PunsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86099C0E14D0AA6C00456656 /* PunsModel.xcdatamodeld */; };
 		86099C1314D0AEC500456656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86099C1214D0AEC500456656 /* CoreData.framework */; };
 		86099C4A14D0B41100456656 /* Pun.m in Sources */ = {isa = PBXBuildFile; fileRef = 86099C4914D0B41100456656 /* Pun.m */; };
@@ -24,7 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5051BA84178F4049000B6F3B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5051BA84178F4049000B6F3B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		50D4EFFB179728DD00A67AF5 /* QuoteIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QuoteIcon.png; path = ../QuoteIcon.png; sourceTree = "<group>"; };
+		50D4EFFD179728E100A67AF5 /* QuoteIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QuoteIcon@2x.png"; path = "../QuoteIcon@2x.png"; sourceTree = "<group>"; };
 		86099C0F14D0AA6C00456656 /* PunsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PunsModel.xcdatamodel; sourceTree = "<group>"; };
 		86099C1214D0AEC500456656 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		86099C4814D0B41100456656 /* Pun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pun.h; sourceTree = "<group>"; };
@@ -63,10 +67,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50D4EFFF1797290900A67AF5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				50D4EFFD179728E100A67AF5 /* QuoteIcon@2x.png */,
+				50D4EFFB179728DD00A67AF5 /* QuoteIcon.png */,
+				5051BA84178F4049000B6F3B /* Default-568h@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		B3BF3CE91497A7FE003AAEDB = {
 			isa = PBXGroup;
 			children = (
-				5051BA84178F4049000B6F3B /* Default-568h@2x.png */,
 				B3BF3CFE1497A7FE003AAEDB /* Puns */,
 				B3BF3CF71497A7FE003AAEDB /* Frameworks */,
 				B3BF3CF51497A7FE003AAEDB /* Products */,
@@ -95,6 +108,7 @@
 		B3BF3CFE1497A7FE003AAEDB /* Puns */ = {
 			isa = PBXGroup;
 			children = (
+				50D4EFFF1797290900A67AF5 /* images */,
 				B3BF3D071497A7FE003AAEDB /* AppDelegate.h */,
 				B3BF3D081497A7FE003AAEDB /* AppDelegate.m */,
 				B3BF3CFF1497A7FE003AAEDB /* Supporting Files */,
@@ -177,6 +191,8 @@
 				B3BF3D031497A7FE003AAEDB /* InfoPlist.strings in Resources */,
 				86731DB9149A559400335FCA /* MainStoryboard.storyboard in Resources */,
 				5051BA85178F4049000B6F3B /* Default-568h@2x.png in Resources */,
+				50D4EFFC179728DD00A67AF5 /* QuoteIcon.png in Resources */,
+				50D4EFFE179728E100A67AF5 /* QuoteIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +288,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Puns/Puns-Prefix.pch";
 				INFOPLIST_FILE = "Puns/Puns-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,6 +300,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Puns/Puns-Prefix.pch";
 				INFOPLIST_FILE = "Puns/Puns-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

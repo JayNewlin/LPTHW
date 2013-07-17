@@ -2,8 +2,8 @@
 //  ListViewController.m
 //  Puns
 //
-//  Created by Amit Bijlani on 12/13/11.
-//  Copyright (c) 2011 Treehouse Island Inc. All rights reserved.
+//  Created by Jay R. Newlin during Training
+//  Copyright (c) 2013 DmgCtrl, Ltd. All rights reserved.
 //
 
 #import "ListViewController.h"

@@ -2,8 +2,8 @@
 //  Pun.h
 //  Puns
 //
-//  Created by Nick Pettit on 1/25/12.
-//  Copyright (c) 2012 Treehouse Island Inc. All rights reserved.
+//  Created by Jay R. Newlin during Training
+//  Copyright (c) 2013 DmgCtrl, Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
