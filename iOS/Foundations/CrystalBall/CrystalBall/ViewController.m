@@ -77,11 +77,9 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-
-- (IBAction)buttonPressed:(UIButton *)sender {
+- (void) makePrediction {
   NSUInteger index = arc4random_uniform(self.predictionArray.count);
-  
-    self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
+  self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
 }
 
 - (BOOL) canBecomeFirstResponder {
@@ -94,10 +92,7 @@
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   if ( motion == UIEventSubtypeMotionShake ){
-    
-    NSUInteger index = arc4random_uniform(self.predictionArray.count);
-    self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
-
+    [self makePrediction];
   }
 }
 
@@ -105,8 +100,13 @@
   NSLog(@"motion cancelled");
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+  self.predictionLabel.text = @"";
+}
 
-
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+  [self makePrediction];
+}
 
 
 
