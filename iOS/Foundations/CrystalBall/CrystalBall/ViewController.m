@@ -111,6 +111,10 @@
   self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
   
   [self.imageView startAnimating];
+  
+  [UIView animateWithDuration:2.0 animations:^{
+    self.predictionLabel.alpha = 1.0;
+  }];
 }
 
 - (BOOL) canBecomeFirstResponder {
@@ -118,7 +122,8 @@
 }
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-  self.predictionLabel.text = @"";
+  self.predictionLabel.text = nil;
+  self.predictionLabel.alpha = 0.0;
 }
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -132,7 +137,8 @@
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-  self.predictionLabel.text = @"";
+  self.predictionLabel.text = nil;
+  self.predictionLabel.alpha = 0.0;
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
