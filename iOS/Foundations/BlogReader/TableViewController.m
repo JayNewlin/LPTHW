@@ -27,12 +27,16 @@
 {
     [super viewDidLoad];
   
-  NSDictionary *blogPost1 = [NSDictionary  dictionaryWithObjectsAndKeys:@"The Missing Widget in Android",@"title",@"Ben Jakuben",@"author", nil];
-  NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Getting Started with iOS Development",@"title",@"Amit Bijlani",@"author", nil];
-  NSDictionary *blogPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"An Interview with Shay Howe",@"title",@"Joe Villanueva",@"author", nil];
+  NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
   
-  self.blogPosts = [NSArray arrayWithObjects:blogPost1,blogPost2,blogPost3,
-                 nil];
+  NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
+  
+  NSError *error = nil;
+  
+  NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+  NSLog(@"%@",dataDictionary);
+  
+  self.blogPosts = [dataDictionary objectForKey:@"posts"];
 
 }
 
