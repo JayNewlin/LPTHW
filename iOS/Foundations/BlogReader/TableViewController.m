@@ -28,10 +28,12 @@
 {
     [super viewDidLoad];
   
-  BlogPost *blogPost = [[BlogPost alloc] init];
-  blogPost.title = @"some title";
-  blogPost.author = @"some author";
-
+  BlogPost *bp = [[BlogPost alloc] initWithTitle:@"some title"];
+  bp.author = @"Author";
+  
+  BlogPost *bp1 = [BlogPost blogPostWithTitle:@"another title"];
+  bp1.author = @"Jay";
+  
   
   NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
   

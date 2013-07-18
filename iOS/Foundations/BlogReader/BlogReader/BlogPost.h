@@ -13,4 +13,8 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *author;
 
+// Designated Initializer
+- (id) initWithTitle:(NSString *)title;
++ (id) blogPostWithTitle:(NSString *)title;
+
 @end
