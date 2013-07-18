@@ -26,12 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  self.titles = [NSArray arrayWithObjects:@"The Missing Widget in the Android SDK: SmartImageView",
-                 @"Get Started with iOS Development",
-                 @"An Interview with Shay Howe",
-                 @"Treehouse Friends: Paul Irish",
-                 @"Getting a Job in Web Design and Development",
-                 @"Treehouse Show Episode 13 &#8211 LLJS, Navicons, and Framework Flights",
+  
+  NSDictionary *blogPost1 = [NSDictionary  dictionaryWithObjectsAndKeys:@"The Missing Widget in Android",@"title",@"Ben Jakuben",@"author", nil];
+  NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Getting Started with iOS Development",@"title",@"Amit Bijlani",@"author", nil];
+  NSDictionary *blogPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"An Interview with Shay Howe",@"title",@"Joe Villanueva",@"author", nil];
+  
+  self.blogPosts = [NSArray arrayWithObjects:blogPost1,blogPost2,blogPost3,
                  nil];
 
 }
@@ -51,15 +51,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.titles count];
+    return [self.blogPosts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+  
+  NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+  
     
-  cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
+  cell.textLabel.text = [blogPost valueForKey:@"title"];
+  cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
     return cell;
 }
 

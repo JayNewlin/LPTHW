@@ -87,8 +87,8 @@
 				50D4F04E179740DA00A67AF5 /* AppDelegate.m */,
 				50D4F05D179745A400A67AF5 /* TableViewController.h */,
 				50D4F05E179745A400A67AF5 /* TableViewController.m */,
-				50D4F045179740DA00A67AF5 /* Supporting Files */,
 				50D4F05B1797418200A67AF5 /* MainStoryboard.storyboard */,
+				50D4F045179740DA00A67AF5 /* Supporting Files */,
 			);
 			path = BlogReader;
 			sourceTree = "<group>";
@@ -290,6 +290,7 @@
 				50D4F05A179740DA00A67AF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
