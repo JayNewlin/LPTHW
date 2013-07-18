@@ -8,12 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BlogPost : NSObject {
-  NSString *title;
-  NSString *author;
-}
+@interface BlogPost : NSObject
 
-- (void) setTitle:(NSString *)title;
-- (NSString *) title;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *author;
 
 @end

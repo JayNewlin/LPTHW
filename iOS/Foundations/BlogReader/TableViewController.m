@@ -30,7 +30,7 @@
   
   BlogPost *blogPost = [[BlogPost alloc] init];
   blogPost.title = @"some title";
-  NSString *string = blogPost.title;
+  blogPost.author = @"some author";
 
   
   NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];

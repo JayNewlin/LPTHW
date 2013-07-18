@@ -10,13 +10,6 @@
 
 @implementation BlogPost
 
-- (void) setTitle:(NSString *)_title{
-  title = _title;
-}
-
-- (NSString *) title{
-  return title;
-}
 
 
 @end
