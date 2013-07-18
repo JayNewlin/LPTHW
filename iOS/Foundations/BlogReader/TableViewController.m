@@ -74,7 +74,7 @@
   
   BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
   
-    
+  cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
   cell.textLabel.text = blogPost.title;
   cell.detailTextLabel.text = blogPost.author;
     return cell;
