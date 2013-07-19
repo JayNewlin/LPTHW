@@ -46,6 +46,7 @@
     blogPost.author = [bpDictionary objectForKey:@"author"];
     blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
     blogPost.date = [bpDictionary objectForKey:@"date"];
+    blogPost.url = [NSURL URLWithString:[bpDictionary objectForKey:@"url"]];
     [self.blogPosts addObject:blogPost];
   }
 
@@ -132,7 +133,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
+
+  BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+  UIApplication *application = [UIApplication sharedApplication];
+  [application openURL:blogPost.url];
+
+  
+  
+  // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
