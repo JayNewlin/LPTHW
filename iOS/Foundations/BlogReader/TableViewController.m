@@ -85,7 +85,7 @@
   }
     
   cell.textLabel.text = blogPost.title;
-  cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@",blogPost.author,blogPost.date];
+  cell.detailTextLabel.text = [NSString stringWithFormat:@"By %@ on %@",blogPost.author, [blogPost formattedDate]];
     return cell;
 }
 
