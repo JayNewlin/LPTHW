@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "BlogPost.h"
+#import "WebViewController.h"
 
 @interface TableViewController ()
 
@@ -91,7 +92,13 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  NSLog(@"preparing for segue: %@", segue.identifier);
+  
+  if ( [segue.identifier isEqualToString:@"showBlogPost"]){
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    
+    [segue.destinationViewController setBlogPostURL:blogPost.url];
+  }
 }
 
 
