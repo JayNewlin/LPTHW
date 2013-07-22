@@ -18,6 +18,7 @@
 		50D4F055179740DA00A67AF5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D4F054179740DA00A67AF5 /* Default-568h@2x.png */; };
 		50D4F05C1797418200A67AF5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D4F05B1797418200A67AF5 /* MainStoryboard.storyboard */; };
 		50D4F05F179745A400A67AF5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D4F05E179745A400A67AF5 /* TableViewController.m */; };
+		50D5D718179D694D00D0E492 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D5D717179D694D00D0E492 /* WebViewController.m */; };
 		50F0DD8017984712000F10F1 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F0DD7F17984712000F10F1 /* BlogPost.m */; };
 		50F0DD82179883BF000F10F1 /* treehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F0DD81179883BE000F10F1 /* treehouse.png */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,8 @@
 		50D4F05B1797418200A67AF5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		50D4F05D179745A400A67AF5 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
 		50D4F05E179745A400A67AF5 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		50D5D716179D694D00D0E492 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		50D5D717179D694D00D0E492 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		50F0DD7E17984712000F10F1 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
 		50F0DD7F17984712000F10F1 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		50F0DD81179883BE000F10F1 /* treehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treehouse.png; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				50D4F05D179745A400A67AF5 /* TableViewController.h */,
 				50D4F05E179745A400A67AF5 /* TableViewController.m */,
 				50D4F05B1797418200A67AF5 /* MainStoryboard.storyboard */,
+				50D5D716179D694D00D0E492 /* WebViewController.h */,
+				50D5D717179D694D00D0E492 /* WebViewController.m */,
 				50D4F045179740DA00A67AF5 /* Supporting Files */,
 			);
 			path = BlogReader;
@@ -186,6 +191,7 @@
 				50D4F04F179740DA00A67AF5 /* AppDelegate.m in Sources */,
 				50D4F05F179745A400A67AF5 /* TableViewController.m in Sources */,
 				50F0DD8017984712000F10F1 /* BlogPost.m in Sources */,
+				50D5D718179D694D00D0E492 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
