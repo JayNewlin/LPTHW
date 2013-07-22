@@ -52,11 +52,12 @@
 
 /* Device */
 
-@media screen and (orientation: landscape) {
-	body {
-		background: red;
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
+	.mike {
+		background-image: url('../img/mike2x.png');
+		background-size: 45px 45px;
 	}
-	}
+}
 
 
 
