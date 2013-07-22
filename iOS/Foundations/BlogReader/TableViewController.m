@@ -96,8 +96,9 @@
   if ( [segue.identifier isEqualToString:@"showBlogPost"]){
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    WebViewController *wbc = (WebViewController *)segue.destinationViewController;
+    wbc.blogPostURL = blogPost.url;
     
-    [segue.destinationViewController setBlogPostURL:blogPost.url];
   }
 }
 
