@@ -2,41 +2,9 @@
 #import "Tire.h"
 #import "Engine.h"
 #import "Car.h"
+#import "Slant6.h"
+#import "AllWeatherRadial.h"
 
-
-// --------------------------------------------------
-
-@interface AllWeatherRadial : Tire
-@end // AllWeatherRadial
-
-
-@implementation AllWeatherRadial
-
-- (NSString *) description
-{
-	return (@"I am a tire for rain or shine.");
-} // description
-
-@end // AllWeatherRadial
-
-
-// --------------------------------------------------
-
-@interface Slant6 : Engine
-@end // Slant6
-
-
-@implementation Slant6
-
-- (NSString *) description
-{
-	return (@"I am a slant-6. VROOOM!");
-} // description
-
-@end // Slant6
-
-
-// --------------------------------------------------
 
 int main (int argc, const char * argv[]) 
 {
