@@ -6,7 +6,8 @@
 typedef enum {
 	kRedColor,
 	kGreenColor,
-	kBlueColor
+	kBlueColor,
+  kYellowColor
 } ShapeColor;
 
 
@@ -34,6 +35,9 @@ NSString *colorName (ShapeColor color)
 		case kBlueColor:
 			return @"blue";
 			break;
+    case kYellowColor:
+      return @"yellow";
+      break;
 	}
 	
 	return @"no clue";
@@ -42,36 +46,54 @@ NSString *colorName (ShapeColor color)
 
 
 // --------------------------------------------------
-// All about Circles
 
-@interface Circle : NSObject
+// adding new class, Shape, and modifying the rest of the classes to inherit from it,
+// as in Chapter 4
+
+// All about Shapes
+
+@interface Shape : NSObject
 {
-	ShapeColor	fillColor;
-	ShapeRect	bounds;
+  ShapeColor fillColor;
+  ShapeRect bounds;
 }
 
 - (void) setFillColor: (ShapeColor) fillColor;
-
 - (void) setBounds: (ShapeRect) bounds;
-
 - (void) draw;
+
+@end // Shape
+
+
+@implementation Shape
+
+- (void) setFillColor: (ShapeColor) c
+{
+  fillColor = c;
+} // setFillColor
+
+- (void) setBounds: (ShapeRect) b
+{
+  bounds = b;
+} // setBounds
+
+- (void) draw
+{
+  
+} //draw
+
+@end // Shape
+
+
+// --------------------------------------------------
+// All about Circles
+
+@interface Circle : Shape
 
 @end // Circle
 
 
 @implementation Circle
-
-- (void) setFillColor: (ShapeColor) c
-{
-	fillColor = c;
-} // setFillColor
-
-
-- (void) setBounds: (ShapeRect) b
-{
-	bounds = b;
-} // setBounds
-
 
 - (void) draw
 {
@@ -84,39 +106,15 @@ NSString *colorName (ShapeColor color)
 @end // Circle
 
 
-
-
 // --------------------------------------------------
 // All about Rectangles
 
-@interface Rectangle : NSObject
-{
-	ShapeColor	fillColor;
-	ShapeRect	bounds;
-}
-
-- (void) setFillColor: (ShapeColor) fillColor;
-
-- (void) setBounds: (ShapeRect) bounds;
-
-- (void) draw;
+@interface Rectangle : Shape
 
 @end // Rectangle
 
 
 @implementation Rectangle
-
-- (void) setFillColor: (ShapeColor) c
-{
-	fillColor = c;
-} // setFillColor
-
-
-- (void) setBounds: (ShapeRect) b
-{
-	bounds = b;
-} // setBounds
-
 
 - (void) draw
 {
@@ -132,34 +130,12 @@ NSString *colorName (ShapeColor color)
 // --------------------------------------------------
 // All about OblateSphereoids
 
-@interface OblateSphereoid : NSObject
-{
-	ShapeColor	fillColor;
-	ShapeRect	bounds;
-}
-
-- (void) setFillColor: (ShapeColor) fillColor;
-
-- (void) setBounds: (ShapeRect) bounds;
-
-- (void) draw;
+@interface OblateSphereoid : Shape
 
 @end // OblateSphereoid
 
 
 @implementation OblateSphereoid
-
-- (void) setFillColor: (ShapeColor) c
-{
-	fillColor = c;
-} // setFillColor
-
-
-- (void) setBounds: (ShapeRect) b
-{
-	bounds = b;
-} // setBounds
-
 
 - (void) draw
 {
@@ -176,34 +152,12 @@ NSString *colorName (ShapeColor color)
 // --------------------------------------------------
 // All about Triangles
 
-@interface Triangle : NSObject
-{
-	ShapeColor	fillColor;
-	ShapeRect	bounds;
-}
-
-- (void) setFillColor: (ShapeColor) fillColor;
-
-- (void) setBounds: (ShapeRect) bounds;
-
-- (void) draw;
+@interface Triangle : Shape
 
 @end // Triangle
 
 
 @implementation Triangle
-
-- (void) setFillColor: (ShapeColor) c
-{
-	fillColor = c;
-} // setFillColor
-
-
-- (void) setBounds: (ShapeRect) b
-{
-	bounds = b;
-} // setBounds
-
 
 - (void) draw
 {
@@ -257,7 +211,7 @@ int main (int argc, const char * argv[])
 	ShapeRect rect3 = { 47, 32, 80, 50 };
 	shapes[3] = [Triangle new];
 	[shapes[3] setBounds: rect3];
-	[shapes[3] setFillColor: kRedColor];
+	[shapes[3] setFillColor: kYellowColor];
 	
 	drawShapes (shapes, 4);
 	
