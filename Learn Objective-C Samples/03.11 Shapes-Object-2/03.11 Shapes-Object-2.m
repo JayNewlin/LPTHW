@@ -171,6 +171,32 @@ NSString *colorName (ShapeColor color)
 
 
 // --------------------------------------------------
+// Adding a new shape (class)
+//
+// All about Rounded-Corner Rectangles
+
+@interface RoundedRectangle : Shape
+{
+  int cornerRadius;
+}
+
+@end // RoundedRectangle
+
+@implementation RoundedRectangle
+
+- (void) draw
+{
+  NSLog(@"drawing a rounded-corner rectangle at (%d %d %d %d) in %@",
+        bounds.x, bounds.y,
+        bounds.width, bounds.height,
+        colorName(fillColor));
+}
+
+@end // RoundedRectangle
+
+
+
+// --------------------------------------------------
 // Draw the shapes
 
 void drawShapes (id shapes[], int count)
