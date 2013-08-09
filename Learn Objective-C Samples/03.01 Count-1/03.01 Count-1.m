@@ -1,11 +1,15 @@
 #import <Foundation/Foundation.h>
 
+// edited to use variable, instead of hard-coded integer (5)
+
 int main (int argc, const char *argv[]) 
 {
-	NSLog (@"The numbers from 1 to 5:");
+	int count = 16;
+  
+  NSLog (@"The numbers from 1 to %d:", count);
 	
 	int i;
-	for (i = 1; i <= 5; i++) {
+	for (i = 1; i <= count; i++) {
 		NSLog (@"%d\n", i);
 	}
 	

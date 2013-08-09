@@ -14,7 +14,7 @@ int main (int argc, const char * argv[])
 		// strip off the trailing \n
 		word[strlen(word) - 1] = '\0';
 		
-		NSLog (@"%s is %d characters long",
+		NSLog (@"%s is %zd characters long",
 			   word, strlen(word));
 	}
 	
