@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502BC4E517D61FC100EF70C5 /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC4E417D61FC100EF70C5 /* InboxViewController.m */; };
 		50B3C79417CF8A400051D52F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79317CF8A400051D52F /* UIKit.framework */; };
 		50B3C79617CF8A400051D52F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79517CF8A400051D52F /* Foundation.framework */; };
 		50B3C79817CF8A400051D52F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79717CF8A400051D52F /* CoreGraphics.framework */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		502BC4E317D61FC100EF70C5 /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		502BC4E417D61FC100EF70C5 /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
 		50B3C79017CF8A400051D52F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B3C79317CF8A400051D52F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50B3C79517CF8A400051D52F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +70,8 @@
 			children = (
 				50B3C7BE17CF8E820051D52F /* Images */,
 				50B3C7B017CF8A9F0051D52F /* MainStoryboard.storyboard */,
+				502BC4E317D61FC100EF70C5 /* InboxViewController.h */,
+				502BC4E417D61FC100EF70C5 /* InboxViewController.m */,
 				50B3C79917CF8A400051D52F /* Ribbit */,
 				50B3C79217CF8A400051D52F /* Frameworks */,
 				50B3C79117CF8A400051D52F /* Products */,
@@ -202,6 +207,7 @@
 			files = (
 				50B3C7A017CF8A400051D52F /* main.m in Sources */,
 				50B3C7A417CF8A400051D52F /* AppDelegate.m in Sources */,
+				502BC4E517D61FC100EF70C5 /* InboxViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +322,7 @@
 				50B3C7AF17CF8A400051D52F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
