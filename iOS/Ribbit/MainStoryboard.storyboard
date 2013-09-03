@@ -52,7 +52,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wke-Ij-pJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="677"/>
+            <point key="canvasLocation" x="1036" y="677"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="A3K-cl-bVp">
@@ -82,7 +82,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jtj-Od-ZVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="1358"/>
+            <point key="canvasLocation" x="1036" y="1358"/>
         </scene>
         <!--Inbox View Controller - Ribbit-->
         <scene sceneID="goP-Cx-seA">
@@ -309,14 +309,6 @@
         <image name="friends.png" width="40" height="24"/>
         <image name="inbox.png" width="32" height="21"/>
     </resources>
-    <classes>
-        <class className="InboxViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InboxViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
