@@ -19,7 +19,13 @@
 {
     [super viewDidLoad];
   
-  [self performSegueWithIdentifier:@"showLogin" sender:self];
+  PFUser *currentUser = [PFUser currentUser];
+  if (currentUser) {
+    NSLog(@"Current user: %@", currentUser.username);
+  }
+  else{
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
+  }
 }
 
 #pragma mark - Table view data source
@@ -60,6 +66,17 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (IBAction)logout:(id)sender {
+  [PFUser logOut];
+  [self performSegueWithIdentifier:@"showLogin" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"showLogin"]) {
+    [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+  }
 }
 
 @end

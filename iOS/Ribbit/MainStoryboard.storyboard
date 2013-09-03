@@ -108,7 +108,13 @@
                             <outlet property="delegate" destination="f0p-Vp-dUb" id="KSZ-O3-bLU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ribbit" id="5Fn-yw-jx8"/>
+                    <navigationItem key="navigationItem" title="Ribbit" id="5Fn-yw-jx8">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="wjQ-DR-qp5">
+                            <connections>
+                                <action selector="logout:" destination="f0p-Vp-dUb" id="0Pz-4k-bKT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Qsb-ag-W48" kind="push" identifier="showLogin" id="3Jk-Lt-sW7"/>
                     </connections>
@@ -142,6 +148,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="Qsb-ag-W48" eventType="touchUpInside" id="c6B-m0-8b4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhB-jr-KIk">
                                 <constraints>
@@ -188,6 +197,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ribbit" id="qfb-Iw-ibH"/>
+                    <connections>
+                        <outlet property="passwordField" destination="V44-ae-CfT" id="rZm-2B-ghF"/>
+                        <outlet property="usernameField" destination="Umf-C4-Pfa" id="Cvv-Mj-Y6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YB-cS-rDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
