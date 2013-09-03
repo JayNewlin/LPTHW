@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="1036" y="3"/>
         </scene>
-        <!--View Controller - Ribbit-->
+        <!--Login View Controller - Ribbit-->
         <scene sceneID="emJ-rb-9EY">
             <objects>
-                <viewController id="Qsb-ag-W48" sceneMemberID="viewController">
+                <viewController id="Qsb-ag-W48" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeS-ad-Axw">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="1487" y="3"/>
         </scene>
-        <!--View Controller - Ribbit-->
+        <!--Signup View Controller - Ribbit-->
         <scene sceneID="tVq-et-ud2">
             <objects>
-                <viewController id="23q-tS-pPG" sceneMemberID="viewController">
+                <viewController id="23q-tS-pPG" customClass="SignupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Lc-4n-Oec">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -218,6 +218,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signup:" destination="23q-tS-pPG" eventType="touchUpInside" id="V7w-d7-Q6c"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHT-dh-U8m">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -241,6 +244,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ribbit" id="Zgs-jL-F9j"/>
+                    <connections>
+                        <outlet property="emailField" destination="gHT-dh-U8m" id="eBw-Uc-Jgi"/>
+                        <outlet property="passwordField" destination="fub-Xh-wMC" id="O70-yC-HpO"/>
+                        <outlet property="usernameField" destination="fKX-V5-9us" id="VOh-lp-jdR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0n-hz-TGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

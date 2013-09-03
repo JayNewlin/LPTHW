@@ -19,10 +19,6 @@
 {
     [super viewDidLoad];
   
-  PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-  [testObject setObject:@"bar" forKey:@"foo"];
-  [testObject save];
-  
   [self performSegueWithIdentifier:@"showLogin" sender:self];
 }
 
