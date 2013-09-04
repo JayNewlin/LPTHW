@@ -20,6 +20,7 @@
 		502BC4F917D62D4B00EF70C5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502BC4F017D62D4B00EF70C5 /* SystemConfiguration.framework */; };
 		502BC4FC17D6328300EF70C5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC4FB17D6328300EF70C5 /* LoginViewController.m */; };
 		502BC4FF17D6329800EF70C5 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC4FE17D6329800EF70C5 /* SignupViewController.m */; };
+		506D771417D784F500810C94 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506D771317D784F500810C94 /* EditFriendsViewController.m */; };
 		50B3C79417CF8A400051D52F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79317CF8A400051D52F /* UIKit.framework */; };
 		50B3C79617CF8A400051D52F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79517CF8A400051D52F /* Foundation.framework */; };
 		50B3C79817CF8A400051D52F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79717CF8A400051D52F /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 		502BC4FB17D6328300EF70C5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		502BC4FD17D6329800EF70C5 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		502BC4FE17D6329800EF70C5 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		506D771217D784F500810C94 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
+		506D771317D784F500810C94 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
 		50B3C79017CF8A400051D52F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B3C79317CF8A400051D52F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50B3C79517CF8A400051D52F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -143,14 +146,16 @@
 			isa = PBXGroup;
 			children = (
 				50B3C7B017CF8A9F0051D52F /* MainStoryboard.storyboard */,
+				50B3C7A217CF8A400051D52F /* AppDelegate.h */,
+				50B3C7A317CF8A400051D52F /* AppDelegate.m */,
+				506D771217D784F500810C94 /* EditFriendsViewController.h */,
+				506D771317D784F500810C94 /* EditFriendsViewController.m */,
+				502BC4E317D61FC100EF70C5 /* InboxViewController.h */,
+				502BC4E417D61FC100EF70C5 /* InboxViewController.m */,
 				502BC4FA17D6328300EF70C5 /* LoginViewController.h */,
 				502BC4FB17D6328300EF70C5 /* LoginViewController.m */,
 				502BC4FD17D6329800EF70C5 /* SignupViewController.h */,
 				502BC4FE17D6329800EF70C5 /* SignupViewController.m */,
-				50B3C7A217CF8A400051D52F /* AppDelegate.h */,
-				50B3C7A317CF8A400051D52F /* AppDelegate.m */,
-				502BC4E317D61FC100EF70C5 /* InboxViewController.h */,
-				502BC4E417D61FC100EF70C5 /* InboxViewController.m */,
 				50B3C79A17CF8A400051D52F /* Supporting Files */,
 			);
 			path = Ribbit;
@@ -260,6 +265,7 @@
 				502BC4E517D61FC100EF70C5 /* InboxViewController.m in Sources */,
 				502BC4FC17D6328300EF70C5 /* LoginViewController.m in Sources */,
 				502BC4FF17D6329800EF70C5 /* SignupViewController.m in Sources */,
+				506D771417D784F500810C94 /* EditFriendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
