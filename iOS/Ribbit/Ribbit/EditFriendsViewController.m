@@ -31,6 +31,8 @@
       [self.tableView reloadData];
     }
   }];
+  
+  self.currentUser = [PFUser currentUser];
 }
 
 
@@ -64,13 +66,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+  [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+  
+  UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+  cell.accessoryType = UITableViewCellAccessoryCheckmark;
+  PFRelation *friendsRelation = [self.currentUser relationforKey:@"friendsRelation"];
+  PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+  [friendsRelation addObject:user];
+  [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    if (error) {
+      NSLog(@"Error: %@ %@", error, [error userInfo]);
+    }
+  }];
 }
 
 @end
