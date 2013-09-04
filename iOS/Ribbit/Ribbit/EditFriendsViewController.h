@@ -14,4 +14,6 @@
 @property (nonatomic, strong) NSArray *allUsers;
 @property (nonatomic, strong) PFUser *currentUser;
 
+- (BOOL)isFriend:(PFUser *)user;
+
 @end
