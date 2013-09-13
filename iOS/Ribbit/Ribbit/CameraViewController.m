@@ -19,6 +19,10 @@
 {
     [super viewDidLoad];
   
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
   self.imagePicker = [[UIImagePickerController alloc] init];
   self.imagePicker.delegate = self;
   self.imagePicker.allowsEditing = NO;
@@ -32,7 +36,6 @@
   self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
   
   [self presentViewController:self.imagePicker animated:NO completion:nil];
-
 }
 
 
@@ -75,5 +78,14 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+#pragma mark - Image Picker Controller delegate
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+  [self dismissViewControllerAnimated:NO completion:nil];
+  
+  [self.tabBarController setSelectedIndex:0];
+}
+
 
 @end
