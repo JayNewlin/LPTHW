@@ -120,7 +120,11 @@
                                 <action selector="cancel:" destination="FQj-AK-tZa" id="Tf8-5S-8Y4"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Send" id="JsU-ZU-vwc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="JsU-ZU-vwc">
+                            <connections>
+                                <action selector="send:" destination="FQj-AK-tZa" id="0A7-iA-xek"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jtj-Od-ZVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
