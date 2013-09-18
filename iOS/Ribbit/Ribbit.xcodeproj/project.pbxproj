@@ -23,6 +23,10 @@
 		505A5BAC17E3829E0093E0A0 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A5BAB17E3829E0093E0A0 /* CameraViewController.m */; };
 		5067E69717D7EA9500EFDED0 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5067E69617D7EA9500EFDED0 /* FriendsViewController.m */; };
 		506D771417D784F500810C94 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506D771317D784F500810C94 /* EditFriendsViewController.m */; };
+		50706CB917EA092000B90C27 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB517EA092000B90C27 /* icon_image.png */; };
+		50706CBA17EA092000B90C27 /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB617EA092000B90C27 /* icon_image@2x.png */; };
+		50706CBB17EA092000B90C27 /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB717EA092000B90C27 /* icon_video.png */; };
+		50706CBC17EA092000B90C27 /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB817EA092000B90C27 /* icon_video@2x.png */; };
 		50B3C79417CF8A400051D52F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79317CF8A400051D52F /* UIKit.framework */; };
 		50B3C79617CF8A400051D52F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79517CF8A400051D52F /* Foundation.framework */; };
 		50B3C79817CF8A400051D52F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79717CF8A400051D52F /* CoreGraphics.framework */; };
@@ -64,6 +68,10 @@
 		5067E69617D7EA9500EFDED0 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		506D771217D784F500810C94 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
 		506D771317D784F500810C94 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
+		50706CB517EA092000B90C27 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
+		50706CB617EA092000B90C27 /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
+		50706CB717EA092000B90C27 /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_video.png; sourceTree = "<group>"; };
+		50706CB817EA092000B90C27 /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
 		50B3C79017CF8A400051D52F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B3C79317CF8A400051D52F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50B3C79517CF8A400051D52F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -192,6 +200,10 @@
 				50B3C7B317CF8E760051D52F /* camera@2x.png */,
 				50B3C7B417CF8E760051D52F /* friends.png */,
 				50B3C7B517CF8E760051D52F /* friends@2x.png */,
+				50706CB517EA092000B90C27 /* icon_image.png */,
+				50706CB617EA092000B90C27 /* icon_image@2x.png */,
+				50706CB717EA092000B90C27 /* icon_video.png */,
+				50706CB817EA092000B90C27 /* icon_video@2x.png */,
 				50B3C7B617CF8E760051D52F /* inbox.png */,
 				50B3C7B717CF8E760051D52F /* inbox@2x.png */,
 			);
@@ -260,6 +272,10 @@
 				50B3C7BB17CF8E760051D52F /* friends@2x.png in Resources */,
 				50B3C7BC17CF8E760051D52F /* inbox.png in Resources */,
 				50B3C7BD17CF8E760051D52F /* inbox@2x.png in Resources */,
+				50706CB917EA092000B90C27 /* icon_image.png in Resources */,
+				50706CBA17EA092000B90C27 /* icon_image@2x.png in Resources */,
+				50706CBB17EA092000B90C27 /* icon_video.png in Resources */,
+				50706CBC17EA092000B90C27 /* icon_video@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
