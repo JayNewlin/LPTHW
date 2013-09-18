@@ -44,6 +44,7 @@
 		50B3C7BC17CF8E760051D52F /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B617CF8E760051D52F /* inbox.png */; };
 		50B3C7BD17CF8E760051D52F /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B717CF8E760051D52F /* inbox@2x.png */; };
 		50F9B34217EA21F900F70D0F /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F9B34117EA21F900F70D0F /* ImageViewController.m */; };
+		50F9B34417EA3C6400F70D0F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F9B34317EA3C6400F70D0F /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		50B3C7B717CF8E760051D52F /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
 		50F9B34017EA21F900F70D0F /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		50F9B34117EA21F900F70D0F /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		50F9B34317EA3C6400F70D0F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F9B34417EA3C6400F70D0F /* MediaPlayer.framework in Frameworks */,
 				502BC4F117D62D4B00EF70C5 /* AudioToolbox.framework in Frameworks */,
 				502BC4F217D62D4B00EF70C5 /* CFNetwork.framework in Frameworks */,
 				502BC4F317D62D4B00EF70C5 /* CoreLocation.framework in Frameworks */,
@@ -148,6 +151,7 @@
 				502BC4EA17D62D4A00EF70C5 /* CoreLocation.framework */,
 				50B3C79517CF8A400051D52F /* Foundation.framework */,
 				502BC4EB17D62D4A00EF70C5 /* libz.1.1.3.dylib */,
+				50F9B34317EA3C6400F70D0F /* MediaPlayer.framework */,
 				502BC4EC17D62D4A00EF70C5 /* MobileCoreServices.framework */,
 				502BC4ED17D62D4A00EF70C5 /* QuartzCore.framework */,
 				502BC4EE17D62D4A00EF70C5 /* Security.framework */,
