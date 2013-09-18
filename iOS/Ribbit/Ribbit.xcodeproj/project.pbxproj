@@ -43,6 +43,7 @@
 		50B3C7BB17CF8E760051D52F /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B517CF8E760051D52F /* friends@2x.png */; };
 		50B3C7BC17CF8E760051D52F /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B617CF8E760051D52F /* inbox.png */; };
 		50B3C7BD17CF8E760051D52F /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B717CF8E760051D52F /* inbox@2x.png */; };
+		50F9B34217EA21F900F70D0F /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F9B34117EA21F900F70D0F /* ImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		50B3C7B517CF8E760051D52F /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
 		50B3C7B617CF8E760051D52F /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
 		50B3C7B717CF8E760051D52F /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
+		50F9B34017EA21F900F70D0F /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		50F9B34117EA21F900F70D0F /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				506D771317D784F500810C94 /* EditFriendsViewController.m */,
 				5067E69517D7EA9500EFDED0 /* FriendsViewController.h */,
 				5067E69617D7EA9500EFDED0 /* FriendsViewController.m */,
+				50F9B34017EA21F900F70D0F /* ImageViewController.h */,
+				50F9B34117EA21F900F70D0F /* ImageViewController.m */,
 				502BC4E317D61FC100EF70C5 /* InboxViewController.h */,
 				502BC4E417D61FC100EF70C5 /* InboxViewController.m */,
 				502BC4FA17D6328300EF70C5 /* LoginViewController.h */,
@@ -294,6 +299,7 @@
 				506D771417D784F500810C94 /* EditFriendsViewController.m in Sources */,
 				5067E69717D7EA9500EFDED0 /* FriendsViewController.m in Sources */,
 				505A5BAC17E3829E0093E0A0 /* CameraViewController.m in Sources */,
+				50F9B34217EA21F900F70D0F /* ImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

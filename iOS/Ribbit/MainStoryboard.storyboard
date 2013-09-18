@@ -164,11 +164,39 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Qsb-ag-W48" kind="push" identifier="showLogin" id="3Jk-Lt-sW7"/>
+                        <segue destination="qrH-ga-4jt" kind="push" identifier="showImage" id="xUL-g6-OP3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyj-dx-IwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1036" y="3"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="gfb-1d-Tyx">
+            <objects>
+                <viewController id="qrH-ga-4jt" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL8-Q1-esQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQ5-PJ-1Ft"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MQ5-PJ-1Ft" firstAttribute="leading" secondItem="aL8-Q1-esQ" secondAttribute="leading" type="default" id="GMm-T2-OyA"/>
+                            <constraint firstItem="MQ5-PJ-1Ft" firstAttribute="top" secondItem="aL8-Q1-esQ" secondAttribute="top" type="default" id="Go3-mj-it0"/>
+                            <constraint firstItem="MQ5-PJ-1Ft" firstAttribute="bottom" secondItem="aL8-Q1-esQ" secondAttribute="bottom" type="default" id="c5y-Ig-kaf"/>
+                            <constraint firstItem="MQ5-PJ-1Ft" firstAttribute="trailing" secondItem="aL8-Q1-esQ" secondAttribute="trailing" type="default" id="exR-he-4hf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7fc-08-KMw"/>
+                    <connections>
+                        <outlet property="imageView" destination="MQ5-PJ-1Ft" id="Ngv-vC-td5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="274-Vw-ZvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-722"/>
         </scene>
         <!--Login View Controller - Ribbit-->
         <scene sceneID="emJ-rb-9EY">
@@ -377,47 +405,6 @@
         <image name="friends.png" width="40" height="24"/>
         <image name="inbox.png" width="32" height="21"/>
     </resources>
-    <classes>
-        <class className="CameraViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="send:"/>
-            </relationships>
-        </class>
-        <class className="EditFriendsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditFriendsViewController.h"/>
-        </class>
-        <class className="FriendsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FriendsViewController.h"/>
-        </class>
-        <class className="InboxViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InboxViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logout:"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="login:"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SignupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignupViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signup:"/>
-                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
