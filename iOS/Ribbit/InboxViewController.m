@@ -100,11 +100,26 @@
     self.moviePlayer.contentURL = fileUrl;
     [self.moviePlayer prepareToPlay];
     [self.moviePlayer thumbnailImageAtTime:0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+    
     // Add it to the view controller so we can see it
     [self.view addSubview:self.moviePlayer.view];
     [self.moviePlayer setFullscreen:YES animated:YES];
   }
-
+  
+  // Delete it!
+  NSMutableArray *recipientIds = [NSMutableArray arrayWithArray:[self.selectedMessage objectForKey:@"recipientIds"]];
+  NSLog(@"Recipients: %@", recipientIds);
+  
+  if ([recipientIds count] == 1) {
+    // Last recipient - delete the whole message!
+    [self.selectedMessage deleteInBackground];
+  }
+  else {
+    // Remove the recipient and save it
+    [recipientIds removeObject:[[PFUser currentUser] objectId]];
+    [self.selectedMessage setObject:recipientIds forKey:@"recipientIds"];
+    [self.selectedMessage saveInBackground];
+  }
 }
 
 - (IBAction)logout:(id)sender {
