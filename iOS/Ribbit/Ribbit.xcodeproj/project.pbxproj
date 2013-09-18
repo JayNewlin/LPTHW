@@ -45,6 +45,8 @@
 		50B3C7BD17CF8E760051D52F /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B717CF8E760051D52F /* inbox@2x.png */; };
 		50F9B34217EA21F900F70D0F /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F9B34117EA21F900F70D0F /* ImageViewController.m */; };
 		50F9B34417EA3C6400F70D0F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F9B34317EA3C6400F70D0F /* MediaPlayer.framework */; };
+		50F9B34B17EA490400F70D0F /* MsgIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F9B34917EA490400F70D0F /* MsgIcon.png */; };
+		50F9B34C17EA490400F70D0F /* MsgIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F9B34A17EA490400F70D0F /* MsgIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		50F9B34017EA21F900F70D0F /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		50F9B34117EA21F900F70D0F /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		50F9B34317EA3C6400F70D0F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		50F9B34917EA490400F70D0F /* MsgIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MsgIcon.png; sourceTree = "<group>"; };
+		50F9B34A17EA490400F70D0F /* MsgIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MsgIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 				50706CB817EA092000B90C27 /* icon_video@2x.png */,
 				50B3C7B617CF8E760051D52F /* inbox.png */,
 				50B3C7B717CF8E760051D52F /* inbox@2x.png */,
+				50F9B34917EA490400F70D0F /* MsgIcon.png */,
+				50F9B34A17EA490400F70D0F /* MsgIcon@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 				50706CBA17EA092000B90C27 /* icon_image@2x.png in Resources */,
 				50706CBB17EA092000B90C27 /* icon_video.png in Resources */,
 				50706CBC17EA092000B90C27 /* icon_video@2x.png in Resources */,
+				50F9B34B17EA490400F70D0F /* MsgIcon.png in Resources */,
+				50F9B34C17EA490400F70D0F /* MsgIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
