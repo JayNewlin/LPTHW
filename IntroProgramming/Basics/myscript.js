@@ -62,6 +62,7 @@ for (var i = 0; i < friends.length; i+=1) {
 };
 */
 
+/*
 var me = {
   first_name: "Jay",
   last_name: "Newlin",
@@ -78,3 +79,36 @@ console.log(me[key]);
 
 me.first_name = "Jay R.";
 console.log(me.first_name);
+*/
+
+var sayHello = function () {
+  var message = "Hello";
+  message = message + " World!";
+  console.log(message);
+}
+
+var debug = function (message) {
+  console.log("Debug:", message);
+}
+
+var doubleNumber = function (num) {
+  return num * 2;
+}
+
+debug(doubleNumber(7));
+
+sayHello();
+
+var x = 1;
+debug("x has been set");
+
+sayHello();
+
+x += 10;
+var y = 100;
+debug("x has been increased. y has been set");
+
+sayHello();
+
+
+
