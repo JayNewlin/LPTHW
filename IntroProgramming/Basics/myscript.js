@@ -49,6 +49,7 @@ for (var counter = 10; counter; counter = counter - 1) {
 console.log("After");
 */
 
+/*
 var friends = ["Nick", "Michael", "Amit", "Allison", "John", "Rich"];
 console.log("These are my friends:", friends);
 console.log("I have", friends.length, "friends.");
@@ -59,3 +60,21 @@ console.log("My friend at position", friendNumber, "is", friends[friendNumber]);
 for (var i = 0; i < friends.length; i+=1) {
   console.log(friends[i]);
 };
+*/
+
+var me = {
+  first_name: "Jay",
+  last_name: "Newlin",
+  "Employee Number": 1
+};
+
+console.log(me.first_name);
+console.log(me.last_name);
+console.log(me["Employee Number"]);
+console.log(me);
+
+var key = "last_name";
+console.log(me[key]);
+
+me.first_name = "Jay R.";
+console.log(me.first_name);
