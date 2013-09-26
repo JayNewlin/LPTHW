@@ -12,7 +12,7 @@
 @interface ViewController : UIViewController 
 
 @property (nonatomic, strong) Book *book;
-@property (nonatomic, strong) UITextField *tf;
+@property (nonatomic, weak) UITextField *tf;
 
 
 - (IBAction)buttonPressed:(id)sender;
