@@ -14,3 +14,8 @@ li {
 
 /* Structural Pseudo-classes - :nth-child */
 
+li:nth-last-child(-n+3) {
+  color: white;
+  background-color: black;
+}
+
