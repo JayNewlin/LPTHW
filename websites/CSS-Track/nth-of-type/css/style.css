@@ -19,3 +19,8 @@ p {
 
 /* Structural Pseudo-classes. Keep up the good work! :) */
 
+p:only-of-type {
+	color: blue;
+}
+
+
