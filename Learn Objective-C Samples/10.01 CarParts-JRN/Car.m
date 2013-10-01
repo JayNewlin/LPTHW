@@ -15,12 +15,12 @@
 - (id) init
 {
     if (self = [super init]) {
-        engine = [Engine new];
-
-        tires[0] = [Tire new];
-        tires[1] = [Tire new];
-        tires[2] = [Tire new];
-        tires[3] = [Tire new];
+      tires = [[NSMutableArray alloc] init];
+    
+      int i;
+      for (i = 0; i <4; i++) {
+        [tires addObject:[NSNull null]];
+      }
     }
 
     return (self);

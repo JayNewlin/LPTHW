@@ -5,14 +5,13 @@
 
 @interface Car : NSObject
 {
-    Tire *tires[4];
+    NSMutableArray *tires;
     Engine *engine;
 }
 
 - (void) setEngine: (Engine *) newEngine;
 
 - (Engine *) engine;
-
 
 - (void) setTire: (Tire *) tire
          atIndex: (int) index;

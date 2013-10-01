@@ -1,29 +1,29 @@
-#import <Foundation/Foundation.h>
-
-#import "Tire.h"	// don't really have to #import this or the next header file.
-#import "Engine.h"	// since they're brought in by Slant6.h and AllWeatherRadial.h
 #import "Car.h"
 #import "Slant6.h"
 #import "AllWeatherRadial.h"
 
 int main (int argc, const char * argv[]) 
 {
-	Car *car = [Car new];
+	Car *car = [[Car alloc] init];
 	
 	int i;
 	for (i = 0; i < 4; i++) {
-		Tire *tire = [AllWeatherRadial new];
-		
+		Tire *tire;
+    tire = [[Tire alloc] init];
+    
+    [tire setPressure: 23 + i];
+    [tire setTreadDepth: 33 - i];
+    
 		[car setTire: tire
-			 atIndex: i];
+         atIndex: i];
 	}
 	
-	Engine *engine = [Slant6 new];
+	Engine *engine = [[Slant6 alloc] init];
 	[car setEngine: engine];
 	
 	[car print];
-	
-	return (0);
+  
+  return (0);
 	
 } // main
 
