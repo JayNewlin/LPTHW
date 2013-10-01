@@ -15,3 +15,29 @@ img {
 
 /* Substring Matching Attribute Selectors */
 
+a[href^="http://"] {
+  color: seagreen;
+}
+
+a[href^="mailto:"] {
+  color:white;
+  background-color: tomato;
+  padding: 4px 8px;
+  text-decoration: none;
+}
+
+a[href$=".pdf"] {
+  background: url('../images/pdf.png') no-repeat 0 2px;
+  padding-left: 25px;
+}
+
+a[href$=".doc"] {
+  background: url('../images/doc.png') no-repeat 0 2px;
+  padding-left: 25px;
+}
+
+img[src*="thumb"] {
+  border: 5px solid;
+}
+
+
