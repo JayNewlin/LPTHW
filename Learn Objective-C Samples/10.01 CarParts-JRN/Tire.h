@@ -6,6 +6,9 @@
   float treadDepth;
 }
 
+- (id) initWithPressure: (float) pressure
+             treadDepth: (float) treadDepth;
+
 - (void)setPressure: (float) pressure;
 - (float) pressure;
 

@@ -9,10 +9,11 @@ int main (int argc, const char * argv[])
 	int i;
 	for (i = 0; i < 4; i++) {
 		Tire *tire;
-    tire = [[Tire alloc] init];
+    tire = [[Tire alloc]
+            initWithPressure: 23 + i treadDepth:33 - i];
     
-    [tire setPressure: 23 + i];
-    [tire setTreadDepth: 33 - i];
+//    [tire setPressure: 23 + i];
+//    [tire setTreadDepth: 33 - i];
     
 		[car setTire: tire
          atIndex: i];

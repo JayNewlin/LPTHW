@@ -36,9 +36,7 @@
 
 - (void) setEngine: (Engine *) newEngine
 {
-  [newEngine retain];
-  [engine release];
-  
+
   engine = newEngine;
   
 } // setEngine
