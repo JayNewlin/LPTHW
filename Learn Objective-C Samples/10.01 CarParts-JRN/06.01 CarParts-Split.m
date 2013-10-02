@@ -6,7 +6,7 @@ int main (int argc, const char * argv[])
 {
 	Car *car = [[Car alloc] init];
 	
-  [car setName:@"Herbie"];
+  car.name=@"Herbie";
 	
   int i;
 	for (i = 0; i < 4; i++) {
@@ -26,8 +26,7 @@ int main (int argc, const char * argv[])
     [tire release];
 	}
 	
-	Engine *engine = [[Slant6 alloc] init];
-	[car setEngine: engine];
+	car.engine = [[Slant6 alloc] init];
 	
 	[car print];
   
