@@ -1,0 +1,32 @@
+body {
+	font: normal 1.1em/1.5 sans-serif;
+	padding: 0 22%;
+}
+ul {
+	line-height: 2.1em;
+	list-style-type: none;
+	padding-left: 20px;
+}
+h2 {
+	margin-top: 0;
+}
+div {
+	margin-bottom: 12px;
+	padding: 20px;
+}
+
+/*  Pseudo-classes */
+
+:root {
+  background-color: #E0EEF5;
+}
+
+:target {
+  color: white;
+  background-color: tomato;
+}
+
+div:not([id="s2"]) {
+  background-color: tomato;
+}
+
