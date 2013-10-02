@@ -6,11 +6,8 @@
   float snowHandling;
 }
 
-- (void) setRainHandling: (float) rainHandling;
-- (float) rainHandling;
-
-- (void) setSnowHandling: (float) snowHandling;
-- (float) snowHandling;
+@property float rainHandling;
+@property float snowHandling;
 
 @end // AllWeatherRadial
 
