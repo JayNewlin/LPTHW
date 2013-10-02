@@ -6,6 +6,9 @@
   float treadDepth;
 }
 
+- (id) initWithPressure: (float) pressure;
+- (id) initWithTreadDepth: (float) treadDepth;
+
 - (id) initWithPressure: (float) pressure
              treadDepth: (float) treadDepth;
 

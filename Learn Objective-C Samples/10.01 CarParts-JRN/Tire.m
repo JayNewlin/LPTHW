@@ -5,9 +5,8 @@
 
 - (id) init
 {
-  if (self = [super init]) {
-    pressure = 34.0;
-    treadDepth = 20.0;
+  if (self = [self initWithPressure:34
+              treadDepth:20]) {
   }
   return (self);
   
@@ -25,7 +24,26 @@
   
 } // initWithPressure:treadDepth:
 
-- (void) setPressure:(float)p
+- (id) initWithPressure:(float) p
+{
+  if (self = [self initWithPressure: p
+              treadDepth:20.0]) {
+  }
+  
+  return (self);
+} // initWithPressure
+
+- (id) initWithTreadDepth:(float) td
+{
+  if (self = [self initWithPressure:34.0
+              treadDepth:td]) {
+  }
+  
+  return (self);
+  
+} // initWithTreadDepth
+
+- (void) setPressure:(float) p
 {
   pressure = p;
   

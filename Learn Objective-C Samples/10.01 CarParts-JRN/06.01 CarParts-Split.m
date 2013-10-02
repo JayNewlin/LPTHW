@@ -8,15 +8,14 @@ int main (int argc, const char * argv[])
 	
 	int i;
 	for (i = 0; i < 4; i++) {
-		Tire *tire;
-    tire = [[Tire alloc]
-            initWithPressure: 23 + i treadDepth:33 - i];
+		AllWeatherRadial *tire;
     
-//    [tire setPressure: 23 + i];
-//    [tire setTreadDepth: 33 - i];
+    tire = [[AllWeatherRadial alloc] init];
     
 		[car setTire: tire
          atIndex: i];
+            
+    [tire release];
 	}
 	
 	Engine *engine = [[Slant6 alloc] init];
