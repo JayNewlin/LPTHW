@@ -5,7 +5,7 @@
 
 @interface Car : NSObject
 {
-  NSString *name;
+  NSString *appellation;
   NSMutableArray *tires;
     Engine *engine;
 }

@@ -12,14 +12,14 @@
 
 @implementation Car
 
-@synthesize name;
+@synthesize name = appellation;
 @synthesize engine;
 
 - (id) init
 {
     if (self = [super init]) {
       
-      name = @"Car";
+      self.name = @"Car";
       tires = [[NSMutableArray alloc] init];
     
       int i;
@@ -53,7 +53,7 @@
 
 - (void) print
 {
-  NSLog(@"%@'s details:", name);
+  NSLog(@"%@'s details:", self.name);
   int i;
   for (i = 0; i < 4; i++) {
     NSLog(@"%@", [self tireAtIndex:i]);
