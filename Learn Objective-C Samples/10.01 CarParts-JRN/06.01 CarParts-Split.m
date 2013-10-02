@@ -6,7 +6,9 @@ int main (int argc, const char * argv[])
 {
 	Car *car = [[Car alloc] init];
 	
-	int i;
+  [car setName:@"Herbie"];
+	
+  int i;
 	for (i = 0; i < 4; i++) {
 		AllWeatherRadial *tire;
     

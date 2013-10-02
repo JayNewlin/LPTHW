@@ -15,6 +15,8 @@
 - (id) init
 {
     if (self = [super init]) {
+      
+      name = @"Car";
       tires = [[NSMutableArray alloc] init];
     
       int i;
@@ -62,14 +64,25 @@
 
 - (void) dealloc
 {
+  [name release];
   [tires release];
   [engine release];
   
   [super dealloc];
 } // dealloc
 
+- (void) setName:(NSString *)newName {
+  [name release];
+  name = [newName copy];
+} // setName
+
+- (NSString *)name {
+  return (name);
+} // name
+
 - (void) print
 {
+  NSLog(@"%@'s details:", name);
   int i;
   for (i = 0; i < 4; i++) {
     NSLog(@"%@", [self tireAtIndex:i]);
