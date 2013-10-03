@@ -14,15 +14,15 @@ thing1 = [[Thingie alloc]
 
 NSLog (@"some thing: %@", thing1);
     
-//    NSData *freezeDried;
-//    freezeDried = [NSKeyedArchiver archivedDataWithRootObject: thing1];
-//        
-//    [thing1 release];
-//
-//    thing1 = [NSKeyedUnarchiver unarchiveObjectWithData: freezeDried];
-//
-//    NSLog (@"reconstituted thing: %@", thing1);
-//    
+    NSData *freezeDried;
+    freezeDried = [NSKeyedArchiver archivedDataWithRootObject: thing1];
+        
+    [thing1 release];
+
+    thing1 = [NSKeyedUnarchiver unarchiveObjectWithData: freezeDried];
+
+    NSLog (@"reconstituted thing: %@", thing1);
+    
 //    Thingie *anotherThing;
 //
 //    anotherThing =  [[[Thingie alloc]

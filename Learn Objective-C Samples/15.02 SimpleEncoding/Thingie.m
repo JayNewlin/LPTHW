@@ -38,13 +38,25 @@
 
 
 - (void) encodeWithCoder: (NSCoder *) coder {
-    // nothing here yet
+  
+  [coder encodeObject:name forKey:@"name"];
+  [coder encodeInt:magicNumber forKey:@"magicNumber"];
+  [coder encodeFloat:shoeSize forKey:@"shoeSize"];
+  [coder encodeObject:subThingies forKey:@"subThingies"];
+  
 } // encodeWithCoder
 
 
 - (id) initWithCoder: (NSCoder *) decoder {
-    // nothing here yet, either
-  return (nil);
+  
+  if (self = [super init]) {
+    self.name = [decoder decodeObjectForKey:@"name"];
+    self.magicNumber = [decoder decodeIntForKey:@"magicNumber"];
+    self.shoeSize = [decoder decodeFloatForKey:@"shoeSize"];
+    self.subThingies = [decoder decodeObjectForKey:@"subThingies"];
+  }
+   
+  return (self);
   
 } // initWithCoder
 
