@@ -38,11 +38,11 @@ NSLog (@"some thing: %@", thing1);
 
     NSLog (@"thing with things: %@", thing1);
     
-//    freezeDried = [NSKeyedArchiver archivedDataWithRootObject: thing1];
-//
-//    thing1 = [NSKeyedUnarchiver unarchiveObjectWithData: freezeDried];
-//    NSLog (@"reconstituted multithing: %@", thing1);
-//    
+    freezeDried = [NSKeyedArchiver archivedDataWithRootObject: thing1];
+
+    thing1 = [NSKeyedUnarchiver unarchiveObjectWithData: freezeDried];
+    NSLog (@"reconstituted multithing: %@", thing1);
+    
 //    [thing1.subThingies addObject: thing1];
 //
 //    // You really don't want to do this...
