@@ -23,21 +23,21 @@ NSLog (@"some thing: %@", thing1);
 
     NSLog (@"reconstituted thing: %@", thing1);
     
-//    Thingie *anotherThing;
-//
-//    anotherThing =  [[[Thingie alloc]
-//              initWithName: @"thing2"
-//              magicNumber: 23
-//              shoeSize: 13.0] autorelease];
-//    [thing1.subThingies addObject: anotherThing];
-//    anotherThing =  [[[Thingie alloc]
-//              initWithName: @"thing3"
-//              magicNumber: 17
-//              shoeSize: 9.0] autorelease];
-//    [thing1.subThingies addObject: anotherThing];
-//
-//    NSLog (@"thing with things: %@", thing1);
-//    
+    Thingie *anotherThing;
+
+    anotherThing =  [[[Thingie alloc]
+              initWithName: @"thing2"
+              magicNumber: 23
+              shoeSize: 13.0] autorelease];
+    [thing1.subThingies addObject: anotherThing];
+    anotherThing =  [[[Thingie alloc]
+              initWithName: @"thing3"
+              magicNumber: 17
+              shoeSize: 9.0] autorelease];
+    [thing1.subThingies addObject: anotherThing];
+
+    NSLog (@"thing with things: %@", thing1);
+    
 //    freezeDried = [NSKeyedArchiver archivedDataWithRootObject: thing1];
 //
 //    thing1 = [NSKeyedUnarchiver unarchiveObjectWithData: freezeDried];
