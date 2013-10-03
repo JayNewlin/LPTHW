@@ -30,6 +30,14 @@ int main (int argc, const char * argv[])
 	
 	[car print];
   
+  NSLog(@"Now, make the copy.");
+  
+  Car *carCopy = [car copy];
+  [carCopy print];
+  
+  [car release];
+  [carCopy release];
+  
   return (0);
 	
 } // main

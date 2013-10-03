@@ -30,5 +30,16 @@
   
 } //initWithPressure:treadDepth
 
+- (id) copyWithZone:(NSZone *)zone
+{
+  AllWeatherRadial *tireCopy;
+  tireCopy = [super copyWithZone:zone];
+  
+  [tireCopy setRainHandling:rainHandling];
+  [tireCopy setSnowHandling:snowHandling];
+  
+  return (tireCopy);
+} // copyWithZone
+
 @end // AllWeatherRadial
 

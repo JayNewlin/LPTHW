@@ -75,5 +75,15 @@
   
 } // description
 
+- (id) copyWithZone:(NSZone *)zone
+{
+  Tire *tireCopy;
+  tireCopy= [[[self class] allocWithZone:zone]
+             initWithPressure:pressure
+             treadDepth:treadDepth];
+  
+  return (tireCopy);
+}
+
 @end // Tire
 

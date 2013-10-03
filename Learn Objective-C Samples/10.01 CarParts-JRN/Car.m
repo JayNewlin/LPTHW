@@ -51,6 +51,33 @@
 
 } // tireAtIndex:
 
+- (id) copyWithZone:(NSZone *)zone
+{
+  Car *carCopy;
+  carCopy = [[[self class]
+              allocWithZone:zone]
+             init];
+  
+  carCopy.name = [NSString stringWithFormat:@"Copy of %@", self.name];
+  
+  Engine *engineCopy;
+  engineCopy = [[engine copy] autorelease];
+  carCopy.engine = engineCopy;
+  
+  int i;
+  for (i = 0; i < 4; i++) {
+    Tire *tireCopy;
+    
+    tireCopy = [[self tireAtIndex:i] copy];
+    [tireCopy autorelease];
+    
+    [carCopy setTire:tireCopy atIndex:i];
+  }
+  
+  return (carCopy);
+  
+} // copyWithZone
+
 - (void) print
 {
   NSLog(@"%@'s details:", self.name);
