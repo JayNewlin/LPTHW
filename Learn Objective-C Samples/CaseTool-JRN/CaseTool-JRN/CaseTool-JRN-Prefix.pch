@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CaseTool-JRN' target in the 'CaseTool-JRN' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif
