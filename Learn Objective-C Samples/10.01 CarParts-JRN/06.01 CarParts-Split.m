@@ -12,6 +12,8 @@ int main (int argc, const char * argv[])
   car.numberOfDoors = 2;
   car.modelYear = 1966;
   car.mileage = 56000;
+  [car setValue: [NSNumber numberWithInt:155]
+     forKeyPath:@"engine.horsepower"];
 	
   int i;
 	for (i = 0; i < 4; i++) {
@@ -31,9 +33,11 @@ int main (int argc, const char * argv[])
     [tire release];
 	}
 	
-	car.engine = [[[Slant6 alloc] init] autorelease];
+	car.engine = [[Slant6 alloc] init];
 	
 	[car print];
+  
+  NSLog(@"%@'s engine horsepower is %@", car.name, [car valueForKeyPath: @"engine.horsepower"]);
   
 
 //  Remove the copying logic, since it was for a specific chapter. Keep it for reference, since I'm building each chapter on the previous.
