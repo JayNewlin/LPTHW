@@ -1,55 +1,57 @@
 #import "Car.h"
+#import "Garage.h"
 #import "Slant6.h"
 #import "AllWeatherRadial.h"
 
-int main (int argc, const char * argv[]) 
-{
-  Car *car = [[[Car alloc] init] autorelease];
-	
-  car.name=@"Herbie";
-  car.make = @"Volkswagen";
-  car.model = @"Beetle";
-  car.numberOfDoors = 2;
-  car.modelYear = 1966;
-  car.mileage = 56000;
-  [car setValue: [NSNumber numberWithInt:155]
-     forKeyPath:@"engine.horsepower"];
-	
+Car *makeCar (NSString *name, NSString *make, NSString *model, int modelYear, int numberOfDoors, float mileage, int horsepower) {
+  Car *car = [[Car alloc] init];
+  
+  car.name = name;
+  car.make = make;
+  car.model = model;
+  car.modelYear = modelYear;
+  car.numberOfDoors = numberOfDoors;
+  car.mileage = mileage;
+  
+  Slant6 *engine = [[Slant6 alloc] init];
+  [engine setValue:[NSNumber numberWithInt:horsepower]
+            forKey:@"horsepower"];
+  car.engine = engine;
+  
+  // Make some tires
   int i;
-	for (i = 0; i < 4; i++) {
-		AllWeatherRadial *tire;
-    
-    tire = [[AllWeatherRadial alloc] init];
-    tire.rainHandling = 20 + i;
-    tire.snowHandling = 28 + i;
-    NSLog(@"Tire %d's handling is %.f, %.f",
-          i,
-          tire.rainHandling,
-          tire.snowHandling);
-    
-		[car setTire: tire
-         atIndex: i];
-            
-    [tire release];
-	}
-	
-	car.engine = [[Slant6 alloc] init];
-	
-	[car print];
+  for(i=0; i<4; i++) {
+    Tire *tire = [[Tire alloc] init];
+    [car setTire: tire atIndex: i];
+  }
   
-  NSLog(@"%@'s engine horsepower is %@", car.name, [car valueForKeyPath: @"engine.horsepower"]);
-  
+  return (car);
+} // makeCar
 
-//  Remove the copying logic, since it was for a specific chapter. Keep it for reference, since I'm building each chapter on the previous.
-//  NSLog(@"Now, make the copy.");
-//  
-//  Car *carCopy = [car copy];
-//  [carCopy print];
-//  [carCopy release];
+int main (int argc, const char * argv[])
+{
+
+  Garage *garage = [[Garage alloc] init];
+  garage.name = @"Leno's Garage";
   
-  NSLog(@"In summary: Car is %@", car);
+  Car *car;
   
-  [car release];
+  car = makeCar (@"Herbie", @"Honda", @"CRX", 1984, 2, 110000, 58);
+  [garage addCar: car];
+  car = makeCar (@"Badger", @"Acura", @"Integra", 1987, 5, 217036.7, 130);
+  [garage addCar: car];
+  car = makeCar (@"Elvis", @"Acura", @"Legend", 1989, 4, 28123.4, 151);
+  [garage addCar: car];
+  car = makeCar (@"Phoenix", @"Pontiac", @"Firebird", 1969, 2, 85128.3, 345);
+  [garage addCar: car];
+  car = makeCar (@"Streaker", @"Pontiac", @"Silver Streak", 1950, 2, 39100.0, 36);
+  [garage addCar: car];
+  car = makeCar (@"Judge", @"Pontiac", @"GTO", 1969, 2, 45132.2, 370);
+  [garage addCar: car];
+  car = makeCar (@"Paper Car", @"Plymouth", @"Valiant", 1965, 2, 76800, 105);
+  [garage addCar: car];
+  
+  [garage print];
   
   return (0);
 	
