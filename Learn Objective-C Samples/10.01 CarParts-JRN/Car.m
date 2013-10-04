@@ -12,8 +12,13 @@
 
 @implementation Car
 
-@synthesize name = appellation;
+@synthesize name;
 @synthesize engine;
+@synthesize make;
+@synthesize model;
+@synthesize modelYear;
+@synthesize numberOfDoors;
+@synthesize mileage;
 
 - (id) init
 {
@@ -59,6 +64,11 @@
              init];
   
   carCopy.name = [NSString stringWithFormat:@"Copy of %@", self.name];
+  carCopy.make = make;
+  carCopy.model = model;
+  carCopy.modelYear = modelYear;
+  carCopy.numberOfDoors = numberOfDoors;
+  carCopy.mileage = mileage;
   
   Engine *engineCopy;
   engineCopy = [[engine copy] autorelease];
@@ -89,6 +99,14 @@
   NSLog(@"%@", engine);
 
 } // print
+
+- (NSString *) description {
+  NSString *desc;
+  desc = [NSString stringWithFormat:@"%@, a %d %@ %@, has %d doors, %.1f miles, and %d tires",
+          name, modelYear, make, model, numberOfDoors, mileage, [tires count]];
+  
+  return desc;
+} // description
 
 @end // Car
 

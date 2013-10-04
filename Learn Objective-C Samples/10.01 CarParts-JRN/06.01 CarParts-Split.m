@@ -4,9 +4,14 @@
 
 int main (int argc, const char * argv[]) 
 {
-	Car *car = [[Car alloc] init];
+  Car *car = [[[Car alloc] init] autorelease];
 	
   car.name=@"Herbie";
+  car.make = @"Volkswagen";
+  car.model = @"Beetle";
+  car.numberOfDoors = 2;
+  car.modelYear = 1966;
+  car.mileage = 56000;
 	
   int i;
 	for (i = 0; i < 4; i++) {
@@ -26,17 +31,21 @@ int main (int argc, const char * argv[])
     [tire release];
 	}
 	
-	car.engine = [[Slant6 alloc] init];
+	car.engine = [[[Slant6 alloc] init] autorelease];
 	
 	[car print];
   
-  NSLog(@"Now, make the copy.");
+
+//  Remove the copying logic, since it was for a specific chapter. Keep it for reference, since I'm building each chapter on the previous.
+//  NSLog(@"Now, make the copy.");
+//  
+//  Car *carCopy = [car copy];
+//  [carCopy print];
+//  [carCopy release];
   
-  Car *carCopy = [car copy];
-  [carCopy print];
+  NSLog(@"In summary: Car is %@", car);
   
   [car release];
-  [carCopy release];
   
   return (0);
 	
