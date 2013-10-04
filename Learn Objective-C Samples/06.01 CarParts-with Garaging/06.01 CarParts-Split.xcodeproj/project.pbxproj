@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50D4B9A417FF385A008BC8E8 /* Garage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B9A317FF385A008BC8E8 /* Garage.m */; };
 		7D64953B0E3572CE00C90222 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6495330E3572CE00C90222 /* Engine.m */; };
 		7D64953C0E3572CE00C90222 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6495380E3572CE00C90222 /* Car.m */; };
 		7D64953D0E3572CE00C90222 /* Tire.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6495390E3572CE00C90222 /* Tire.m */; };
@@ -34,6 +35,8 @@
 		08FB7796FE84155DC02AAC07 /* 06.01 CarParts-Split.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "06.01 CarParts-Split.m"; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* 06.01 CarParts-Split_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "06.01 CarParts-Split_Prefix.pch"; sourceTree = "<group>"; };
+		50D4B9A217FF385A008BC8E8 /* Garage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Garage.h; sourceTree = "<group>"; };
+		50D4B9A317FF385A008BC8E8 /* Garage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Garage.m; sourceTree = "<group>"; };
 		7D6495330E3572CE00C90222 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
 		7D6495340E3572CE00C90222 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
 		7D6495350E3572CE00C90222 /* Slant6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slant6.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				7D6495380E3572CE00C90222 /* Car.m */,
 				7D6495340E3572CE00C90222 /* Engine.h */,
 				7D6495330E3572CE00C90222 /* Engine.m */,
+				50D4B9A217FF385A008BC8E8 /* Garage.h */,
+				50D4B9A317FF385A008BC8E8 /* Garage.m */,
 				7D6495350E3572CE00C90222 /* Slant6.h */,
 				7D64953A0E3572CE00C90222 /* Slant6.m */,
 				7D6495360E3572CE00C90222 /* Tire.h */,
@@ -170,6 +175,7 @@
 				7D64953D0E3572CE00C90222 /* Tire.m in Sources */,
 				7D64953E0E3572CE00C90222 /* Slant6.m in Sources */,
 				7D6495480E3572F200C90222 /* AllWeatherRadial.m in Sources */,
+				50D4B9A417FF385A008BC8E8 /* Garage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
