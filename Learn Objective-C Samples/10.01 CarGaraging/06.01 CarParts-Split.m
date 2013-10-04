@@ -53,6 +53,15 @@ int main (int argc, const char * argv[])
   
   [garage print];
   
+  NSNumber *count = [garage valueForKeyPath:@"cars.@count"];
+  NSLog(@"That's a total of %@ cars.", count);
+  
+  NSNumber *sum = [garage valueForKeyPath:@"cars.@sum.mileage"];
+  NSLog(@"In total, they have traveled %@ miles. Wow! That's a lot of driving!", sum);
+  
+  NSNumber *avgMileage = [garage valueForKeyPath:@"cars.@avg.mileage"];
+  NSLog(@"Our cars average %@ miles driven.", avgMileage);
+  
   return (0);
 	
 } // main
