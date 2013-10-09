@@ -17,7 +17,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.sliderLabel.text = @"50";
+	
+  self.sliderLabel.text = @"50";
+  
+  UIImage *buttonImageNormal = [UIImage imageNamed:@"whiteButton.png"];
+  UIEdgeInsets insets = UIEdgeInsetsMake(0, 12, 0, 12);
+  UIImage *stretchableButtonImageNormal = [buttonImageNormal resizableImageWithCapInsets:insets];
+  [self.doSomethingButton setBackgroundImage:stretchableButtonImageNormal forState:UIControlStateNormal];
+  
+  UIImage *buttonImagePressed = [UIImage imageNamed:@"blueButton.png"];
+  UIImage *stretchableButtonImagePressed = [buttonImagePressed resizableImageWithCapInsets:insets];
+  [self.doSomethingButton setBackgroundImage:stretchableButtonImagePressed forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning
