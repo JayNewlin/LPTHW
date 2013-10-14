@@ -10,4 +10,6 @@
 
 @interface BIDBlueViewController : UIViewController
 
+- (IBAction)blueButtonPressed;
+
 @end

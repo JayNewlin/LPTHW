@@ -10,4 +10,6 @@
 
 @interface BIDYellowViewController : UIViewController
 
+- (IBAction)yellowButtonPressed;
+
 @end
