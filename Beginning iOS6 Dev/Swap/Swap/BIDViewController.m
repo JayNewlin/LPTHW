@@ -29,19 +29,31 @@
 }
 
 - (IBAction)buttonTapped:(id)sender {
-  NSString *message = nil;
+// Simple message method, prior to middle of pg. 137
+//  NSString *message = nil;
+//  
+//  if ([self.foos containsObject:sender])
+//    message = @"Foo button pressed";
+//  else
+//    message = @"Bar button pressed";
+//  
+//  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message
+//                                                  message:nil
+//                                                 delegate:nil
+//                                        cancelButtonTitle:@"OK"
+//                                        otherButtonTitles:nil];
+//  [alert show];
   
-  if ([self.foos containsObject:sender])
-    message = @"Foo button pressed";
-  else
-    message = @"Bar button pressed";
-  
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message
-                                                  message:nil
-                                                 delegate:nil
-                                        cancelButtonTitle:@"OK"
-                                        otherButtonTitles:nil];
-  [alert show];
+  if ([self.foos containsObject:sender]) {
+    for (UIButton *oneFoo in self.foos) {
+      oneFoo.hidden = YES;
+    }
+  }
+  else {
+    for (UIButton *oneBar in self.bars) {
+      oneBar.hidden = YES;
+    }
+  }
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
