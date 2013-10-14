@@ -35,4 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)yellowButtonPressed {
+  UIAlertView *alert = [[UIAlertView alloc]
+                        initWithTitle:@"Yellow View Button Pressed"
+                        message:@"You did press the yellow view button, right?"
+                        delegate:nil
+                        cancelButtonTitle:@"I sure did!"
+                        otherButtonTitles:nil];
+  [alert show];
+}
+
 @end

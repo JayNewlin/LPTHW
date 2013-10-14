@@ -35,4 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)blueButtonPressed {
+  UIAlertView *alert = [[UIAlertView alloc]
+                        initWithTitle:@"Blue View Button Pressed"
+                        message:@"Well, at least that's what I think you pressed."
+                        delegate:nil
+                        cancelButtonTitle:@"Yep, I did"
+                        otherButtonTitles: nil];
+  [alert show];
+}
+
 @end
