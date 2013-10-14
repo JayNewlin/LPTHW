@@ -31,7 +31,7 @@
 	
   self.blueViewController = [[BIDBlueViewController alloc]
                              initWithNibName:@"BlueView" bundle:nil];
-  [self.view insertSubview:self.blueViewController atIndex:0];
+  [self.view insertSubview:self.blueViewController.view atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
