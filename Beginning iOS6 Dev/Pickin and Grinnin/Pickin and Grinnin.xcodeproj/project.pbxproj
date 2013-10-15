@@ -41,6 +41,7 @@
 		509E3BC6180D9627004E47B0 /* doubleicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 509E3BB9180D9627004E47B0 /* doubleicon.png */; };
 		509E3BC7180D9627004E47B0 /* singleicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 509E3BBA180D9627004E47B0 /* singleicon.png */; };
 		509E3BC8180D9627004E47B0 /* toolicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 509E3BBB180D9627004E47B0 /* toolicon.png */; };
+		509E3BCA180D9C01004E47B0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509E3BC9180D9C00004E47B0 /* TabBarController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		509E3BB9180D9627004E47B0 /* doubleicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doubleicon.png; sourceTree = "<group>"; };
 		509E3BBA180D9627004E47B0 /* singleicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singleicon.png; sourceTree = "<group>"; };
 		509E3BBB180D9627004E47B0 /* toolicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolicon.png; sourceTree = "<group>"; };
+		509E3BC9180D9C00004E47B0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TabBarController.xib; path = ../TabBarController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				509E3BA7180D946F004E47B0 /* BIDCustomPickerViewController.h */,
 				509E3BA8180D946F004E47B0 /* BIDCustomPickerViewController.m */,
 				509E3BA9180D946F004E47B0 /* BIDCustomPickerViewController.xib */,
+				509E3BC9180D9C00004E47B0 /* TabBarController.xib */,
 				509E3B71180D8B50004E47B0 /* Supporting Files */,
 			);
 			path = "Pickin and Grinnin";
@@ -284,6 +287,7 @@
 				509E3BC6180D9627004E47B0 /* doubleicon.png in Resources */,
 				509E3BC7180D9627004E47B0 /* singleicon.png in Resources */,
 				509E3BC8180D9627004E47B0 /* toolicon.png in Resources */,
+				509E3BCA180D9C01004E47B0 /* TabBarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
