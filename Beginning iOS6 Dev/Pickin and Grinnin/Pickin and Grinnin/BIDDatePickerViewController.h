@@ -10,4 +10,8 @@
 
 @interface BIDDatePickerViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+
+- (IBAction)buttonPressed;
+
 @end
