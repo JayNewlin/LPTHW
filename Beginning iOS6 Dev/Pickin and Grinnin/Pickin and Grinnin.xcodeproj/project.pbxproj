@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5041EE79180F4CF200381DFD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5041EE78180F4CF200381DFD /* AudioToolbox.framework */; };
 		5062274E180DED71006E7B4B /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5062274D180DED71006E7B4B /* statedictionary.plist */; };
 		509E3B6B180D8B50004E47B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E3B6A180D8B50004E47B0 /* UIKit.framework */; };
 		509E3B6D180D8B50004E47B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E3B6C180D8B50004E47B0 /* Foundation.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5041EE78180F4CF200381DFD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5062274D180DED71006E7B4B /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
 		509E3B67180D8B50004E47B0 /* Pickin and Grinnin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pickin and Grinnin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		509E3B6A180D8B50004E47B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5041EE79180F4CF200381DFD /* AudioToolbox.framework in Frameworks */,
 				509E3B6B180D8B50004E47B0 /* UIKit.framework in Frameworks */,
 				509E3B6D180D8B50004E47B0 /* Foundation.framework in Frameworks */,
 				509E3B6F180D8B50004E47B0 /* CoreGraphics.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		509E3B69180D8B50004E47B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5041EE78180F4CF200381DFD /* AudioToolbox.framework */,
 				509E3B6A180D8B50004E47B0 /* UIKit.framework */,
 				509E3B6C180D8B50004E47B0 /* Foundation.framework */,
 				509E3B6E180D8B50004E47B0 /* CoreGraphics.framework */,
