@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DF33D6C3-BB8C-4EFD-B89D-40F8EC2364C2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pickin and Grinnin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>454F710F-9479-4A4F-B816-C73F03FF1C8E</key>
+		<string>ssh://github.com/JayNewlin/LPTHW.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Beginning iOS6 Dev/Pickin and Grinnin/Pickin and Grinnin.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>454F710F-9479-4A4F-B816-C73F03FF1C8E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/JayNewlin/LPTHW.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>454F710F-9479-4A4F-B816-C73F03FF1C8E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>454F710F-9479-4A4F-B816-C73F03FF1C8E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Learning</string>
+		</dict>
+	</array>
+</dict>
+</plist>

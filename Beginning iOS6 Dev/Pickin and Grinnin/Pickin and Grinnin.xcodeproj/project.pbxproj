@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5062274E180DED71006E7B4B /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5062274D180DED71006E7B4B /* statedictionary.plist */; };
 		509E3B6B180D8B50004E47B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E3B6A180D8B50004E47B0 /* UIKit.framework */; };
 		509E3B6D180D8B50004E47B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E3B6C180D8B50004E47B0 /* Foundation.framework */; };
 		509E3B6F180D8B50004E47B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E3B6E180D8B50004E47B0 /* CoreGraphics.framework */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5062274D180DED71006E7B4B /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
 		509E3B67180D8B50004E47B0 /* Pickin and Grinnin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pickin and Grinnin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		509E3B6A180D8B50004E47B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		509E3B6C180D8B50004E47B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +167,7 @@
 				509E3BB3180D9627004E47B0 /* Custom Picker Sounds */,
 				509E3BB6180D9627004E47B0 /* Tab Bar Icons */,
 				509E3B72180D8B50004E47B0 /* Pickin and Grinnin-Info.plist */,
+				5062274D180DED71006E7B4B /* statedictionary.plist */,
 				509E3B73180D8B50004E47B0 /* InfoPlist.strings */,
 				509E3B76180D8B50004E47B0 /* main.m */,
 				509E3B78180D8B50004E47B0 /* Pickin and Grinnin-Prefix.pch */,
@@ -288,6 +291,7 @@
 				509E3BC7180D9627004E47B0 /* singleicon.png in Resources */,
 				509E3BC8180D9627004E47B0 /* toolicon.png in Resources */,
 				509E3BCA180D9C01004E47B0 /* TabBarController.xib in Resources */,
+				5062274E180DED71006E7B4B /* statedictionary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +423,7 @@
 				509E3B86180D8B50004E47B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
