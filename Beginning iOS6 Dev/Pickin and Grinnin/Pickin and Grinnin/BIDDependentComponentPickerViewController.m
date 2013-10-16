@@ -8,20 +8,40 @@
 
 #import "BIDDependentComponentPickerViewController.h"
 
-//@interface BIDDependentComponentPickerViewController ()
-//
-//@end
+@interface BIDDependentComponentPickerViewController ()
+
+@end
 
 @implementation BIDDependentComponentPickerViewController
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+  
+  NSBundle *bundle = [NSBundle mainBundle];
+  NSURL *plistURL = [bundle URLForResource:@"statedictionary" withExtension:@"plist"];
+  
+  self.stateZips = [NSDictionary dictionaryWithContentsOfURL:plistURL];
+  
+  NSArray *allStates = [self.stateZips allKeys];
+  NSArray *sortedStates = [allStates sortedArrayUsingSelector:@selector(compare:)];
+  self.states = sortedStates;
+  
+  NSString *selectedState = self.states[0];
+  self.zips = self.stateZips[selectedState];
+  
+  [self.dependentPicker reloadAllComponents];
+}
 
 - (IBAction)buttonPressed
 {
@@ -42,29 +62,6 @@
 }
 
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-  
-  NSBundle *bundle = [NSBundle mainBundle];
-  NSURL *plistURL = [bundle URLForResource:@"statedictionary" withExtension:@"plist"];
-  
-  self.stateZips = [NSDictionary dictionaryWithContentsOfURL:plistURL];
-  
-  NSArray *allStates = [self.stateZips allKeys];
-  NSArray *sortedStates = [allStates sortedArrayUsingSelector:@selector(compare:)];
-  self.states = sortedStates;
-  
-  NSString *selectedState = self.states[0];
-  self.zips = self.stateZips[selectedState];
-  
-  [self.dependentPicker reloadAllComponents];
-  
-//  NSString *logNote = [[NSString alloc] initWithFormat:@"I have %d at self.states and %d at self.zips", [self.states count], [self.zips count]];
-//  NSLog(logNote);
-}
-
 #pragma mark - Picker Data Source Methods
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -79,6 +76,7 @@
     return [self.zips count];
   }
 }
+
 
 #pragma mark Picker Delegate Methods
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
