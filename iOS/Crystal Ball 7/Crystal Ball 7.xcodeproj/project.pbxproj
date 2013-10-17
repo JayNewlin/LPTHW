@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5001361A18101EA000ED7413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001361918101EA000ED7413 /* Foundation.framework */; };
+		5001361C18101EA000ED7413 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001361B18101EA000ED7413 /* CoreGraphics.framework */; };
+		5001361E18101EA000ED7413 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001361D18101EA000ED7413 /* UIKit.framework */; };
+		5001362418101EA000ED7413 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5001362218101EA000ED7413 /* InfoPlist.strings */; };
+		5001362618101EA000ED7413 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5001362518101EA000ED7413 /* main.m */; };
+		5001362A18101EA000ED7413 /* THAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5001362918101EA000ED7413 /* THAppDelegate.m */; };
+		5001362D18101EA000ED7413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5001362B18101EA000ED7413 /* Main.storyboard */; };
+		5001363018101EA000ED7413 /* THViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5001362F18101EA000ED7413 /* THViewController.m */; };
+		5001363218101EA000ED7413 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5001363118101EA000ED7413 /* Images.xcassets */; };
+		5001363918101EA100ED7413 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001363818101EA100ED7413 /* XCTest.framework */; };
+		5001363A18101EA100ED7413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001361918101EA000ED7413 /* Foundation.framework */; };
+		5001363B18101EA100ED7413 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001361D18101EA000ED7413 /* UIKit.framework */; };
+		5001364318101EA100ED7413 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5001364118101EA100ED7413 /* InfoPlist.strings */; };
+		5001364518101EA100ED7413 /* Crystal_Ball_7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5001364418101EA100ED7413 /* Crystal_Ball_7Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5001363C18101EA100ED7413 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5001360E18101EA000ED7413 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5001361518101EA000ED7413;
+			remoteInfo = "Crystal Ball 7";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5001361618101EA000ED7413 /* Crystal Ball 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crystal Ball 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5001361918101EA000ED7413 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5001361B18101EA000ED7413 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5001361D18101EA000ED7413 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5001362118101EA000ED7413 /* Crystal Ball 7-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Crystal Ball 7-Info.plist"; sourceTree = "<group>"; };
+		5001362318101EA000ED7413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5001362518101EA000ED7413 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5001362718101EA000ED7413 /* Crystal Ball 7-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Crystal Ball 7-Prefix.pch"; sourceTree = "<group>"; };
+		5001362818101EA000ED7413 /* THAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THAppDelegate.h; sourceTree = "<group>"; };
+		5001362918101EA000ED7413 /* THAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THAppDelegate.m; sourceTree = "<group>"; };
+		5001362C18101EA000ED7413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5001362E18101EA000ED7413 /* THViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THViewController.h; sourceTree = "<group>"; };
+		5001362F18101EA000ED7413 /* THViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THViewController.m; sourceTree = "<group>"; };
+		5001363118101EA000ED7413 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5001363718101EA100ED7413 /* Crystal Ball 7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crystal Ball 7Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5001363818101EA100ED7413 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5001364018101EA100ED7413 /* Crystal Ball 7Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Crystal Ball 7Tests-Info.plist"; sourceTree = "<group>"; };
+		5001364218101EA100ED7413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5001364418101EA100ED7413 /* Crystal_Ball_7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Crystal_Ball_7Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5001361318101EA000ED7413 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5001361C18101EA000ED7413 /* CoreGraphics.framework in Frameworks */,
+				5001361E18101EA000ED7413 /* UIKit.framework in Frameworks */,
+				5001361A18101EA000ED7413 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5001363418101EA100ED7413 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5001363918101EA100ED7413 /* XCTest.framework in Frameworks */,
+				5001363B18101EA100ED7413 /* UIKit.framework in Frameworks */,
+				5001363A18101EA100ED7413 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5001360D18101EA000ED7413 = {
+			isa = PBXGroup;
+			children = (
+				5001361F18101EA000ED7413 /* Crystal Ball 7 */,
+				5001363E18101EA100ED7413 /* Crystal Ball 7Tests */,
+				5001361818101EA000ED7413 /* Frameworks */,
+				5001361718101EA000ED7413 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5001361718101EA000ED7413 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5001361618101EA000ED7413 /* Crystal Ball 7.app */,
+				5001363718101EA100ED7413 /* Crystal Ball 7Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5001361818101EA000ED7413 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5001361918101EA000ED7413 /* Foundation.framework */,
+				5001361B18101EA000ED7413 /* CoreGraphics.framework */,
+				5001361D18101EA000ED7413 /* UIKit.framework */,
+				5001363818101EA100ED7413 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5001361F18101EA000ED7413 /* Crystal Ball 7 */ = {
+			isa = PBXGroup;
+			children = (
+				5001362818101EA000ED7413 /* THAppDelegate.h */,
+				5001362918101EA000ED7413 /* THAppDelegate.m */,
+				5001362B18101EA000ED7413 /* Main.storyboard */,
+				5001362E18101EA000ED7413 /* THViewController.h */,
+				5001362F18101EA000ED7413 /* THViewController.m */,
+				5001363118101EA000ED7413 /* Images.xcassets */,
+				5001362018101EA000ED7413 /* Supporting Files */,
+			);
+			path = "Crystal Ball 7";
+			sourceTree = "<group>";
+		};
+		5001362018101EA000ED7413 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5001362118101EA000ED7413 /* Crystal Ball 7-Info.plist */,
+				5001362218101EA000ED7413 /* InfoPlist.strings */,
+				5001362518101EA000ED7413 /* main.m */,
+				5001362718101EA000ED7413 /* Crystal Ball 7-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5001363E18101EA100ED7413 /* Crystal Ball 7Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5001364418101EA100ED7413 /* Crystal_Ball_7Tests.m */,
+				5001363F18101EA100ED7413 /* Supporting Files */,
+			);
+			path = "Crystal Ball 7Tests";
+			sourceTree = "<group>";
+		};
+		5001363F18101EA100ED7413 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5001364018101EA100ED7413 /* Crystal Ball 7Tests-Info.plist */,
+				5001364118101EA100ED7413 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5001361518101EA000ED7413 /* Crystal Ball 7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5001364818101EA100ED7413 /* Build configuration list for PBXNativeTarget "Crystal Ball 7" */;
+			buildPhases = (
+				5001361218101EA000ED7413 /* Sources */,
+				5001361318101EA000ED7413 /* Frameworks */,
+				5001361418101EA000ED7413 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crystal Ball 7";
+			productName = "Crystal Ball 7";
+			productReference = 5001361618101EA000ED7413 /* Crystal Ball 7.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5001363618101EA100ED7413 /* Crystal Ball 7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5001364B18101EA100ED7413 /* Build configuration list for PBXNativeTarget "Crystal Ball 7Tests" */;
+			buildPhases = (
+				5001363318101EA100ED7413 /* Sources */,
+				5001363418101EA100ED7413 /* Frameworks */,
+				5001363518101EA100ED7413 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5001363D18101EA100ED7413 /* PBXTargetDependency */,
+			);
+			name = "Crystal Ball 7Tests";
+			productName = "Crystal Ball 7Tests";
+			productReference = 5001363718101EA100ED7413 /* Crystal Ball 7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5001360E18101EA000ED7413 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TH;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "DmgCtrl, Ltd.";
+				TargetAttributes = {
+					5001363618101EA100ED7413 = {
+						TestTargetID = 5001361518101EA000ED7413;
+					};
+				};
+			};
+			buildConfigurationList = 5001361118101EA000ED7413 /* Build configuration list for PBXProject "Crystal Ball 7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5001360D18101EA000ED7413;
+			productRefGroup = 5001361718101EA000ED7413 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5001361518101EA000ED7413 /* Crystal Ball 7 */,
+				5001363618101EA100ED7413 /* Crystal Ball 7Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5001361418101EA000ED7413 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5001363218101EA000ED7413 /* Images.xcassets in Resources */,
+				5001362418101EA000ED7413 /* InfoPlist.strings in Resources */,
+				5001362D18101EA000ED7413 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5001363518101EA100ED7413 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5001364318101EA100ED7413 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5001361218101EA000ED7413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5001363018101EA000ED7413 /* THViewController.m in Sources */,
+				5001362A18101EA000ED7413 /* THAppDelegate.m in Sources */,
+				5001362618101EA000ED7413 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5001363318101EA100ED7413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5001364518101EA100ED7413 /* Crystal_Ball_7Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5001363D18101EA100ED7413 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5001361518101EA000ED7413 /* Crystal Ball 7 */;
+			targetProxy = 5001363C18101EA100ED7413 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5001362218101EA000ED7413 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5001362318101EA000ED7413 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5001362B18101EA000ED7413 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5001362C18101EA000ED7413 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5001364118101EA100ED7413 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5001364218101EA100ED7413 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5001364618101EA100ED7413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5001364718101EA100ED7413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5001364918101EA100ED7413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crystal Ball 7/Crystal Ball 7-Prefix.pch";
+				INFOPLIST_FILE = "Crystal Ball 7/Crystal Ball 7-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5001364A18101EA100ED7413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crystal Ball 7/Crystal Ball 7-Prefix.pch";
+				INFOPLIST_FILE = "Crystal Ball 7/Crystal Ball 7-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5001364C18101EA100ED7413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Crystal Ball 7.app/Crystal Ball 7";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crystal Ball 7/Crystal Ball 7-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Crystal Ball 7Tests/Crystal Ball 7Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5001364D18101EA100ED7413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Crystal Ball 7.app/Crystal Ball 7";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crystal Ball 7/Crystal Ball 7-Prefix.pch";
+				INFOPLIST_FILE = "Crystal Ball 7Tests/Crystal Ball 7Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5001361118101EA000ED7413 /* Build configuration list for PBXProject "Crystal Ball 7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5001364618101EA100ED7413 /* Debug */,
+				5001364718101EA100ED7413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5001364818101EA100ED7413 /* Build configuration list for PBXNativeTarget "Crystal Ball 7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5001364918101EA100ED7413 /* Debug */,
+				5001364A18101EA100ED7413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5001364B18101EA100ED7413 /* Build configuration list for PBXNativeTarget "Crystal Ball 7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5001364C18101EA100ED7413 /* Debug */,
+				5001364D18101EA100ED7413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5001360E18101EA000ED7413 /* Project object */;
+}
