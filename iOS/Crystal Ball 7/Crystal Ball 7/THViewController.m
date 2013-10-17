@@ -20,15 +20,6 @@
 	 
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-  
-  [super viewDidAppear:animated];
-  
-  CGRect frame = self.predictionLabel.frame;
-  self.predictionLabel.frame = CGRectMake(frame.origin.x, 200, frame.size.width, frame.size.height);
-
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
