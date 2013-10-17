@@ -10,4 +10,6 @@
 
 @interface THViewController : UIViewController
 
+- (IBAction)buttonPressed;
+
 @end

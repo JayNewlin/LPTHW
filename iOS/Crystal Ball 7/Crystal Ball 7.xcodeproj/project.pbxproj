@@ -112,8 +112,6 @@
 		5001361F18101EA000ED7413 /* Crystal Ball 7 */ = {
 			isa = PBXGroup;
 			children = (
-				5001362818101EA000ED7413 /* THAppDelegate.h */,
-				5001362918101EA000ED7413 /* THAppDelegate.m */,
 				5001362B18101EA000ED7413 /* Main.storyboard */,
 				5001362E18101EA000ED7413 /* THViewController.h */,
 				5001362F18101EA000ED7413 /* THViewController.m */,
@@ -126,6 +124,8 @@
 		5001362018101EA000ED7413 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5001362818101EA000ED7413 /* THAppDelegate.h */,
+				5001362918101EA000ED7413 /* THAppDelegate.m */,
 				5001362118101EA000ED7413 /* Crystal Ball 7-Info.plist */,
 				5001362218101EA000ED7413 /* InfoPlist.strings */,
 				5001362518101EA000ED7413 /* main.m */,
