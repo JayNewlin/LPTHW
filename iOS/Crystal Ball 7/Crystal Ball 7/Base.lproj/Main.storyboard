@@ -16,16 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="249" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-1k-Sfo">
-                                <rect key="frame" x="36" y="181" width="249" height="140"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-Oi-Rdt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-1k-Sfo">
+                                <rect key="frame" x="36" y="178" width="248" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="9XK-bn-YQT"/>
+                                    <constraint firstAttribute="width" constant="248" id="P5v-mH-xHe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccB-ZT-OkN">
-                                <rect key="frame" x="30" y="488" width="261" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccB-ZT-OkN">
+                                <rect key="frame" x="29" y="501" width="261" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="0m4-Kl-p9c"/>
+                                    <constraint firstAttribute="height" constant="47" id="xsF-Ml-IsB"/>
+                                </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="button-off">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,6 +49,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Apn-Oi-Rdt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6CY-PH-Fuw"/>
+                            <constraint firstItem="d4U-Wy-c3T" firstAttribute="top" secondItem="Apn-Oi-Rdt" secondAttribute="bottom" id="ClS-F1-43o"/>
+                            <constraint firstItem="d4U-Wy-c3T" firstAttribute="top" secondItem="ccB-ZT-OkN" secondAttribute="bottom" constant="20" id="J2m-02-b1n"/>
+                            <constraint firstAttribute="centerX" secondItem="ccB-ZT-OkN" secondAttribute="centerX" id="Plf-gq-kn2"/>
+                            <constraint firstAttribute="trailing" secondItem="Apn-Oi-Rdt" secondAttribute="trailing" id="cP7-K6-mHD"/>
+                            <constraint firstItem="Apn-Oi-Rdt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="pv1-oF-8fn"/>
+                            <constraint firstItem="Mli-1k-Sfo" firstAttribute="centerY" secondItem="Apn-Oi-Rdt" secondAttribute="centerY" constant="-36" id="r9q-r5-jcA"/>
+                            <constraint firstItem="Mli-1k-Sfo" firstAttribute="centerX" secondItem="Apn-Oi-Rdt" secondAttribute="centerX" id="uyp-gb-eZD"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="predictionLabel" destination="Mli-1k-Sfo" id="nNL-mF-SG7"/>
@@ -47,6 +69,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="320" height="568"/>
         <image name="button-off" width="261" height="49"/>
         <image name="button-on" width="261" height="47"/>
     </resources>
