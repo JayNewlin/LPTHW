@@ -7,6 +7,7 @@
 //
 
 #import "THViewController.h"
+#import "THCrystalBall.h"
 
 @interface THViewController ()
 
@@ -17,33 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  self.crystalBall = [[THCrystalBall alloc] init];
   
-  self.predictions = [[NSArray alloc] initWithObjects:
-                          @"It is certain",
-                          @"It is decidedly so",
-                          @"All signs say YES",
-                          @"The stars are not aligned",
-                          @"My reply is NO",
-                          @"It is doubtful",
-                          @"Better not tell you now",
-                          @"Concentrate, and ask again",
-                          @"Unable to answer now",
-                          @"Without a doubt",
-                          @"Yes, definitely",
-                          @"You may rely on it",
-                          @"As I see it, yes",
-                          @"Most likely",
-                          @"The outlook is good",
-                          @"Yes",
-                          @"Signs point to YES",
-                          @"Reply hazy; try again",
-                          @"Ask again later",
-                          @"Cannot predict now",
-                          @"Don't count on it",
-                          @"My sources say NO",
-                          @"Outlook not so good",
-                          @"Very doubtful",nil];
-	 
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,8 +30,7 @@
 
 - (IBAction)buttonPressed {
   
-  int random = arc4random_uniform(self.predictions.count);
-  self.predictionLabel.text = [self.predictions objectAtIndex:random];
+  self.predictionLabel.text = [self.crystalBall randomPrediction];
   
 }
 @end

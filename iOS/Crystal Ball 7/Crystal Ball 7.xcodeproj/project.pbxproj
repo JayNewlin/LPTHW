@@ -21,6 +21,7 @@
 		5001363B18101EA100ED7413 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001361D18101EA000ED7413 /* UIKit.framework */; };
 		5001364318101EA100ED7413 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5001364118101EA100ED7413 /* InfoPlist.strings */; };
 		5001364518101EA100ED7413 /* Crystal_Ball_7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5001364418101EA100ED7413 /* Crystal_Ball_7Tests.m */; };
+		505B4968181182B50018BC0A /* THCrystalBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B4967181182B50018BC0A /* THCrystalBall.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		5001364018101EA100ED7413 /* Crystal Ball 7Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Crystal Ball 7Tests-Info.plist"; sourceTree = "<group>"; };
 		5001364218101EA100ED7413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5001364418101EA100ED7413 /* Crystal_Ball_7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Crystal_Ball_7Tests.m; sourceTree = "<group>"; };
+		505B4966181182B50018BC0A /* THCrystalBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCrystalBall.h; sourceTree = "<group>"; };
+		505B4967181182B50018BC0A /* THCrystalBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCrystalBall.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				5001362B18101EA000ED7413 /* Main.storyboard */,
 				5001362E18101EA000ED7413 /* THViewController.h */,
 				5001362F18101EA000ED7413 /* THViewController.m */,
+				505B4966181182B50018BC0A /* THCrystalBall.h */,
+				505B4967181182B50018BC0A /* THCrystalBall.m */,
 				5001363118101EA000ED7413 /* Images.xcassets */,
 				5001362018101EA000ED7413 /* Supporting Files */,
 			);
@@ -253,6 +258,7 @@
 				5001363018101EA000ED7413 /* THViewController.m in Sources */,
 				5001362A18101EA000ED7413 /* THAppDelegate.m in Sources */,
 				5001362618101EA000ED7413 /* main.m in Sources */,
+				505B4968181182B50018BC0A /* THCrystalBall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +467,7 @@
 				5001364A18101EA100ED7413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5001364B18101EA100ED7413 /* Build configuration list for PBXNativeTarget "Crystal Ball 7Tests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +476,7 @@
 				5001364D18101EA100ED7413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

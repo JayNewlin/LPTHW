@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class THCrystalBall;
+
 @interface THViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
-@property (strong, nonatomic) NSArray *predictions;
+@property (strong, nonatomic) THCrystalBall *crystalBall;
 
 - (IBAction)buttonPressed;
 
