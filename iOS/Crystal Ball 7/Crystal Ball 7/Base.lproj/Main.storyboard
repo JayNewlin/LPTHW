@@ -16,18 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-Oi-Rdt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-Oi-Rdt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-1k-Sfo">
-                                <rect key="frame" x="36" y="178" width="248" height="140"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to know?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-1k-Sfo">
+                                <rect key="frame" x="38" y="197" width="244" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="9XK-bn-YQT"/>
-                                    <constraint firstAttribute="width" constant="248" id="P5v-mH-xHe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="32"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -37,12 +33,10 @@
                             <constraint firstItem="Apn-Oi-Rdt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6CY-PH-Fuw"/>
                             <constraint firstItem="d4U-Wy-c3T" firstAttribute="top" secondItem="Apn-Oi-Rdt" secondAttribute="bottom" id="ClS-F1-43o"/>
                             <constraint firstAttribute="trailing" secondItem="Apn-Oi-Rdt" secondAttribute="trailing" id="cP7-K6-mHD"/>
-                            <constraint firstItem="Apn-Oi-Rdt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="pv1-oF-8fn"/>
-                            <constraint firstItem="Mli-1k-Sfo" firstAttribute="centerY" secondItem="Apn-Oi-Rdt" secondAttribute="centerY" constant="-36" id="r9q-r5-jcA"/>
-                            <constraint firstItem="Mli-1k-Sfo" firstAttribute="centerX" secondItem="Apn-Oi-Rdt" secondAttribute="centerX" id="uyp-gb-eZD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="Apn-Oi-Rdt" id="bdT-OT-Mcf"/>
                         <outlet property="predictionLabel" destination="Mli-1k-Sfo" id="nNL-mF-SG7"/>
                     </connections>
                 </viewController>
@@ -51,7 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="320" height="568"/>
+        <image name="CB00001" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
