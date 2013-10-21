@@ -20,9 +20,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to know?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-1k-Sfo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to know?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="Mli-1k-Sfo">
                                 <rect key="frame" x="38" y="197" width="244" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="5KR-XG-Aob"/>
+                                    <constraint firstAttribute="width" constant="244" id="sY2-8y-FQ3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="32"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -32,7 +36,10 @@
                         <constraints>
                             <constraint firstItem="Apn-Oi-Rdt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6CY-PH-Fuw"/>
                             <constraint firstItem="d4U-Wy-c3T" firstAttribute="top" secondItem="Apn-Oi-Rdt" secondAttribute="bottom" id="ClS-F1-43o"/>
+                            <constraint firstItem="d4U-Wy-c3T" firstAttribute="top" secondItem="Mli-1k-Sfo" secondAttribute="bottom" constant="231" id="Ld4-7Q-dde"/>
                             <constraint firstAttribute="trailing" secondItem="Apn-Oi-Rdt" secondAttribute="trailing" id="cP7-K6-mHD"/>
+                            <constraint firstAttribute="trailing" secondItem="Mli-1k-Sfo" secondAttribute="trailing" constant="38" id="esE-dq-78B"/>
+                            <constraint firstItem="Mli-1k-Sfo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="38" id="oTe-yW-9Nb"/>
                         </constraints>
                     </view>
                     <connections>
