@@ -8,16 +8,23 @@
 
 #import "THViewController.h"
 #import "THCrystalBall.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface THViewController ()
 
 @end
 
-@implementation THViewController
+@implementation THViewController {
+  SystemSoundID soundEffect;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+  NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"crystal_ball" ofType:@"mp3"];
+  NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+  AudioServicesCreateSystemSoundID(CFBridgingRetain(soundURL), &soundEffect);
   
   self.crystalBall = [[THCrystalBall alloc] init];
   
@@ -97,6 +104,7 @@
 
 - (void) makePrediction {
   [self.backgroundImageView startAnimating];
+  AudioServicesPlaySystemSound(soundEffect);
   [self performSelector:@selector(predictionText) withObject:nil afterDelay:1.0];
 }
 
