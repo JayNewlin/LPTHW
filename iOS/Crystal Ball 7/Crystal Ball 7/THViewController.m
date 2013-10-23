@@ -18,6 +18,11 @@
   SystemSoundID soundEffect;
 }
 
+- (void)viewWillAppear {
+  
+  [self setNeedsStatusBarAppearanceUpdate];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -92,6 +97,10 @@
   self.backgroundImageView.animationDuration = 1.75f;
   self.backgroundImageView.animationRepeatCount = 1;
   
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+  return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning
