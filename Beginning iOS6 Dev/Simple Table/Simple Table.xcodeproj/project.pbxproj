@@ -14,13 +14,13 @@
 		5004DBD01818564600EEF659 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBCF1818564600EEF659 /* main.m */; };
 		5004DBD41818564600EEF659 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBD31818564600EEF659 /* BIDAppDelegate.m */; };
 		5004DBD71818564600EEF659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBD51818564600EEF659 /* Main.storyboard */; };
-		5004DBDA1818564600EEF659 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBD91818564600EEF659 /* BIDViewController.m */; };
 		5004DBDC1818564600EEF659 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBDB1818564600EEF659 /* Images.xcassets */; };
 		5004DBE31818564600EEF659 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBE21818564600EEF659 /* XCTest.framework */; };
 		5004DBE41818564600EEF659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBC31818564600EEF659 /* Foundation.framework */; };
 		5004DBE51818564600EEF659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBC71818564600EEF659 /* UIKit.framework */; };
 		5004DBED1818564600EEF659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBEB1818564600EEF659 /* InfoPlist.strings */; };
 		5004DBEF1818564600EEF659 /* Simple_TableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBEE1818564600EEF659 /* Simple_TableTests.m */; };
+		5004DBFA181857B400EEF659 /* BIDTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBF9181857B400EEF659 /* BIDTestTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +45,14 @@
 		5004DBD21818564600EEF659 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
 		5004DBD31818564600EEF659 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
 		5004DBD61818564600EEF659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5004DBD81818564600EEF659 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
-		5004DBD91818564600EEF659 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
 		5004DBDB1818564600EEF659 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5004DBE11818564600EEF659 /* Simple TableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple TableTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5004DBE21818564600EEF659 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5004DBEA1818564600EEF659 /* Simple TableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple TableTests-Info.plist"; sourceTree = "<group>"; };
 		5004DBEC1818564600EEF659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5004DBEE1818564600EEF659 /* Simple_TableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simple_TableTests.m; sourceTree = "<group>"; };
+		5004DBF8181857B400EEF659 /* BIDTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDTestTableViewController.h; sourceTree = "<group>"; };
+		5004DBF9181857B400EEF659 /* BIDTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDTestTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +115,8 @@
 				5004DBD21818564600EEF659 /* BIDAppDelegate.h */,
 				5004DBD31818564600EEF659 /* BIDAppDelegate.m */,
 				5004DBD51818564600EEF659 /* Main.storyboard */,
-				5004DBD81818564600EEF659 /* BIDViewController.h */,
-				5004DBD91818564600EEF659 /* BIDViewController.m */,
+				5004DBF8181857B400EEF659 /* BIDTestTableViewController.h */,
+				5004DBF9181857B400EEF659 /* BIDTestTableViewController.m */,
 				5004DBDB1818564600EEF659 /* Images.xcassets */,
 				5004DBCA1818564600EEF659 /* Supporting Files */,
 			);
@@ -251,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5004DBD41818564600EEF659 /* BIDAppDelegate.m in Sources */,
-				5004DBDA1818564600EEF659 /* BIDViewController.m in Sources */,
+				5004DBFA181857B400EEF659 /* BIDTestTableViewController.m in Sources */,
 				5004DBD01818564600EEF659 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

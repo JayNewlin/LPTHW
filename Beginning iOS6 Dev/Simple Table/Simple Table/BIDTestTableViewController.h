@@ -1,5 +1,5 @@
 //
-//  BIDViewController.h
+//  BIDTestTableViewController.h
 //  Simple Table
 //
 //  Created by Jay R Newlin on 10/23/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BIDViewController : UIViewController
+@interface BIDTestTableViewController : UITableViewController
+
+@property (copy, nonatomic) NSArray *dwarves;
 
 @end
