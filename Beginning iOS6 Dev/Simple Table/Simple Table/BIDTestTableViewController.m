@@ -55,7 +55,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
   if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
   }
   
   UIImage *image = [UIImage imageNamed:@"star.png"];
@@ -65,6 +65,12 @@
   cell.imageView.highlightedImage = highlightedImage;
   
   cell.textLabel.text = self.dwarves[indexPath.row];
+  
+  if (indexPath.row < 7) {
+    cell.detailTextLabel.text = @"Created by the folks at Disney";
+  } else {
+    cell.detailTextLabel.text = @"Courtesy of Mr. Tolkien";
+  }
     
     return cell;
 }
