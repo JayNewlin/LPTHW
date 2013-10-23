@@ -7,147 +7,147 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5004DB8318184EF300EEF659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DB8218184EF300EEF659 /* Foundation.framework */; };
-		5004DB8518184EF300EEF659 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DB8418184EF300EEF659 /* CoreGraphics.framework */; };
-		5004DB8718184EF300EEF659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DB8618184EF300EEF659 /* UIKit.framework */; };
-		5004DB8D18184EF300EEF659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004DB8B18184EF300EEF659 /* InfoPlist.strings */; };
-		5004DB8F18184EF300EEF659 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DB8E18184EF300EEF659 /* main.m */; };
-		5004DB9318184EF300EEF659 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DB9218184EF300EEF659 /* BIDAppDelegate.m */; };
-		5004DB9618184EF300EEF659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5004DB9418184EF300EEF659 /* Main.storyboard */; };
-		5004DB9918184EF300EEF659 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DB9818184EF300EEF659 /* BIDViewController.m */; };
-		5004DB9B18184EF300EEF659 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5004DB9A18184EF300EEF659 /* Images.xcassets */; };
-		5004DBA218184EF400EEF659 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBA118184EF400EEF659 /* XCTest.framework */; };
-		5004DBA318184EF400EEF659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DB8218184EF300EEF659 /* Foundation.framework */; };
-		5004DBA418184EF400EEF659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DB8618184EF300EEF659 /* UIKit.framework */; };
-		5004DBAC18184EF400EEF659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBAA18184EF400EEF659 /* InfoPlist.strings */; };
-		5004DBAE18184EF400EEF659 /* Simple_TableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBAD18184EF400EEF659 /* Simple_TableTests.m */; };
+		5004DBC41818564600EEF659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBC31818564600EEF659 /* Foundation.framework */; };
+		5004DBC61818564600EEF659 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBC51818564600EEF659 /* CoreGraphics.framework */; };
+		5004DBC81818564600EEF659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBC71818564600EEF659 /* UIKit.framework */; };
+		5004DBCE1818564600EEF659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBCC1818564600EEF659 /* InfoPlist.strings */; };
+		5004DBD01818564600EEF659 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBCF1818564600EEF659 /* main.m */; };
+		5004DBD41818564600EEF659 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBD31818564600EEF659 /* BIDAppDelegate.m */; };
+		5004DBD71818564600EEF659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBD51818564600EEF659 /* Main.storyboard */; };
+		5004DBDA1818564600EEF659 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBD91818564600EEF659 /* BIDViewController.m */; };
+		5004DBDC1818564600EEF659 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBDB1818564600EEF659 /* Images.xcassets */; };
+		5004DBE31818564600EEF659 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBE21818564600EEF659 /* XCTest.framework */; };
+		5004DBE41818564600EEF659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBC31818564600EEF659 /* Foundation.framework */; };
+		5004DBE51818564600EEF659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DBC71818564600EEF659 /* UIKit.framework */; };
+		5004DBED1818564600EEF659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004DBEB1818564600EEF659 /* InfoPlist.strings */; };
+		5004DBEF1818564600EEF659 /* Simple_TableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DBEE1818564600EEF659 /* Simple_TableTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5004DBA518184EF400EEF659 /* PBXContainerItemProxy */ = {
+		5004DBE61818564600EEF659 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5004DB7718184EF300EEF659 /* Project object */;
+			containerPortal = 5004DBB81818564600EEF659 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5004DB7E18184EF300EEF659;
+			remoteGlobalIDString = 5004DBBF1818564600EEF659;
 			remoteInfo = "Simple Table";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5004DB7F18184EF300EEF659 /* Simple Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5004DB8218184EF300EEF659 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5004DB8418184EF300EEF659 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5004DB8618184EF300EEF659 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5004DB8A18184EF300EEF659 /* Simple Table-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple Table-Info.plist"; sourceTree = "<group>"; };
-		5004DB8C18184EF300EEF659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5004DB8E18184EF300EEF659 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5004DB9018184EF300EEF659 /* Simple Table-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Table-Prefix.pch"; sourceTree = "<group>"; };
-		5004DB9118184EF300EEF659 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
-		5004DB9218184EF300EEF659 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
-		5004DB9518184EF300EEF659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5004DB9718184EF300EEF659 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
-		5004DB9818184EF300EEF659 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
-		5004DB9A18184EF300EEF659 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5004DBA018184EF400EEF659 /* Simple TableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple TableTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5004DBA118184EF400EEF659 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5004DBA918184EF400EEF659 /* Simple TableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple TableTests-Info.plist"; sourceTree = "<group>"; };
-		5004DBAB18184EF400EEF659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5004DBAD18184EF400EEF659 /* Simple_TableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simple_TableTests.m; sourceTree = "<group>"; };
+		5004DBC01818564600EEF659 /* Simple Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5004DBC31818564600EEF659 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5004DBC51818564600EEF659 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5004DBC71818564600EEF659 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5004DBCB1818564600EEF659 /* Simple Table-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple Table-Info.plist"; sourceTree = "<group>"; };
+		5004DBCD1818564600EEF659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5004DBCF1818564600EEF659 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5004DBD11818564600EEF659 /* Simple Table-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Table-Prefix.pch"; sourceTree = "<group>"; };
+		5004DBD21818564600EEF659 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
+		5004DBD31818564600EEF659 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
+		5004DBD61818564600EEF659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5004DBD81818564600EEF659 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
+		5004DBD91818564600EEF659 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
+		5004DBDB1818564600EEF659 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5004DBE11818564600EEF659 /* Simple TableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple TableTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5004DBE21818564600EEF659 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5004DBEA1818564600EEF659 /* Simple TableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple TableTests-Info.plist"; sourceTree = "<group>"; };
+		5004DBEC1818564600EEF659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5004DBEE1818564600EEF659 /* Simple_TableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simple_TableTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5004DB7C18184EF300EEF659 /* Frameworks */ = {
+		5004DBBD1818564600EEF659 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5004DB8518184EF300EEF659 /* CoreGraphics.framework in Frameworks */,
-				5004DB8718184EF300EEF659 /* UIKit.framework in Frameworks */,
-				5004DB8318184EF300EEF659 /* Foundation.framework in Frameworks */,
+				5004DBC61818564600EEF659 /* CoreGraphics.framework in Frameworks */,
+				5004DBC81818564600EEF659 /* UIKit.framework in Frameworks */,
+				5004DBC41818564600EEF659 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5004DB9D18184EF400EEF659 /* Frameworks */ = {
+		5004DBDE1818564600EEF659 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5004DBA218184EF400EEF659 /* XCTest.framework in Frameworks */,
-				5004DBA418184EF400EEF659 /* UIKit.framework in Frameworks */,
-				5004DBA318184EF400EEF659 /* Foundation.framework in Frameworks */,
+				5004DBE31818564600EEF659 /* XCTest.framework in Frameworks */,
+				5004DBE51818564600EEF659 /* UIKit.framework in Frameworks */,
+				5004DBE41818564600EEF659 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5004DB7618184EF300EEF659 = {
+		5004DBB71818564600EEF659 = {
 			isa = PBXGroup;
 			children = (
-				5004DB8818184EF300EEF659 /* Simple Table */,
-				5004DBA718184EF400EEF659 /* Simple TableTests */,
-				5004DB8118184EF300EEF659 /* Frameworks */,
-				5004DB8018184EF300EEF659 /* Products */,
+				5004DBC91818564600EEF659 /* Simple Table */,
+				5004DBE81818564600EEF659 /* Simple TableTests */,
+				5004DBC21818564600EEF659 /* Frameworks */,
+				5004DBC11818564600EEF659 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5004DB8018184EF300EEF659 /* Products */ = {
+		5004DBC11818564600EEF659 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5004DB7F18184EF300EEF659 /* Simple Table.app */,
-				5004DBA018184EF400EEF659 /* Simple TableTests.xctest */,
+				5004DBC01818564600EEF659 /* Simple Table.app */,
+				5004DBE11818564600EEF659 /* Simple TableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5004DB8118184EF300EEF659 /* Frameworks */ = {
+		5004DBC21818564600EEF659 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5004DB8218184EF300EEF659 /* Foundation.framework */,
-				5004DB8418184EF300EEF659 /* CoreGraphics.framework */,
-				5004DB8618184EF300EEF659 /* UIKit.framework */,
-				5004DBA118184EF400EEF659 /* XCTest.framework */,
+				5004DBC31818564600EEF659 /* Foundation.framework */,
+				5004DBC51818564600EEF659 /* CoreGraphics.framework */,
+				5004DBC71818564600EEF659 /* UIKit.framework */,
+				5004DBE21818564600EEF659 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5004DB8818184EF300EEF659 /* Simple Table */ = {
+		5004DBC91818564600EEF659 /* Simple Table */ = {
 			isa = PBXGroup;
 			children = (
-				5004DB9118184EF300EEF659 /* BIDAppDelegate.h */,
-				5004DB9218184EF300EEF659 /* BIDAppDelegate.m */,
-				5004DB9418184EF300EEF659 /* Main.storyboard */,
-				5004DB9718184EF300EEF659 /* BIDViewController.h */,
-				5004DB9818184EF300EEF659 /* BIDViewController.m */,
-				5004DB9A18184EF300EEF659 /* Images.xcassets */,
-				5004DB8918184EF300EEF659 /* Supporting Files */,
+				5004DBD21818564600EEF659 /* BIDAppDelegate.h */,
+				5004DBD31818564600EEF659 /* BIDAppDelegate.m */,
+				5004DBD51818564600EEF659 /* Main.storyboard */,
+				5004DBD81818564600EEF659 /* BIDViewController.h */,
+				5004DBD91818564600EEF659 /* BIDViewController.m */,
+				5004DBDB1818564600EEF659 /* Images.xcassets */,
+				5004DBCA1818564600EEF659 /* Supporting Files */,
 			);
 			path = "Simple Table";
 			sourceTree = "<group>";
 		};
-		5004DB8918184EF300EEF659 /* Supporting Files */ = {
+		5004DBCA1818564600EEF659 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5004DB8A18184EF300EEF659 /* Simple Table-Info.plist */,
-				5004DB8B18184EF300EEF659 /* InfoPlist.strings */,
-				5004DB8E18184EF300EEF659 /* main.m */,
-				5004DB9018184EF300EEF659 /* Simple Table-Prefix.pch */,
+				5004DBCB1818564600EEF659 /* Simple Table-Info.plist */,
+				5004DBCC1818564600EEF659 /* InfoPlist.strings */,
+				5004DBCF1818564600EEF659 /* main.m */,
+				5004DBD11818564600EEF659 /* Simple Table-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5004DBA718184EF400EEF659 /* Simple TableTests */ = {
+		5004DBE81818564600EEF659 /* Simple TableTests */ = {
 			isa = PBXGroup;
 			children = (
-				5004DBAD18184EF400EEF659 /* Simple_TableTests.m */,
-				5004DBA818184EF400EEF659 /* Supporting Files */,
+				5004DBEE1818564600EEF659 /* Simple_TableTests.m */,
+				5004DBE91818564600EEF659 /* Supporting Files */,
 			);
 			path = "Simple TableTests";
 			sourceTree = "<group>";
 		};
-		5004DBA818184EF400EEF659 /* Supporting Files */ = {
+		5004DBE91818564600EEF659 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5004DBA918184EF400EEF659 /* Simple TableTests-Info.plist */,
-				5004DBAA18184EF400EEF659 /* InfoPlist.strings */,
+				5004DBEA1818564600EEF659 /* Simple TableTests-Info.plist */,
+				5004DBEB1818564600EEF659 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,13 +155,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5004DB7E18184EF300EEF659 /* Simple Table */ = {
+		5004DBBF1818564600EEF659 /* Simple Table */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5004DBB118184EF400EEF659 /* Build configuration list for PBXNativeTarget "Simple Table" */;
+			buildConfigurationList = 5004DBF21818564600EEF659 /* Build configuration list for PBXNativeTarget "Simple Table" */;
 			buildPhases = (
-				5004DB7B18184EF300EEF659 /* Sources */,
-				5004DB7C18184EF300EEF659 /* Frameworks */,
-				5004DB7D18184EF300EEF659 /* Resources */,
+				5004DBBC1818564600EEF659 /* Sources */,
+				5004DBBD1818564600EEF659 /* Frameworks */,
+				5004DBBE1818564600EEF659 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -169,43 +169,43 @@
 			);
 			name = "Simple Table";
 			productName = "Simple Table";
-			productReference = 5004DB7F18184EF300EEF659 /* Simple Table.app */;
+			productReference = 5004DBC01818564600EEF659 /* Simple Table.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5004DB9F18184EF400EEF659 /* Simple TableTests */ = {
+		5004DBE01818564600EEF659 /* Simple TableTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5004DBB418184EF400EEF659 /* Build configuration list for PBXNativeTarget "Simple TableTests" */;
+			buildConfigurationList = 5004DBF51818564600EEF659 /* Build configuration list for PBXNativeTarget "Simple TableTests" */;
 			buildPhases = (
-				5004DB9C18184EF400EEF659 /* Sources */,
-				5004DB9D18184EF400EEF659 /* Frameworks */,
-				5004DB9E18184EF400EEF659 /* Resources */,
+				5004DBDD1818564600EEF659 /* Sources */,
+				5004DBDE1818564600EEF659 /* Frameworks */,
+				5004DBDF1818564600EEF659 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5004DBA618184EF400EEF659 /* PBXTargetDependency */,
+				5004DBE71818564600EEF659 /* PBXTargetDependency */,
 			);
 			name = "Simple TableTests";
 			productName = "Simple TableTests";
-			productReference = 5004DBA018184EF400EEF659 /* Simple TableTests.xctest */;
+			productReference = 5004DBE11818564600EEF659 /* Simple TableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5004DB7718184EF300EEF659 /* Project object */ = {
+		5004DBB81818564600EEF659 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BID;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "DmgCtrl, Ltd.";
 				TargetAttributes = {
-					5004DB9F18184EF400EEF659 = {
-						TestTargetID = 5004DB7E18184EF300EEF659;
+					5004DBE01818564600EEF659 = {
+						TestTargetID = 5004DBBF1818564600EEF659;
 					};
 				};
 			};
-			buildConfigurationList = 5004DB7A18184EF300EEF659 /* Build configuration list for PBXProject "Simple Table" */;
+			buildConfigurationList = 5004DBBB1818564600EEF659 /* Build configuration list for PBXProject "Simple Table" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,88 +213,88 @@
 				en,
 				Base,
 			);
-			mainGroup = 5004DB7618184EF300EEF659;
-			productRefGroup = 5004DB8018184EF300EEF659 /* Products */;
+			mainGroup = 5004DBB71818564600EEF659;
+			productRefGroup = 5004DBC11818564600EEF659 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5004DB7E18184EF300EEF659 /* Simple Table */,
-				5004DB9F18184EF400EEF659 /* Simple TableTests */,
+				5004DBBF1818564600EEF659 /* Simple Table */,
+				5004DBE01818564600EEF659 /* Simple TableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5004DB7D18184EF300EEF659 /* Resources */ = {
+		5004DBBE1818564600EEF659 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5004DB9B18184EF300EEF659 /* Images.xcassets in Resources */,
-				5004DB8D18184EF300EEF659 /* InfoPlist.strings in Resources */,
-				5004DB9618184EF300EEF659 /* Main.storyboard in Resources */,
+				5004DBDC1818564600EEF659 /* Images.xcassets in Resources */,
+				5004DBCE1818564600EEF659 /* InfoPlist.strings in Resources */,
+				5004DBD71818564600EEF659 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5004DB9E18184EF400EEF659 /* Resources */ = {
+		5004DBDF1818564600EEF659 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5004DBAC18184EF400EEF659 /* InfoPlist.strings in Resources */,
+				5004DBED1818564600EEF659 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5004DB7B18184EF300EEF659 /* Sources */ = {
+		5004DBBC1818564600EEF659 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5004DB9318184EF300EEF659 /* BIDAppDelegate.m in Sources */,
-				5004DB9918184EF300EEF659 /* BIDViewController.m in Sources */,
-				5004DB8F18184EF300EEF659 /* main.m in Sources */,
+				5004DBD41818564600EEF659 /* BIDAppDelegate.m in Sources */,
+				5004DBDA1818564600EEF659 /* BIDViewController.m in Sources */,
+				5004DBD01818564600EEF659 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5004DB9C18184EF400EEF659 /* Sources */ = {
+		5004DBDD1818564600EEF659 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5004DBAE18184EF400EEF659 /* Simple_TableTests.m in Sources */,
+				5004DBEF1818564600EEF659 /* Simple_TableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5004DBA618184EF400EEF659 /* PBXTargetDependency */ = {
+		5004DBE71818564600EEF659 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5004DB7E18184EF300EEF659 /* Simple Table */;
-			targetProxy = 5004DBA518184EF400EEF659 /* PBXContainerItemProxy */;
+			target = 5004DBBF1818564600EEF659 /* Simple Table */;
+			targetProxy = 5004DBE61818564600EEF659 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5004DB8B18184EF300EEF659 /* InfoPlist.strings */ = {
+		5004DBCC1818564600EEF659 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5004DB8C18184EF300EEF659 /* en */,
+				5004DBCD1818564600EEF659 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		5004DB9418184EF300EEF659 /* Main.storyboard */ = {
+		5004DBD51818564600EEF659 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5004DB9518184EF300EEF659 /* Base */,
+				5004DBD61818564600EEF659 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5004DBAA18184EF400EEF659 /* InfoPlist.strings */ = {
+		5004DBEB1818564600EEF659 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5004DBAB18184EF400EEF659 /* en */,
+				5004DBEC1818564600EEF659 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5004DBAF18184EF400EEF659 /* Debug */ = {
+		5004DBF01818564600EEF659 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -341,7 +341,7 @@
 			};
 			name = Debug;
 		};
-		5004DBB018184EF400EEF659 /* Release */ = {
+		5004DBF11818564600EEF659 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -374,12 +374,11 @@
 			};
 			name = Release;
 		};
-		5004DBB218184EF400EEF659 /* Debug */ = {
+		5004DBF31818564600EEF659 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Table/Simple Table-Prefix.pch";
 				INFOPLIST_FILE = "Simple Table/Simple Table-Info.plist";
@@ -388,12 +387,11 @@
 			};
 			name = Debug;
 		};
-		5004DBB318184EF400EEF659 /* Release */ = {
+		5004DBF41818564600EEF659 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Table/Simple Table-Prefix.pch";
 				INFOPLIST_FILE = "Simple Table/Simple Table-Info.plist";
@@ -402,7 +400,7 @@
 			};
 			name = Release;
 		};
-		5004DBB518184EF400EEF659 /* Debug */ = {
+		5004DBF61818564600EEF659 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -425,7 +423,7 @@
 			};
 			name = Debug;
 		};
-		5004DBB618184EF400EEF659 /* Release */ = {
+		5004DBF71818564600EEF659 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -447,32 +445,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5004DB7A18184EF300EEF659 /* Build configuration list for PBXProject "Simple Table" */ = {
+		5004DBBB1818564600EEF659 /* Build configuration list for PBXProject "Simple Table" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5004DBAF18184EF400EEF659 /* Debug */,
-				5004DBB018184EF400EEF659 /* Release */,
+				5004DBF01818564600EEF659 /* Debug */,
+				5004DBF11818564600EEF659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5004DBB118184EF400EEF659 /* Build configuration list for PBXNativeTarget "Simple Table" */ = {
+		5004DBF21818564600EEF659 /* Build configuration list for PBXNativeTarget "Simple Table" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5004DBB218184EF400EEF659 /* Debug */,
-				5004DBB318184EF400EEF659 /* Release */,
+				5004DBF31818564600EEF659 /* Debug */,
+				5004DBF41818564600EEF659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		5004DBB418184EF400EEF659 /* Build configuration list for PBXNativeTarget "Simple TableTests" */ = {
+		5004DBF51818564600EEF659 /* Build configuration list for PBXNativeTarget "Simple TableTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5004DBB518184EF400EEF659 /* Debug */,
-				5004DBB618184EF400EEF659 /* Release */,
+				5004DBF61818564600EEF659 /* Debug */,
+				5004DBF71818564600EEF659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5004DB7718184EF300EEF659 /* Project object */;
+	rootObject = 5004DBB81818564600EEF659 /* Project object */;
 }
