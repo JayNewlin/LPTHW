@@ -59,7 +59,10 @@
   }
   
   UIImage *image = [UIImage imageNamed:@"star.png"];
+  UIImage *highlightedImage = [UIImage imageNamed:@"star2.png"];
+  
   cell.imageView.image = image;
+  cell.imageView.highlightedImage = highlightedImage;
   
   cell.textLabel.text = self.dwarves[indexPath.row];
     
