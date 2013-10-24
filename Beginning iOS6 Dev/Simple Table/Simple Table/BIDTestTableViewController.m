@@ -65,6 +65,7 @@
   cell.imageView.highlightedImage = highlightedImage;
   
   cell.textLabel.text = self.dwarves[indexPath.row];
+  cell.textLabel.font = [UIFont boldSystemFontOfSize:50];
   
   if (indexPath.row < 7) {
     cell.detailTextLabel.text = @"Created by the folks at Disney";
@@ -106,5 +107,9 @@
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return 70;
+}
 
 @end
