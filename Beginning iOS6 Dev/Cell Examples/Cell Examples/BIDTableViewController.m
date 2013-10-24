@@ -36,7 +36,11 @@
                      @{@"Name" : @"iPad Air", @"Color" : @"Gold"}];
   
   UITableView *tableView = (id)[self.view viewWithTag:1];
-  [tableView registerClass:[BIDNameAndColorCell class] forCellReuseIdentifier:@"Cell"];
+  
+  tableView.rowHeight = 65;
+  UINib *nib = [UINib nibWithNibName:@"BIDNameAndColorCell" bundle:nil];
+  
+  [tableView registerNib:nib forCellReuseIdentifier:@"Cell"];
 
 }
 

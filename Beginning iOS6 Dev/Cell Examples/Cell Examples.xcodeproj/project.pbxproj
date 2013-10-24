@@ -22,6 +22,7 @@
 		5004DC3318195DC500EEF659 /* Cell_ExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DC3218195DC500EEF659 /* Cell_ExamplesTests.m */; };
 		5004DC3E18195F1600EEF659 /* BIDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DC3D18195F1600EEF659 /* BIDTableViewController.m */; };
 		5004DC411819615300EEF659 /* BIDNameAndColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DC401819615300EEF659 /* BIDNameAndColorCell.m */; };
+		5004DC43181972D100EEF659 /* BIDNameAndColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5004DC42181972D100EEF659 /* BIDNameAndColorCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5004DC3D18195F1600EEF659 /* BIDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDTableViewController.m; sourceTree = "<group>"; };
 		5004DC3F1819615300EEF659 /* BIDNameAndColorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDNameAndColorCell.h; sourceTree = "<group>"; };
 		5004DC401819615300EEF659 /* BIDNameAndColorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDNameAndColorCell.m; sourceTree = "<group>"; };
+		5004DC42181972D100EEF659 /* BIDNameAndColorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BIDNameAndColorCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				5004DC1918195DC500EEF659 /* Main.storyboard */,
 				5004DC3C18195F1600EEF659 /* BIDTableViewController.h */,
 				5004DC3D18195F1600EEF659 /* BIDTableViewController.m */,
+				5004DC42181972D100EEF659 /* BIDNameAndColorCell.xib */,
 				5004DC3F1819615300EEF659 /* BIDNameAndColorCell.h */,
 				5004DC401819615300EEF659 /* BIDNameAndColorCell.m */,
 				5004DC1F18195DC500EEF659 /* Images.xcassets */,
@@ -236,6 +239,7 @@
 			files = (
 				5004DC2018195DC500EEF659 /* Images.xcassets in Resources */,
 				5004DC1218195DC500EEF659 /* InfoPlist.strings in Resources */,
+				5004DC43181972D100EEF659 /* BIDNameAndColorCell.xib in Resources */,
 				5004DC1B18195DC500EEF659 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
