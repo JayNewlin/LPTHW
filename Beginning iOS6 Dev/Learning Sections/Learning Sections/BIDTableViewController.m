@@ -78,4 +78,9 @@
   return self.keys[section];
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+  return self.keys;
+}
+
 @end
