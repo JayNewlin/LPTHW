@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
   
+  [UIApplication sharedApplication].statusBarHidden = YES;
+  
   UITableView *tableView = (id)[self.view viewWithTag:1];
   [tableView registerClass:[UITableViewCell class]
     forCellReuseIdentifier:@"Cell"];
