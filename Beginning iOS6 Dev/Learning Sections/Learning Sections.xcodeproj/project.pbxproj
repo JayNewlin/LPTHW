@@ -20,6 +20,8 @@
 		5004DC721819801B00EEF659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5004DC541819801B00EEF659 /* UIKit.framework */; };
 		5004DC7A1819801B00EEF659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004DC781819801B00EEF659 /* InfoPlist.strings */; };
 		5004DC7C1819801B00EEF659 /* Learning_SectionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DC7B1819801B00EEF659 /* Learning_SectionsTests.m */; };
+		5004DC871819810C00EEF659 /* BIDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004DC861819810C00EEF659 /* BIDTableViewController.m */; };
+		5004DC891819956F00EEF659 /* sortednames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5004DC881819956F00EEF659 /* sortednames.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		5004DC771819801B00EEF659 /* Learning SectionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Learning SectionsTests-Info.plist"; sourceTree = "<group>"; };
 		5004DC791819801B00EEF659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5004DC7B1819801B00EEF659 /* Learning_SectionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Learning_SectionsTests.m; sourceTree = "<group>"; };
+		5004DC851819810C00EEF659 /* BIDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDTableViewController.h; sourceTree = "<group>"; };
+		5004DC861819810C00EEF659 /* BIDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDTableViewController.m; sourceTree = "<group>"; };
+		5004DC881819956F00EEF659 /* sortednames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sortednames.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				5004DC621819801B00EEF659 /* Main.storyboard */,
+				5004DC851819810C00EEF659 /* BIDTableViewController.h */,
+				5004DC861819810C00EEF659 /* BIDTableViewController.m */,
 				5004DC681819801B00EEF659 /* Images.xcassets */,
 				5004DC571819801B00EEF659 /* Supporting Files */,
 			);
@@ -119,6 +126,7 @@
 		5004DC571819801B00EEF659 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5004DC881819956F00EEF659 /* sortednames.plist */,
 				5004DC5F1819801B00EEF659 /* BIDAppDelegate.h */,
 				5004DC601819801B00EEF659 /* BIDAppDelegate.m */,
 				5004DC581819801B00EEF659 /* Learning Sections-Info.plist */,
@@ -224,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5004DC891819956F00EEF659 /* sortednames.plist in Resources */,
 				5004DC691819801B00EEF659 /* Images.xcassets in Resources */,
 				5004DC5B1819801B00EEF659 /* InfoPlist.strings in Resources */,
 				5004DC641819801B00EEF659 /* Main.storyboard in Resources */,
@@ -247,6 +256,7 @@
 			files = (
 				5004DC611819801B00EEF659 /* BIDAppDelegate.m in Sources */,
 				5004DC5D1819801B00EEF659 /* main.m in Sources */,
+				5004DC871819810C00EEF659 /* BIDTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
