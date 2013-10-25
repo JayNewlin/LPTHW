@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BIDTableViewController : UITableViewController
+@interface BIDTableViewController : UITableViewController <UISearchDisplayDelegate>
 
 @property (copy, nonatomic) NSDictionary *names;
 @property (copy, nonatomic) NSArray *keys;
