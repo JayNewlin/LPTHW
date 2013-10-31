@@ -18,6 +18,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+  if ([UIScreen mainScreen].bounds.size.height == 568) {
+    self.backgroundImageView.image = [UIImage imageNamed:@"loginBackground-568h"];
+  }
 
 }
 

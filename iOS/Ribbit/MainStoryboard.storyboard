@@ -290,6 +290,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="JId-Ys-oll" id="gDm-aW-1tm"/>
                         <outlet property="passwordField" destination="V44-ae-CfT" id="rZm-2B-ghF"/>
                         <outlet property="usernameField" destination="Umf-C4-Pfa" id="Cvv-Mj-Y6q"/>
                     </connections>
@@ -374,6 +375,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ribbit" id="Zgs-jL-F9j"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="Le9-d5-0Fg" id="iqL-xL-D1Y"/>
                         <outlet property="emailField" destination="gHT-dh-U8m" id="eBw-Uc-Jgi"/>
                         <outlet property="passwordField" destination="fub-Xh-wMC" id="O70-yC-HpO"/>
                         <outlet property="usernameField" destination="fKX-V5-9us" id="VOh-lp-jdR"/>

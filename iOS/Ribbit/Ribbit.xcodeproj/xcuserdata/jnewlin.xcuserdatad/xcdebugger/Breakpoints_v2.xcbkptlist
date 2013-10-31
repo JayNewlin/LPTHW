@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ribbit/SignupViewController.m"
-            timestampString = "399917317.846377"
+            timestampString = "404950129.763651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "-signup:"
             landmarkType = "5">
          </BreakpointContent>
