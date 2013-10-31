@@ -20,33 +20,19 @@
 		502BC4F917D62D4B00EF70C5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502BC4F017D62D4B00EF70C5 /* SystemConfiguration.framework */; };
 		502BC4FC17D6328300EF70C5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC4FB17D6328300EF70C5 /* LoginViewController.m */; };
 		502BC4FF17D6329800EF70C5 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502BC4FE17D6329800EF70C5 /* SignupViewController.m */; };
+		504519FE1822F27600F821CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504519FD1822F27600F821CB /* Images.xcassets */; };
 		505A5BAC17E3829E0093E0A0 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505A5BAB17E3829E0093E0A0 /* CameraViewController.m */; };
 		5067E69717D7EA9500EFDED0 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5067E69617D7EA9500EFDED0 /* FriendsViewController.m */; };
 		506D771417D784F500810C94 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506D771317D784F500810C94 /* EditFriendsViewController.m */; };
-		50706CB917EA092000B90C27 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB517EA092000B90C27 /* icon_image.png */; };
-		50706CBA17EA092000B90C27 /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB617EA092000B90C27 /* icon_image@2x.png */; };
-		50706CBB17EA092000B90C27 /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB717EA092000B90C27 /* icon_video.png */; };
-		50706CBC17EA092000B90C27 /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50706CB817EA092000B90C27 /* icon_video@2x.png */; };
 		50B3C79417CF8A400051D52F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79317CF8A400051D52F /* UIKit.framework */; };
 		50B3C79617CF8A400051D52F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79517CF8A400051D52F /* Foundation.framework */; };
 		50B3C79817CF8A400051D52F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B3C79717CF8A400051D52F /* CoreGraphics.framework */; };
 		50B3C79E17CF8A400051D52F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C79C17CF8A400051D52F /* InfoPlist.strings */; };
 		50B3C7A017CF8A400051D52F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B3C79F17CF8A400051D52F /* main.m */; };
 		50B3C7A417CF8A400051D52F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B3C7A317CF8A400051D52F /* AppDelegate.m */; };
-		50B3C7A617CF8A400051D52F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7A517CF8A400051D52F /* Default.png */; };
-		50B3C7A817CF8A400051D52F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7A717CF8A400051D52F /* Default@2x.png */; };
-		50B3C7AA17CF8A400051D52F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7A917CF8A400051D52F /* Default-568h@2x.png */; };
 		50B3C7B117CF8A9F0051D52F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B017CF8A9F0051D52F /* MainStoryboard.storyboard */; };
-		50B3C7B817CF8E760051D52F /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B217CF8E760051D52F /* camera.png */; };
-		50B3C7B917CF8E760051D52F /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B317CF8E760051D52F /* camera@2x.png */; };
-		50B3C7BA17CF8E760051D52F /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B417CF8E760051D52F /* friends.png */; };
-		50B3C7BB17CF8E760051D52F /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B517CF8E760051D52F /* friends@2x.png */; };
-		50B3C7BC17CF8E760051D52F /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B617CF8E760051D52F /* inbox.png */; };
-		50B3C7BD17CF8E760051D52F /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B3C7B717CF8E760051D52F /* inbox@2x.png */; };
 		50F9B34217EA21F900F70D0F /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F9B34117EA21F900F70D0F /* ImageViewController.m */; };
 		50F9B34417EA3C6400F70D0F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F9B34317EA3C6400F70D0F /* MediaPlayer.framework */; };
-		50F9B34B17EA490400F70D0F /* MsgIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F9B34917EA490400F70D0F /* MsgIcon.png */; };
-		50F9B34C17EA490400F70D0F /* MsgIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F9B34A17EA490400F70D0F /* MsgIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,16 +52,13 @@
 		502BC4FB17D6328300EF70C5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		502BC4FD17D6329800EF70C5 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		502BC4FE17D6329800EF70C5 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		504519FD1822F27600F821CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		505A5BAA17E3829E0093E0A0 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		505A5BAB17E3829E0093E0A0 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		5067E69517D7EA9500EFDED0 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		5067E69617D7EA9500EFDED0 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		506D771217D784F500810C94 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
 		506D771317D784F500810C94 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
-		50706CB517EA092000B90C27 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
-		50706CB617EA092000B90C27 /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
-		50706CB717EA092000B90C27 /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_video.png; sourceTree = "<group>"; };
-		50706CB817EA092000B90C27 /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
 		50B3C79017CF8A400051D52F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B3C79317CF8A400051D52F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50B3C79517CF8A400051D52F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,21 +69,10 @@
 		50B3C7A117CF8A400051D52F /* Ribbit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ribbit-Prefix.pch"; sourceTree = "<group>"; };
 		50B3C7A217CF8A400051D52F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50B3C7A317CF8A400051D52F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		50B3C7A517CF8A400051D52F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		50B3C7A717CF8A400051D52F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		50B3C7A917CF8A400051D52F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		50B3C7B017CF8A9F0051D52F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
-		50B3C7B217CF8E760051D52F /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
-		50B3C7B317CF8E760051D52F /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
-		50B3C7B417CF8E760051D52F /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
-		50B3C7B517CF8E760051D52F /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
-		50B3C7B617CF8E760051D52F /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
-		50B3C7B717CF8E760051D52F /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
 		50F9B34017EA21F900F70D0F /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		50F9B34117EA21F900F70D0F /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		50F9B34317EA3C6400F70D0F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		50F9B34917EA490400F70D0F /* MsgIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MsgIcon.png; sourceTree = "<group>"; };
-		50F9B34A17EA490400F70D0F /* MsgIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MsgIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +159,7 @@
 				502BC4FB17D6328300EF70C5 /* LoginViewController.m */,
 				502BC4FD17D6329800EF70C5 /* SignupViewController.h */,
 				502BC4FE17D6329800EF70C5 /* SignupViewController.m */,
+				504519FD1822F27600F821CB /* Images.xcassets */,
 				50B3C79A17CF8A400051D52F /* Supporting Files */,
 			);
 			path = Ribbit;
@@ -199,9 +172,6 @@
 				50B3C79C17CF8A400051D52F /* InfoPlist.strings */,
 				50B3C79F17CF8A400051D52F /* main.m */,
 				50B3C7A117CF8A400051D52F /* Ribbit-Prefix.pch */,
-				50B3C7A517CF8A400051D52F /* Default.png */,
-				50B3C7A717CF8A400051D52F /* Default@2x.png */,
-				50B3C7A917CF8A400051D52F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,18 +179,6 @@
 		50B3C7BE17CF8E820051D52F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				50B3C7B217CF8E760051D52F /* camera.png */,
-				50B3C7B317CF8E760051D52F /* camera@2x.png */,
-				50B3C7B417CF8E760051D52F /* friends.png */,
-				50B3C7B517CF8E760051D52F /* friends@2x.png */,
-				50706CB517EA092000B90C27 /* icon_image.png */,
-				50706CB617EA092000B90C27 /* icon_image@2x.png */,
-				50706CB717EA092000B90C27 /* icon_video.png */,
-				50706CB817EA092000B90C27 /* icon_video@2x.png */,
-				50B3C7B617CF8E760051D52F /* inbox.png */,
-				50B3C7B717CF8E760051D52F /* inbox@2x.png */,
-				50F9B34917EA490400F70D0F /* MsgIcon.png */,
-				50F9B34A17EA490400F70D0F /* MsgIcon@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -277,22 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B3C79E17CF8A400051D52F /* InfoPlist.strings in Resources */,
-				50B3C7A617CF8A400051D52F /* Default.png in Resources */,
-				50B3C7A817CF8A400051D52F /* Default@2x.png in Resources */,
-				50B3C7AA17CF8A400051D52F /* Default-568h@2x.png in Resources */,
 				50B3C7B117CF8A9F0051D52F /* MainStoryboard.storyboard in Resources */,
-				50B3C7B817CF8E760051D52F /* camera.png in Resources */,
-				50B3C7B917CF8E760051D52F /* camera@2x.png in Resources */,
-				50B3C7BA17CF8E760051D52F /* friends.png in Resources */,
-				50B3C7BB17CF8E760051D52F /* friends@2x.png in Resources */,
-				50B3C7BC17CF8E760051D52F /* inbox.png in Resources */,
-				50B3C7BD17CF8E760051D52F /* inbox@2x.png in Resources */,
-				50706CB917EA092000B90C27 /* icon_image.png in Resources */,
-				50706CBA17EA092000B90C27 /* icon_image@2x.png in Resources */,
-				50706CBB17EA092000B90C27 /* icon_video.png in Resources */,
-				50706CBC17EA092000B90C27 /* icon_video@2x.png in Resources */,
-				50F9B34B17EA490400F70D0F /* MsgIcon.png in Resources */,
-				50F9B34C17EA490400F70D0F /* MsgIcon@2x.png in Resources */,
+				504519FE1822F27600F821CB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +332,8 @@
 		50B3C7AE17CF8A400051D52F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -403,6 +349,8 @@
 		50B3C7AF17CF8A400051D52F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
